@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/mine"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/mine"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

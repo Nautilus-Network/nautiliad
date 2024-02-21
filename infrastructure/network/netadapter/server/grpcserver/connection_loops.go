@@ -7,14 +7,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 	"github.com/davecgh/go-spew/spew"
 
-	routerpkg "github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	routerpkg "github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func (c *gRPCConnection) connectionLoops() error {

@@ -1,6 +1,6 @@
 package lrucachehashpairtoblockghostdagdatahashpair
 
-import "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+import "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
 type lruKey struct {
 	blockHash externalapi.DomainHash

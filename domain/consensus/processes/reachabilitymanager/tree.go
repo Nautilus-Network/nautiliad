@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/reachabilitydata"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/reachabilitydata"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
 	"github.com/pkg/errors"
 )

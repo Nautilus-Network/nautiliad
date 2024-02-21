@@ -7,18 +7,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/util/txmass"
+	"github.com/Nautilus-Network/nautiliad/util/txmass"
 
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/pb"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/keys"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/signal"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/pb"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/keys"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/signal"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 	"github.com/pkg/errors"
 
 	"google.golang.org/grpc"
@@ -48,7 +48,7 @@ type server struct {
 // Currently, set to 100MB
 const MaxDaemonSendMsgSize = 100_000_000
 
-// Start starts the nexelliawalletd server
+// Start starts the nautiluswalletd server
 func Start(params *dagconfig.Params, listen, rpcServer string, keysFilePath string, profile string, timeout uint32) error {
 	initLog(defaultLogFile, defaultErrLogFile)
 

@@ -1,14 +1,14 @@
 package consensusstatemanager
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/transactionhelper"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/utxo"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util/staging"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/transactionhelper"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/utxo"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util/staging"
 	"github.com/pkg/errors"
 )
 

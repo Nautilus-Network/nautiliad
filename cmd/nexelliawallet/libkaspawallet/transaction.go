@@ -1,13 +1,13 @@
 package libkaspawallet
 
 import (
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet/bip32"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet/serialization"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/subnetworks"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/txscript"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet/bip32"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet/serialization"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/subnetworks"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/txscript"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/pkg/errors"
 )
 

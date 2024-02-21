@@ -7,9 +7,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 )
 
 var timeout = 30 * time.Second
@@ -49,7 +49,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Wait a second to let nexelliad process orphans
+	// Wait a second to let nautiliad process orphans
 	<-time.After(1 * time.Second)
 
 	err = checkTopBlockIsTip(rpcClient, topBlock)

@@ -4,12 +4,12 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
-	routerpkg "github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
+	routerpkg "github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver"
 	"github.com/pkg/errors"
 )
 

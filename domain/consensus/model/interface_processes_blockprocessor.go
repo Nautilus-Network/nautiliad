@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+import "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
 // BlockProcessor is responsible for processing incoming blocks
 type BlockProcessor interface {

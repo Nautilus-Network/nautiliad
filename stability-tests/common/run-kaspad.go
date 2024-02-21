@@ -7,18 +7,18 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
-// RunNexelliadForTesting runs nexelliad for testing purposes
-func RunNexelliadForTesting(t *testing.T, testName string, rpcAddress string) func() {
+// RunNautiliadForTesting runs nautiliad for testing purposes
+func RunNautiliadForTesting(t *testing.T, testName string, rpcAddress string) func() {
 	appDir, err := TempDir(testName)
 	if err != nil {
 		t.Fatalf("TempDir: %s", err)
 	}
 
-	nexelliadRunCommand, err := StartCmd("KASPAD",
-		"nexelliad",
+	nautiliadRunCommand, err := StartCmd("KASPAD",
+		"nautiliad",
 		NetworkCliArgumentFromNetParams(&dagconfig.DevnetParams),
 		"--appdir", appDir,
 		"--rpclisten", rpcAddress,
@@ -27,20 +27,20 @@ func RunNexelliadForTesting(t *testing.T, testName string, rpcAddress string) fu
 	if err != nil {
 		t.Fatalf("StartCmd: %s", err)
 	}
-	t.Logf("Nexelliad started with --appdir=%s", appDir)
+	t.Logf("Nautiliad started with --appdir=%s", appDir)
 
 	isShutdown := uint64(0)
 	go func() {
-		err := nexelliadRunCommand.Wait()
+		err := nautiliadRunCommand.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&isShutdown) == 0 {
-				panic(fmt.Sprintf("Nexelliad closed unexpectedly: %s. See logs at: %s", err, appDir))
+				panic(fmt.Sprintf("Nautiliad closed unexpectedly: %s. See logs at: %s", err, appDir))
 			}
 		}
 	}()
 
 	return func() {
-		err := nexelliadRunCommand.Process.Signal(syscall.SIGTERM)
+		err := nautiliadRunCommand.Process.Signal(syscall.SIGTERM)
 		if err != nil {
 			t.Fatalf("Signal: %s", err)
 		}
@@ -49,6 +49,6 @@ func RunNexelliadForTesting(t *testing.T, testName string, rpcAddress string) fu
 			t.Fatalf("RemoveAll: %s", err)
 		}
 		atomic.StoreUint64(&isShutdown, 1)
-		t.Logf("Nexelliad stopped")
+		t.Logf("Nautiliad stopped")
 	}
 }

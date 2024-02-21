@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
 	"github.com/davecgh/go-spew/spew"
 )
 

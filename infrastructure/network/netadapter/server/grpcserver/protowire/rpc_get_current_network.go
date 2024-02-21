@@ -1,26 +1,26 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetCurrentNetworkRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetCurrentNetworkRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetCurrentNetworkRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_GetCurrentNetworkRequest) fromAppMessage(_ *appmessage.GetCurrentNetworkRequestMessage) error {
+func (x *NautiliadMessage_GetCurrentNetworkRequest) fromAppMessage(_ *appmessage.GetCurrentNetworkRequestMessage) error {
 	return nil
 }
 
-func (x *NexelliadMessage_GetCurrentNetworkResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetCurrentNetworkResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetCurrentNetworkResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetCurrentNetworkResponse is nil")
 	}
 	return x.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetCurrentNetworkResponse) fromAppMessage(message *appmessage.GetCurrentNetworkResponseMessage) error {
+func (x *NautiliadMessage_GetCurrentNetworkResponse) fromAppMessage(message *appmessage.GetCurrentNetworkResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

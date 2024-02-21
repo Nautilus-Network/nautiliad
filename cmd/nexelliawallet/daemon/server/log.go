@@ -5,18 +5,18 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/util"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
 var (
 	backendLog = logger.NewBackend()
-	log        = backendLog.Logger("NXLWD")
+	log        = backendLog.Logger("NTLWD")
 	spawn      = panics.GoroutineWrapperFunc(log)
 
-	defaultAppDir     = util.AppDir("nexelliawallet", false)
+	defaultAppDir     = util.AppDir("nautiluswallet", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, "daemon.log")
 	defaultErrLogFile = filepath.Join(defaultAppDir, "daemon_err.log")
 )

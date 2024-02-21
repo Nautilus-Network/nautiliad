@@ -1,30 +1,30 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetBlockCountRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBlockCountRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetBlockCountRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetBlockCountRequest is nil")
 	}
 	return &appmessage.GetBlockCountRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_GetBlockCountRequest) fromAppMessage(_ *appmessage.GetBlockCountRequestMessage) error {
+func (x *NautiliadMessage_GetBlockCountRequest) fromAppMessage(_ *appmessage.GetBlockCountRequestMessage) error {
 	x.GetBlockCountRequest = &GetBlockCountRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_GetBlockCountResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBlockCountResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetBlockCountResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetBlockCountResponse is nil")
 	}
 	return x.GetBlockCountResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetBlockCountResponse) fromAppMessage(message *appmessage.GetBlockCountResponseMessage) error {
+func (x *NautiliadMessage_GetBlockCountResponse) fromAppMessage(message *appmessage.GetBlockCountResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

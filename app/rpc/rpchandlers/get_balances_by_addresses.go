@@ -1,9 +1,9 @@
 package rpchandlers
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/app/rpc/rpccontext"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/rpc/rpccontext"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 
@@ -11,7 +11,7 @@ import (
 func HandleGetBalancesByAddresses(context *rpccontext.Context, _ *router.Router, request appmessage.Message) (appmessage.Message, error) {
 	if !context.Config.UTXOIndex {
 		errorMessage := &appmessage.GetBalancesByAddressesResponseMessage{}
-		errorMessage.Error = appmessage.RPCErrorf("Method unavailable when nexelliad is run without --utxoindex")
+		errorMessage.Error = appmessage.RPCErrorf("Method unavailable when nautiliad is run without --utxoindex")
 		return errorMessage, nil
 	}
 

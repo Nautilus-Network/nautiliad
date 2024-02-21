@@ -7,7 +7,7 @@ package appmessage
 import (
 	"net"
 
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 )
 
 // NetAddress defines information about a peer on the network including the time

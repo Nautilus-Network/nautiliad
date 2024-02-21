@@ -3,15 +3,15 @@ package pruningmanager
 import (
 	"sort"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/multiset"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/utxo"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/virtual"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util/staging"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/multiset"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/utxo"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/virtual"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util/staging"
 	"github.com/pkg/errors"
 )
 
@@ -694,7 +694,7 @@ func (pm *pruningManager) pruningPointCandidate(stagingArea *model.StagingArea) 
 }
 
 // validateUTXOSetFitsCommitment makes sure that the calculated UTXOSet of the new pruning point fits the commitment.
-// This is a sanity test, to make sure that nexelliad doesn't store, and subsequently sends syncing peers the wrong UTXOSet.
+// This is a sanity test, to make sure that nautiliad doesn't store, and subsequently sends syncing peers the wrong UTXOSet.
 func (pm *pruningManager) validateUTXOSetFitsCommitment(stagingArea *model.StagingArea, pruningPointHash *externalapi.DomainHash) error {
 	onEnd := logger.LogAndMeasureExecutionTime(log, "pruningManager.validateUTXOSetFitsCommitment")
 	defer onEnd()

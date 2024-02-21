@@ -1,10 +1,10 @@
 package consensusstatemanager
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/utxo"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/utxo"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
 // AddBlock submits the given block to be added to the

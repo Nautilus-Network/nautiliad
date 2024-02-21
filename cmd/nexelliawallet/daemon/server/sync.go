@@ -5,9 +5,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 

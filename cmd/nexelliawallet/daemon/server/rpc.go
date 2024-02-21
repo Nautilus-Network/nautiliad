@@ -3,8 +3,8 @@ package server
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient"
 )
 
 func connectToRPC(params *dagconfig.Params, rpcServer string, timeout uint32) (*rpcclient.RPCClient, error) {

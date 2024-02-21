@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet/bip32"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/utils"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet/bip32"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/utils"
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/keys"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/keys"
 )
 
 func create(conf *createConfig) error {
@@ -32,8 +32,8 @@ func create(conf *createConfig) error {
 	}
 
 	fmt.Printf("Notice the above is neither a secret key to your wallet " +
-		"(use \"nexelliawallet dump-unencrypted-data\" to see a secret seed phrase) " +
-		"nor a wallet public address (use \"nexelliawallet new-address\" to create and see one)\n\n")
+		"(use \"nautiluswallet dump-unencrypted-data\" to see a secret seed phrase) " +
+		"nor a wallet public address (use \"nautiluswallet new-address\" to create and see one)\n\n")
 
 	extendedPublicKeys := make([]string, conf.NumPrivateKeys, conf.NumPublicKeys)
 	copy(extendedPublicKeys, signerExtendedPublicKeys)

@@ -3,20 +3,20 @@ package integration
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
 )
 
 func TestVirtualSelectedParentChain(t *testing.T) {
-	// Setup a couple of nexelliad instances
-	nexelliad1, nexelliad2, _, teardown := standardSetup(t)
+	// Setup a couple of nautiliad instances
+	nautiliad1, nautiliad2, _, teardown := standardSetup(t)
 	defer teardown()
 
 	// Register to virtual selected parent chain changes
 	onVirtualSelectedParentChainChangedChan := make(chan *appmessage.VirtualSelectedParentChainChangedNotificationMessage)
-	err := nexelliad1.rpcClient.RegisterForVirtualSelectedParentChainChangedNotifications(true,
+	err := nautiliad1.rpcClient.RegisterForVirtualSelectedParentChainChangedNotifications(true,
 		func(notification *appmessage.VirtualSelectedParentChainChangedNotificationMessage) {
 			onVirtualSelectedParentChainChangedChan <- notification
 		})
@@ -24,14 +24,14 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 		t.Fatalf("Failed to register for virtual selected parent chain change notifications: %s", err)
 	}
 
-	// In nexelliad1, mine a chain over the genesis and make sure
+	// In nautiliad1, mine a chain over the genesis and make sure
 	// each chain changed notifications contains only one entry
 	// in `added` and nothing in `removed`
-	chain1TipHash := consensushashing.BlockHash(nexelliad1.config.NetParams().GenesisBlock)
+	chain1TipHash := consensushashing.BlockHash(nautiliad1.config.NetParams().GenesisBlock)
 	chain1TipHashString := chain1TipHash.String()
 	const blockAmountToMine = 10
 	for i := 0; i < blockAmountToMine; i++ {
-		minedBlock := mineNextBlock(t, nexelliad1)
+		minedBlock := mineNextBlock(t, nautiliad1)
 		notification := <-onVirtualSelectedParentChainChangedChan
 		if len(notification.RemovedChainBlockHashes) > 0 {
 			t.Fatalf("RemovedChainBlockHashes is unexpectedly not empty")
@@ -50,16 +50,16 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 		chain1TipHashString = minedBlockHashString
 	}
 
-	// In nexelliad2, mine a different chain of `blockAmountToMine` + 1
+	// In nautiliad2, mine a different chain of `blockAmountToMine` + 1
 	// blocks over the genesis
 	var chain2Tip *externalapi.DomainBlock
 	for i := 0; i < blockAmountToMine+1; i++ {
-		chain2Tip = mineNextBlock(t, nexelliad2)
+		chain2Tip = mineNextBlock(t, nautiliad2)
 	}
 
-	// Connect the two nexelliads. This should trigger sync
+	// Connect the two nautiliads. This should trigger sync
 	// between the two nodes
-	connect(t, nexelliad1, nexelliad2)
+	connect(t, nautiliad1, nautiliad2)
 
 	chain2TipHash := consensushashing.BlockHash(chain2Tip)
 	chain2TipHashString := chain2TipHash.String()
@@ -79,7 +79,7 @@ func TestVirtualSelectedParentChain(t *testing.T) {
 
 	// Get the virtual selected parent chain from the tip of
 	// the first chain
-	virtualSelectedParentChainFromChain1Tip, err := nexelliad1.rpcClient.GetVirtualSelectedParentChainFromBlock(
+	virtualSelectedParentChainFromChain1Tip, err := nautiliad1.rpcClient.GetVirtualSelectedParentChainFromBlock(
 		chain1TipHashString, true)
 	if err != nil {
 		t.Fatalf("GetVirtualSelectedParentChainFromBlock failed: %s", err)

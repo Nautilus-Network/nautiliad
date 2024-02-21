@@ -1,10 +1,10 @@
 package blockparentbuilder
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/hashset"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/hashset"
 	"github.com/pkg/errors"
 )
 

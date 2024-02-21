@@ -1,10 +1,10 @@
 package blockrelay
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	peerpkg "github.com/Nexellia-Network/nexelliad/app/protocol/peer"
-	"github.com/Nexellia-Network/nexelliad/domain"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	peerpkg "github.com/Nautilus-Network/nautiliad/app/protocol/peer"
+	"github.com/Nautilus-Network/nautiliad/domain"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 )
 
 // PruningPointProofRequestsContext is the interface for the context needed for the HandlePruningPointProofRequests flow.

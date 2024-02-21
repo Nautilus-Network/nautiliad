@@ -1,7 +1,7 @@
 package ldb
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
 	"github.com/pkg/errors"
 	"github.com/syndtr/goleveldb/leveldb"
 )

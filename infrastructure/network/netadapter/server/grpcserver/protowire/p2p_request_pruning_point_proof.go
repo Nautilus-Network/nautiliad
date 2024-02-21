@@ -1,17 +1,17 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_RequestPruningPointProof) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_RequestPruningPointProof) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_RequestPruningPointProof is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_RequestPruningPointProof is nil")
 	}
 	return &appmessage.MsgRequestPruningPointProof{}, nil
 }
 
-func (x *NexelliadMessage_RequestPruningPointProof) fromAppMessage(_ *appmessage.MsgRequestPruningPointProof) error {
+func (x *NautiliadMessage_RequestPruningPointProof) fromAppMessage(_ *appmessage.MsgRequestPruningPointProof) error {
 	return nil
 }

@@ -3,7 +3,7 @@ package dagconfig_test
 import (
 	"testing"
 
-	. "github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	. "github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
 // Define some of the required parameters for a user-registered

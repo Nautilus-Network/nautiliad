@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/client"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/pb"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/client"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/pb"
 )
 
 func showAddresses(conf *showAddressesConfig) error {

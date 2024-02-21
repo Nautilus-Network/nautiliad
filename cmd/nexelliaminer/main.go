@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/util"
 
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/version"
 
 	"github.com/pkg/errors"
 
 	_ "net/http/pprof"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/signal"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/signal"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 )
 
 func main() {

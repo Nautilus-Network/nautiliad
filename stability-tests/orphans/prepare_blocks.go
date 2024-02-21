@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database/ldb"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/mine"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database/ldb"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

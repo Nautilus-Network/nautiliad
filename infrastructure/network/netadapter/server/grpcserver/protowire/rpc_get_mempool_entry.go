@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetMempoolEntryRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetMempoolEntryRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetMempoolEntryRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetMempoolEntryRequest is nil")
 	}
 	return x.GetMempoolEntryRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetMempoolEntryRequest) fromAppMessage(message *appmessage.GetMempoolEntryRequestMessage) error {
+func (x *NautiliadMessage_GetMempoolEntryRequest) fromAppMessage(message *appmessage.GetMempoolEntryRequestMessage) error {
 	x.GetMempoolEntryRequest = &GetMempoolEntryRequestMessage{
 		TxId:                  message.TxID,
 		IncludeOrphanPool:     message.IncludeOrphanPool,
@@ -32,14 +32,14 @@ func (x *GetMempoolEntryRequestMessage) toAppMessage() (appmessage.Message, erro
 	}, nil
 }
 
-func (x *NexelliadMessage_GetMempoolEntryResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetMempoolEntryResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetMempoolEntryResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetMempoolEntryResponse is nil")
 	}
 	return x.GetMempoolEntryResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetMempoolEntryResponse) fromAppMessage(message *appmessage.GetMempoolEntryResponseMessage) error {
+func (x *NautiliadMessage_GetMempoolEntryResponse) fromAppMessage(message *appmessage.GetMempoolEntryResponseMessage) error {
 	var rpcErr *RPCError
 	if message.Error != nil {
 		rpcErr = &RPCError{Message: message.Error.Message}

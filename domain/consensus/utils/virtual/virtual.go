@@ -1,8 +1,8 @@
 package virtual
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // ContainsOnlyVirtualGenesis returns whether the given block hashes contain only the virtual

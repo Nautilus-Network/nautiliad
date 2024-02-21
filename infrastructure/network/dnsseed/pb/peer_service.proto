@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/Nexellia-Network/nexelliad/pb";
+option go_package = "github.com/Nautilus-Network/nautiliad/pb";
 
 service PeerService {
   rpc GetPeersList(GetPeersListRequest) returns (GetPeersListResponse) {}

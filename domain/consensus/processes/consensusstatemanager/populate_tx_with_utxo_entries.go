@@ -1,10 +1,10 @@
 package consensusstatemanager
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
 )
 
 // PopulateTransactionWithUTXOEntries populates the transaction UTXO entries with data from the virtual's UTXO set.

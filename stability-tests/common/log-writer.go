@@ -3,7 +3,7 @@ package common
 import (
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
 // LogWriter writes to the given log with the given log level and prefix

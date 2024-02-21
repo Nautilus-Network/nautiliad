@@ -3,14 +3,14 @@ package protowire
 import (
 	"math/big"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BlockWithTrustedData is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BlockWithTrustedData is nil")
 	}
 
 	msgBlock, err := x.BlockWithTrustedData.Block.toAppMessage()
@@ -52,7 +52,7 @@ func (x *NexelliadMessage_BlockWithTrustedData) toAppMessage() (appmessage.Messa
 	}, nil
 }
 
-func (x *NexelliadMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
+func (x *NautiliadMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
 	x.BlockWithTrustedData = &BlockWithTrustedDataMessage{
 		Block:        &BlockMessage{},
 		DaaScore:     msgBlockWithTrustedData.DAAScore,

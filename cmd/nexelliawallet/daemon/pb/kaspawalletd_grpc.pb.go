@@ -31,89 +31,89 @@ type KaspawalletdClient interface {
 	Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error)
 }
 
-type nexelliawalletdClient struct {
+type nautiluswalletdClient struct {
 	cc grpc.ClientConnInterface
 }
 
 func NewKaspawalletdClient(cc grpc.ClientConnInterface) KaspawalletdClient {
-	return &nexelliawalletdClient{cc}
+	return &nautiluswalletdClient{cc}
 }
 
-func (c *nexelliawalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
+func (c *nautiluswalletdClient) GetBalance(ctx context.Context, in *GetBalanceRequest, opts ...grpc.CallOption) (*GetBalanceResponse, error) {
 	out := new(GetBalanceResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/GetBalance", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/GetBalance", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
+func (c *nautiluswalletdClient) GetExternalSpendableUTXOs(ctx context.Context, in *GetExternalSpendableUTXOsRequest, opts ...grpc.CallOption) (*GetExternalSpendableUTXOsResponse, error) {
 	out := new(GetExternalSpendableUTXOsResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/GetExternalSpendableUTXOs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/GetExternalSpendableUTXOs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
+func (c *nautiluswalletdClient) CreateUnsignedTransactions(ctx context.Context, in *CreateUnsignedTransactionsRequest, opts ...grpc.CallOption) (*CreateUnsignedTransactionsResponse, error) {
 	out := new(CreateUnsignedTransactionsResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/CreateUnsignedTransactions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/CreateUnsignedTransactions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
+func (c *nautiluswalletdClient) ShowAddresses(ctx context.Context, in *ShowAddressesRequest, opts ...grpc.CallOption) (*ShowAddressesResponse, error) {
 	out := new(ShowAddressesResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/ShowAddresses", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/ShowAddresses", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
+func (c *nautiluswalletdClient) NewAddress(ctx context.Context, in *NewAddressRequest, opts ...grpc.CallOption) (*NewAddressResponse, error) {
 	out := new(NewAddressResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/NewAddress", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/NewAddress", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
+func (c *nautiluswalletdClient) Shutdown(ctx context.Context, in *ShutdownRequest, opts ...grpc.CallOption) (*ShutdownResponse, error) {
 	out := new(ShutdownResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Shutdown", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/Shutdown", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
+func (c *nautiluswalletdClient) Broadcast(ctx context.Context, in *BroadcastRequest, opts ...grpc.CallOption) (*BroadcastResponse, error) {
 	out := new(BroadcastResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Broadcast", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/Broadcast", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
+func (c *nautiluswalletdClient) Send(ctx context.Context, in *SendRequest, opts ...grpc.CallOption) (*SendResponse, error) {
 	out := new(SendResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Send", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/Send", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *nexelliawalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
+func (c *nautiluswalletdClient) Sign(ctx context.Context, in *SignRequest, opts ...grpc.CallOption) (*SignResponse, error) {
 	out := new(SignResponse)
-	err := c.cc.Invoke(ctx, "/nexelliawalletd.nexelliawalletd/Sign", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/nautiluswalletd.nautiluswalletd/Sign", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -192,7 +192,7 @@ func _Kaspawalletd_GetBalance_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/GetBalance",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/GetBalance",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).GetBalance(ctx, req.(*GetBalanceRequest))
@@ -210,7 +210,7 @@ func _Kaspawalletd_GetExternalSpendableUTXOs_Handler(srv interface{}, ctx contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/GetExternalSpendableUTXOs",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/GetExternalSpendableUTXOs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).GetExternalSpendableUTXOs(ctx, req.(*GetExternalSpendableUTXOsRequest))
@@ -228,7 +228,7 @@ func _Kaspawalletd_CreateUnsignedTransactions_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/CreateUnsignedTransactions",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/CreateUnsignedTransactions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).CreateUnsignedTransactions(ctx, req.(*CreateUnsignedTransactionsRequest))
@@ -246,7 +246,7 @@ func _Kaspawalletd_ShowAddresses_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/ShowAddresses",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/ShowAddresses",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).ShowAddresses(ctx, req.(*ShowAddressesRequest))
@@ -264,7 +264,7 @@ func _Kaspawalletd_NewAddress_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/NewAddress",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/NewAddress",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).NewAddress(ctx, req.(*NewAddressRequest))
@@ -282,7 +282,7 @@ func _Kaspawalletd_Shutdown_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/Shutdown",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/Shutdown",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).Shutdown(ctx, req.(*ShutdownRequest))
@@ -300,7 +300,7 @@ func _Kaspawalletd_Broadcast_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/Broadcast",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/Broadcast",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).Broadcast(ctx, req.(*BroadcastRequest))
@@ -318,7 +318,7 @@ func _Kaspawalletd_Send_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/Send",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/Send",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).Send(ctx, req.(*SendRequest))
@@ -336,7 +336,7 @@ func _Kaspawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/nexelliawalletd.nexelliawalletd/Sign",
+		FullMethod: "/nautiluswalletd.nautiluswalletd/Sign",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KaspawalletdServer).Sign(ctx, req.(*SignRequest))
@@ -348,7 +348,7 @@ func _Kaspawalletd_Sign_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Kaspawalletd_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "nexelliawalletd.nexelliawalletd",
+	ServiceName: "nautiluswalletd.nautiluswalletd",
 	HandlerType: (*KaspawalletdServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -389,5 +389,5 @@ var Kaspawalletd_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "nexelliawalletd.proto",
+	Metadata: "nautiluswalletd.proto",
 }

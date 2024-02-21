@@ -4,10 +4,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 )
 
 const (
@@ -74,9 +74,9 @@ func TestMempoolLimits(t *testing.T) {
 }
 
 func buildRPCClient(t *testing.T) *rpcclient.RPCClient {
-	client, err := rpcclient.NewRPCClient(activeConfig().NexelliadRPCAddress)
+	client, err := rpcclient.NewRPCClient(activeConfig().NautiliadRPCAddress)
 	if err != nil {
-		t.Fatalf("error connecting to %s: %s", activeConfig().NexelliadRPCAddress, err)
+		t.Fatalf("error connecting to %s: %s", activeConfig().NautiliadRPCAddress, err)
 	}
 	return client
 }

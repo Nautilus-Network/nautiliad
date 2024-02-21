@@ -8,9 +8,9 @@ import (
 	"math"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
 
-	. "github.com/Nexellia-Network/nexelliad/util"
+	. "github.com/Nautilus-Network/nautiliad/util"
 )
 
 func TestAmountCreation(t *testing.T) {

@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+import "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
 // FinalityManager provides method to validate that a block does not violate finality
 type FinalityManager interface {

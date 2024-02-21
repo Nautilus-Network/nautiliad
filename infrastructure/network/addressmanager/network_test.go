@@ -8,7 +8,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 )
 
 // TestIPTypes ensures the various functions which determine the type of an IP

@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	utilMath "github.com/Nexellia-Network/nexelliad/util/math"
+	utilMath "github.com/Nautilus-Network/nautiliad/util/math"
 )
 
 const (

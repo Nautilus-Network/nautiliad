@@ -3,18 +3,18 @@ package protowire
 import (
 	"math"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_SubmitTransactionRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_SubmitTransactionRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_SubmitTransactionRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_SubmitTransactionRequest is nil")
 	}
 	return x.SubmitTransactionRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_SubmitTransactionRequest) fromAppMessage(message *appmessage.SubmitTransactionRequestMessage) error {
+func (x *NautiliadMessage_SubmitTransactionRequest) fromAppMessage(message *appmessage.SubmitTransactionRequestMessage) error {
 	x.SubmitTransactionRequest = &SubmitTransactionRequestMessage{
 		Transaction: &RpcTransaction{},
 		AllowOrphan: message.AllowOrphan,
@@ -37,14 +37,14 @@ func (x *SubmitTransactionRequestMessage) toAppMessage() (appmessage.Message, er
 	}, nil
 }
 
-func (x *NexelliadMessage_SubmitTransactionResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_SubmitTransactionResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_SubmitTransactionResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_SubmitTransactionResponse is nil")
 	}
 	return x.SubmitTransactionResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_SubmitTransactionResponse) fromAppMessage(message *appmessage.SubmitTransactionResponseMessage) error {
+func (x *NautiliadMessage_SubmitTransactionResponse) fromAppMessage(message *appmessage.SubmitTransactionResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

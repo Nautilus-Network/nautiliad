@@ -3,10 +3,10 @@ package blockprocessor
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

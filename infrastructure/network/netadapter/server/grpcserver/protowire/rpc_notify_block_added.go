@@ -1,27 +1,27 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_NotifyBlockAddedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyBlockAddedRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.NotifyBlockAddedRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_NotifyBlockAddedRequest) fromAppMessage(_ *appmessage.NotifyBlockAddedRequestMessage) error {
+func (x *NautiliadMessage_NotifyBlockAddedRequest) fromAppMessage(_ *appmessage.NotifyBlockAddedRequestMessage) error {
 	x.NotifyBlockAddedRequest = &NotifyBlockAddedRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_NotifyBlockAddedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyBlockAddedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyBlockAddedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyBlockAddedResponse is nil")
 	}
 	return x.NotifyBlockAddedResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_NotifyBlockAddedResponse) fromAppMessage(message *appmessage.NotifyBlockAddedResponseMessage) error {
+func (x *NautiliadMessage_NotifyBlockAddedResponse) fromAppMessage(message *appmessage.NotifyBlockAddedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -46,14 +46,14 @@ func (x *NotifyBlockAddedResponseMessage) toAppMessage() (appmessage.Message, er
 	}, nil
 }
 
-func (x *NexelliadMessage_BlockAddedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BlockAddedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BlockAddedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BlockAddedNotification is nil")
 	}
 	return x.BlockAddedNotification.toAppMessage()
 }
 
-func (x *NexelliadMessage_BlockAddedNotification) fromAppMessage(message *appmessage.BlockAddedNotificationMessage) error {
+func (x *NautiliadMessage_BlockAddedNotification) fromAppMessage(message *appmessage.BlockAddedNotificationMessage) error {
 	block := &RpcBlock{}
 	err := block.fromAppMessage(message.Block)
 	if err != nil {

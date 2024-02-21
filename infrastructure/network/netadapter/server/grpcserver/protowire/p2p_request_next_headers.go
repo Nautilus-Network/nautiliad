@@ -1,17 +1,17 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_RequestNextHeaders) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_RequestNextHeaders) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_RequestNextHeaders is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_RequestNextHeaders is nil")
 	}
 	return &appmessage.MsgRequestNextHeaders{}, nil
 }
 
-func (x *NexelliadMessage_RequestNextHeaders) fromAppMessage(_ *appmessage.MsgRequestNextHeaders) error {
+func (x *NautiliadMessage_RequestNextHeaders) fromAppMessage(_ *appmessage.MsgRequestNextHeaders) error {
 	return nil
 }

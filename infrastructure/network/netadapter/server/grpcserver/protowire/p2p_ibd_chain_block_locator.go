@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_IbdChainBlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_IbdChainBlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_IbdChainBlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_IbdChainBlockLocator is nil")
 	}
 	return x.IbdChainBlockLocator.toAppMessage()
 }
@@ -25,7 +25,7 @@ func (x *IbdChainBlockLocatorMessage) toAppMessage() (appmessage.Message, error)
 	}, nil
 }
 
-func (x *NexelliadMessage_IbdChainBlockLocator) fromAppMessage(message *appmessage.MsgIBDChainBlockLocator) error {
+func (x *NautiliadMessage_IbdChainBlockLocator) fromAppMessage(message *appmessage.MsgIBDChainBlockLocator) error {
 	x.IbdChainBlockLocator = &IbdChainBlockLocatorMessage{
 		BlockLocatorHashes: domainHashesToProto(message.BlockLocatorHashes),
 	}

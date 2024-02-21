@@ -43,8 +43,8 @@ func (c *p2PClient) MessageStream(ctx context.Context, opts ...grpc.CallOption) 
 }
 
 type P2P_MessageStreamClient interface {
-	Send(*NexelliadMessage) error
-	Recv() (*NexelliadMessage, error)
+	Send(*NautiliadMessage) error
+	Recv() (*NautiliadMessage, error)
 	grpc.ClientStream
 }
 
@@ -52,12 +52,12 @@ type p2PMessageStreamClient struct {
 	grpc.ClientStream
 }
 
-func (x *p2PMessageStreamClient) Send(m *NexelliadMessage) error {
+func (x *p2PMessageStreamClient) Send(m *NautiliadMessage) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *p2PMessageStreamClient) Recv() (*NexelliadMessage, error) {
-	m := new(NexelliadMessage)
+func (x *p2PMessageStreamClient) Recv() (*NautiliadMessage, error) {
+	m := new(NautiliadMessage)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -97,8 +97,8 @@ func _P2P_MessageStream_Handler(srv interface{}, stream grpc.ServerStream) error
 }
 
 type P2P_MessageStreamServer interface {
-	Send(*NexelliadMessage) error
-	Recv() (*NexelliadMessage, error)
+	Send(*NautiliadMessage) error
+	Recv() (*NautiliadMessage, error)
 	grpc.ServerStream
 }
 
@@ -106,12 +106,12 @@ type p2PMessageStreamServer struct {
 	grpc.ServerStream
 }
 
-func (x *p2PMessageStreamServer) Send(m *NexelliadMessage) error {
+func (x *p2PMessageStreamServer) Send(m *NautiliadMessage) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *p2PMessageStreamServer) Recv() (*NexelliadMessage, error) {
-	m := new(NexelliadMessage)
+func (x *p2PMessageStreamServer) Recv() (*NautiliadMessage, error) {
+	m := new(NautiliadMessage)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -161,8 +161,8 @@ func (c *rPCClient) MessageStream(ctx context.Context, opts ...grpc.CallOption) 
 }
 
 type RPC_MessageStreamClient interface {
-	Send(*NexelliadMessage) error
-	Recv() (*NexelliadMessage, error)
+	Send(*NautiliadMessage) error
+	Recv() (*NautiliadMessage, error)
 	grpc.ClientStream
 }
 
@@ -170,12 +170,12 @@ type rPCMessageStreamClient struct {
 	grpc.ClientStream
 }
 
-func (x *rPCMessageStreamClient) Send(m *NexelliadMessage) error {
+func (x *rPCMessageStreamClient) Send(m *NautiliadMessage) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *rPCMessageStreamClient) Recv() (*NexelliadMessage, error) {
-	m := new(NexelliadMessage)
+func (x *rPCMessageStreamClient) Recv() (*NautiliadMessage, error) {
+	m := new(NautiliadMessage)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -215,8 +215,8 @@ func _RPC_MessageStream_Handler(srv interface{}, stream grpc.ServerStream) error
 }
 
 type RPC_MessageStreamServer interface {
-	Send(*NexelliadMessage) error
-	Recv() (*NexelliadMessage, error)
+	Send(*NautiliadMessage) error
+	Recv() (*NautiliadMessage, error)
 	grpc.ServerStream
 }
 
@@ -224,12 +224,12 @@ type rPCMessageStreamServer struct {
 	grpc.ServerStream
 }
 
-func (x *rPCMessageStreamServer) Send(m *NexelliadMessage) error {
+func (x *rPCMessageStreamServer) Send(m *NautiliadMessage) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *rPCMessageStreamServer) Recv() (*NexelliadMessage, error) {
-	m := new(NexelliadMessage)
+func (x *rPCMessageStreamServer) Recv() (*NautiliadMessage, error) {
+	m := new(NautiliadMessage)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
 	}

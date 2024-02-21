@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_ResolveFinalityConflictRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_ResolveFinalityConflictRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_ResolveFinalityConflictRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_ResolveFinalityConflictRequest is nil")
 	}
 	return x.ResolveFinalityConflictRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_ResolveFinalityConflictRequest) fromAppMessage(message *appmessage.ResolveFinalityConflictRequestMessage) error {
+func (x *NautiliadMessage_ResolveFinalityConflictRequest) fromAppMessage(message *appmessage.ResolveFinalityConflictRequestMessage) error {
 	x.ResolveFinalityConflictRequest = &ResolveFinalityConflictRequestMessage{
 		FinalityBlockHash: message.FinalityBlockHash,
 	}
@@ -28,14 +28,14 @@ func (x *ResolveFinalityConflictRequestMessage) toAppMessage() (appmessage.Messa
 	}, nil
 }
 
-func (x *NexelliadMessage_ResolveFinalityConflictResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_ResolveFinalityConflictResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_ResolveFinalityConflictResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_ResolveFinalityConflictResponse is nil")
 	}
 	return x.ResolveFinalityConflictResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_ResolveFinalityConflictResponse) fromAppMessage(message *appmessage.ResolveFinalityConflictResponseMessage) error {
+func (x *NautiliadMessage_ResolveFinalityConflictResponse) fromAppMessage(message *appmessage.ResolveFinalityConflictResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

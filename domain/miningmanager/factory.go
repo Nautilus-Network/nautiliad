@@ -4,10 +4,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensusreference"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/Nexellia-Network/nexelliad/domain/miningmanager/mempool"
+	"github.com/Nautilus-Network/nautiliad/domain/consensusreference"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/Nautilus-Network/nautiliad/domain/miningmanager/mempool"
 )
 
 // Factory instantiates new mining managers

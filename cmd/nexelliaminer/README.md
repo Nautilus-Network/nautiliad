@@ -1,6 +1,6 @@
-# nexelliaminer
+# nautilusminer
 
-nexelliaminer is a CPU-based miner for nexelliad
+nautilusminer is a CPU-based miner for nautiliad
 
 ## Requirements
 
@@ -19,11 +19,11 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install nexelliad including all dependencies:
+- Run the following commands to obtain and install nautiliad including all dependencies:
 
 ```bash
-$ git clone https://github.com/Nexellia-Network/nexelliad/
-$ cd nexelliad/cmd/nexelliaminer
+$ git clone https://github.com/Nautilus-Network/nautiliad/
+$ cd nautiliad/cmd/nautilusminer
 $ go install .
 ```
 
@@ -33,13 +33,13 @@ $ go install .
   
 ## Usage
 
-The full nexelliaminer configuration options can be seen with:
+The full nautilusminer configuration options can be seen with:
 
 ```bash
-$ nexelliaminer --help
+$ nautilusminer --help
 ```
 
 But the minimum configuration needed to run it is:
 ```bash
-$ nexelliaminer --miningaddr=<YOUR_MINING_ADDRESS>
+$ nautilusminer --miningaddr=<YOUR_MINING_ADDRESS>
 ```

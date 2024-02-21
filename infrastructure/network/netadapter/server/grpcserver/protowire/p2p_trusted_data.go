@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_TrustedData) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_TrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_TrustedDataMessage is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_TrustedDataMessage is nil")
 	}
 
 	daaWindow := make([]*appmessage.TrustedDataDAAHeader, len(x.TrustedData.DaaWindow))
@@ -43,7 +43,7 @@ func (x *NexelliadMessage_TrustedData) toAppMessage() (appmessage.Message, error
 	}, nil
 }
 
-func (x *NexelliadMessage_TrustedData) fromAppMessage(msgTrustedData *appmessage.MsgTrustedData) error {
+func (x *NautiliadMessage_TrustedData) fromAppMessage(msgTrustedData *appmessage.MsgTrustedData) error {
 	x.TrustedData = &TrustedDataMessage{
 		DaaWindow:    make([]*DaaBlockV4, len(msgTrustedData.DAAWindow)),
 		GhostdagData: make([]*BlockGhostdagDataHashPair, len(msgTrustedData.GHOSTDAGData)),

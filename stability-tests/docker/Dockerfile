@@ -1,14 +1,14 @@
 ARG KASPAD_IMAGE
 ARG KASPAMINER_IMAGE
 
-FROM ${KASPAD_IMAGE} as nexelliad
-FROM ${KASPAMINER_IMAGE} as nexelliaminer
+FROM ${KASPAD_IMAGE} as nautiliad
+FROM ${KASPAMINER_IMAGE} as nautilusminer
 
 FROM golang:1.19-alpine
 
-RUN mkdir -p /go/src/github.com/Nexellia-Network/nexelliad/
+RUN mkdir -p /go/src/github.com/Nautilus-Network/nautiliad/
 
-WORKDIR /go/src/github.com/Nexellia-Network/nexelliad/
+WORKDIR /go/src/github.com/Nautilus-Network/nautiliad/
 
 RUN apk add bash build-base git
 
@@ -19,11 +19,11 @@ RUN go mod download
 
 COPY . .
 
-COPY --from=nexelliad /app/ /app/
-COPY --from=nexelliaminer /app/ /app/
+COPY --from=nautiliad /app/ /app/
+COPY --from=nautilusminer /app/ /app/
 ENV PATH="/app:${PATH}"
 
-WORKDIR /go/src/github.com/Nexellia-Network/nexelliad/stability-tests
+WORKDIR /go/src/github.com/Nautilus-Network/nautiliad/stability-tests
 
 RUN go install ./...
 

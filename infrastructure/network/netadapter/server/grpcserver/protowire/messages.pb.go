@@ -20,147 +20,147 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type NexelliadMessage struct {
+type NautiliadMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//	*NexelliadMessage_Addresses
-	//	*NexelliadMessage_Block
-	//	*NexelliadMessage_Transaction
-	//	*NexelliadMessage_BlockLocator
-	//	*NexelliadMessage_RequestAddresses
-	//	*NexelliadMessage_RequestRelayBlocks
-	//	*NexelliadMessage_RequestTransactions
-	//	*NexelliadMessage_IbdBlock
-	//	*NexelliadMessage_InvRelayBlock
-	//	*NexelliadMessage_InvTransactions
-	//	*NexelliadMessage_Ping
-	//	*NexelliadMessage_Pong
-	//	*NexelliadMessage_Verack
-	//	*NexelliadMessage_Version
-	//	*NexelliadMessage_TransactionNotFound
-	//	*NexelliadMessage_Reject
-	//	*NexelliadMessage_PruningPointUtxoSetChunk
-	//	*NexelliadMessage_RequestIBDBlocks
-	//	*NexelliadMessage_UnexpectedPruningPoint
-	//	*NexelliadMessage_IbdBlockLocator
-	//	*NexelliadMessage_IbdBlockLocatorHighestHash
-	//	*NexelliadMessage_RequestNextPruningPointUtxoSetChunk
-	//	*NexelliadMessage_DonePruningPointUtxoSetChunks
-	//	*NexelliadMessage_IbdBlockLocatorHighestHashNotFound
-	//	*NexelliadMessage_BlockWithTrustedData
-	//	*NexelliadMessage_DoneBlocksWithTrustedData
-	//	*NexelliadMessage_RequestPruningPointAndItsAnticone
-	//	*NexelliadMessage_BlockHeaders
-	//	*NexelliadMessage_RequestNextHeaders
-	//	*NexelliadMessage_DoneHeaders
-	//	*NexelliadMessage_RequestPruningPointUTXOSet
-	//	*NexelliadMessage_RequestHeaders
-	//	*NexelliadMessage_RequestBlockLocator
-	//	*NexelliadMessage_PruningPoints
-	//	*NexelliadMessage_RequestPruningPointProof
-	//	*NexelliadMessage_PruningPointProof
-	//	*NexelliadMessage_Ready
-	//	*NexelliadMessage_BlockWithTrustedDataV4
-	//	*NexelliadMessage_TrustedData
-	//	*NexelliadMessage_RequestIBDChainBlockLocator
-	//	*NexelliadMessage_IbdChainBlockLocator
-	//	*NexelliadMessage_RequestAnticone
-	//	*NexelliadMessage_RequestNextPruningPointAndItsAnticoneBlocks
-	//	*NexelliadMessage_GetCurrentNetworkRequest
-	//	*NexelliadMessage_GetCurrentNetworkResponse
-	//	*NexelliadMessage_SubmitBlockRequest
-	//	*NexelliadMessage_SubmitBlockResponse
-	//	*NexelliadMessage_GetBlockTemplateRequest
-	//	*NexelliadMessage_GetBlockTemplateResponse
-	//	*NexelliadMessage_NotifyBlockAddedRequest
-	//	*NexelliadMessage_NotifyBlockAddedResponse
-	//	*NexelliadMessage_BlockAddedNotification
-	//	*NexelliadMessage_GetPeerAddressesRequest
-	//	*NexelliadMessage_GetPeerAddressesResponse
-	//	*NexelliadMessage_GetSelectedTipHashRequest
-	//	*NexelliadMessage_GetSelectedTipHashResponse
-	//	*NexelliadMessage_GetMempoolEntryRequest
-	//	*NexelliadMessage_GetMempoolEntryResponse
-	//	*NexelliadMessage_GetConnectedPeerInfoRequest
-	//	*NexelliadMessage_GetConnectedPeerInfoResponse
-	//	*NexelliadMessage_AddPeerRequest
-	//	*NexelliadMessage_AddPeerResponse
-	//	*NexelliadMessage_SubmitTransactionRequest
-	//	*NexelliadMessage_SubmitTransactionResponse
-	//	*NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest
-	//	*NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse
-	//	*NexelliadMessage_VirtualSelectedParentChainChangedNotification
-	//	*NexelliadMessage_GetBlockRequest
-	//	*NexelliadMessage_GetBlockResponse
-	//	*NexelliadMessage_GetSubnetworkRequest
-	//	*NexelliadMessage_GetSubnetworkResponse
-	//	*NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest
-	//	*NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse
-	//	*NexelliadMessage_GetBlocksRequest
-	//	*NexelliadMessage_GetBlocksResponse
-	//	*NexelliadMessage_GetBlockCountRequest
-	//	*NexelliadMessage_GetBlockCountResponse
-	//	*NexelliadMessage_GetBlockDagInfoRequest
-	//	*NexelliadMessage_GetBlockDagInfoResponse
-	//	*NexelliadMessage_ResolveFinalityConflictRequest
-	//	*NexelliadMessage_ResolveFinalityConflictResponse
-	//	*NexelliadMessage_NotifyFinalityConflictsRequest
-	//	*NexelliadMessage_NotifyFinalityConflictsResponse
-	//	*NexelliadMessage_FinalityConflictNotification
-	//	*NexelliadMessage_FinalityConflictResolvedNotification
-	//	*NexelliadMessage_GetMempoolEntriesRequest
-	//	*NexelliadMessage_GetMempoolEntriesResponse
-	//	*NexelliadMessage_ShutDownRequest
-	//	*NexelliadMessage_ShutDownResponse
-	//	*NexelliadMessage_GetHeadersRequest
-	//	*NexelliadMessage_GetHeadersResponse
-	//	*NexelliadMessage_NotifyUtxosChangedRequest
-	//	*NexelliadMessage_NotifyUtxosChangedResponse
-	//	*NexelliadMessage_UtxosChangedNotification
-	//	*NexelliadMessage_GetUtxosByAddressesRequest
-	//	*NexelliadMessage_GetUtxosByAddressesResponse
-	//	*NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest
-	//	*NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse
-	//	*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
-	//	*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
-	//	*NexelliadMessage_VirtualSelectedParentBlueScoreChangedNotification
-	//	*NexelliadMessage_BanRequest
-	//	*NexelliadMessage_BanResponse
-	//	*NexelliadMessage_UnbanRequest
-	//	*NexelliadMessage_UnbanResponse
-	//	*NexelliadMessage_GetInfoRequest
-	//	*NexelliadMessage_GetInfoResponse
-	//	*NexelliadMessage_StopNotifyingUtxosChangedRequest
-	//	*NexelliadMessage_StopNotifyingUtxosChangedResponse
-	//	*NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest
-	//	*NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse
-	//	*NexelliadMessage_PruningPointUTXOSetOverrideNotification
-	//	*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
-	//	*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
-	//	*NexelliadMessage_EstimateNetworkHashesPerSecondRequest
-	//	*NexelliadMessage_EstimateNetworkHashesPerSecondResponse
-	//	*NexelliadMessage_NotifyVirtualDaaScoreChangedRequest
-	//	*NexelliadMessage_NotifyVirtualDaaScoreChangedResponse
-	//	*NexelliadMessage_VirtualDaaScoreChangedNotification
-	//	*NexelliadMessage_GetBalanceByAddressRequest
-	//	*NexelliadMessage_GetBalanceByAddressResponse
-	//	*NexelliadMessage_GetBalancesByAddressesRequest
-	//	*NexelliadMessage_GetBalancesByAddressesResponse
-	//	*NexelliadMessage_NotifyNewBlockTemplateRequest
-	//	*NexelliadMessage_NotifyNewBlockTemplateResponse
-	//	*NexelliadMessage_NewBlockTemplateNotification
-	//	*NexelliadMessage_GetMempoolEntriesByAddressesRequest
-	//	*NexelliadMessage_GetMempoolEntriesByAddressesResponse
-	//	*NexelliadMessage_GetCoinSupplyRequest
-	//	*NexelliadMessage_GetCoinSupplyResponse
-	Payload isNexelliadMessage_Payload `protobuf_oneof:"payload"`
+	//	*NautiliadMessage_Addresses
+	//	*NautiliadMessage_Block
+	//	*NautiliadMessage_Transaction
+	//	*NautiliadMessage_BlockLocator
+	//	*NautiliadMessage_RequestAddresses
+	//	*NautiliadMessage_RequestRelayBlocks
+	//	*NautiliadMessage_RequestTransactions
+	//	*NautiliadMessage_IbdBlock
+	//	*NautiliadMessage_InvRelayBlock
+	//	*NautiliadMessage_InvTransactions
+	//	*NautiliadMessage_Ping
+	//	*NautiliadMessage_Pong
+	//	*NautiliadMessage_Verack
+	//	*NautiliadMessage_Version
+	//	*NautiliadMessage_TransactionNotFound
+	//	*NautiliadMessage_Reject
+	//	*NautiliadMessage_PruningPointUtxoSetChunk
+	//	*NautiliadMessage_RequestIBDBlocks
+	//	*NautiliadMessage_UnexpectedPruningPoint
+	//	*NautiliadMessage_IbdBlockLocator
+	//	*NautiliadMessage_IbdBlockLocatorHighestHash
+	//	*NautiliadMessage_RequestNextPruningPointUtxoSetChunk
+	//	*NautiliadMessage_DonePruningPointUtxoSetChunks
+	//	*NautiliadMessage_IbdBlockLocatorHighestHashNotFound
+	//	*NautiliadMessage_BlockWithTrustedData
+	//	*NautiliadMessage_DoneBlocksWithTrustedData
+	//	*NautiliadMessage_RequestPruningPointAndItsAnticone
+	//	*NautiliadMessage_BlockHeaders
+	//	*NautiliadMessage_RequestNextHeaders
+	//	*NautiliadMessage_DoneHeaders
+	//	*NautiliadMessage_RequestPruningPointUTXOSet
+	//	*NautiliadMessage_RequestHeaders
+	//	*NautiliadMessage_RequestBlockLocator
+	//	*NautiliadMessage_PruningPoints
+	//	*NautiliadMessage_RequestPruningPointProof
+	//	*NautiliadMessage_PruningPointProof
+	//	*NautiliadMessage_Ready
+	//	*NautiliadMessage_BlockWithTrustedDataV4
+	//	*NautiliadMessage_TrustedData
+	//	*NautiliadMessage_RequestIBDChainBlockLocator
+	//	*NautiliadMessage_IbdChainBlockLocator
+	//	*NautiliadMessage_RequestAnticone
+	//	*NautiliadMessage_RequestNextPruningPointAndItsAnticoneBlocks
+	//	*NautiliadMessage_GetCurrentNetworkRequest
+	//	*NautiliadMessage_GetCurrentNetworkResponse
+	//	*NautiliadMessage_SubmitBlockRequest
+	//	*NautiliadMessage_SubmitBlockResponse
+	//	*NautiliadMessage_GetBlockTemplateRequest
+	//	*NautiliadMessage_GetBlockTemplateResponse
+	//	*NautiliadMessage_NotifyBlockAddedRequest
+	//	*NautiliadMessage_NotifyBlockAddedResponse
+	//	*NautiliadMessage_BlockAddedNotification
+	//	*NautiliadMessage_GetPeerAddressesRequest
+	//	*NautiliadMessage_GetPeerAddressesResponse
+	//	*NautiliadMessage_GetSelectedTipHashRequest
+	//	*NautiliadMessage_GetSelectedTipHashResponse
+	//	*NautiliadMessage_GetMempoolEntryRequest
+	//	*NautiliadMessage_GetMempoolEntryResponse
+	//	*NautiliadMessage_GetConnectedPeerInfoRequest
+	//	*NautiliadMessage_GetConnectedPeerInfoResponse
+	//	*NautiliadMessage_AddPeerRequest
+	//	*NautiliadMessage_AddPeerResponse
+	//	*NautiliadMessage_SubmitTransactionRequest
+	//	*NautiliadMessage_SubmitTransactionResponse
+	//	*NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest
+	//	*NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse
+	//	*NautiliadMessage_VirtualSelectedParentChainChangedNotification
+	//	*NautiliadMessage_GetBlockRequest
+	//	*NautiliadMessage_GetBlockResponse
+	//	*NautiliadMessage_GetSubnetworkRequest
+	//	*NautiliadMessage_GetSubnetworkResponse
+	//	*NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest
+	//	*NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse
+	//	*NautiliadMessage_GetBlocksRequest
+	//	*NautiliadMessage_GetBlocksResponse
+	//	*NautiliadMessage_GetBlockCountRequest
+	//	*NautiliadMessage_GetBlockCountResponse
+	//	*NautiliadMessage_GetBlockDagInfoRequest
+	//	*NautiliadMessage_GetBlockDagInfoResponse
+	//	*NautiliadMessage_ResolveFinalityConflictRequest
+	//	*NautiliadMessage_ResolveFinalityConflictResponse
+	//	*NautiliadMessage_NotifyFinalityConflictsRequest
+	//	*NautiliadMessage_NotifyFinalityConflictsResponse
+	//	*NautiliadMessage_FinalityConflictNotification
+	//	*NautiliadMessage_FinalityConflictResolvedNotification
+	//	*NautiliadMessage_GetMempoolEntriesRequest
+	//	*NautiliadMessage_GetMempoolEntriesResponse
+	//	*NautiliadMessage_ShutDownRequest
+	//	*NautiliadMessage_ShutDownResponse
+	//	*NautiliadMessage_GetHeadersRequest
+	//	*NautiliadMessage_GetHeadersResponse
+	//	*NautiliadMessage_NotifyUtxosChangedRequest
+	//	*NautiliadMessage_NotifyUtxosChangedResponse
+	//	*NautiliadMessage_UtxosChangedNotification
+	//	*NautiliadMessage_GetUtxosByAddressesRequest
+	//	*NautiliadMessage_GetUtxosByAddressesResponse
+	//	*NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest
+	//	*NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse
+	//	*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
+	//	*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
+	//	*NautiliadMessage_VirtualSelectedParentBlueScoreChangedNotification
+	//	*NautiliadMessage_BanRequest
+	//	*NautiliadMessage_BanResponse
+	//	*NautiliadMessage_UnbanRequest
+	//	*NautiliadMessage_UnbanResponse
+	//	*NautiliadMessage_GetInfoRequest
+	//	*NautiliadMessage_GetInfoResponse
+	//	*NautiliadMessage_StopNotifyingUtxosChangedRequest
+	//	*NautiliadMessage_StopNotifyingUtxosChangedResponse
+	//	*NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest
+	//	*NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse
+	//	*NautiliadMessage_PruningPointUTXOSetOverrideNotification
+	//	*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
+	//	*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
+	//	*NautiliadMessage_EstimateNetworkHashesPerSecondRequest
+	//	*NautiliadMessage_EstimateNetworkHashesPerSecondResponse
+	//	*NautiliadMessage_NotifyVirtualDaaScoreChangedRequest
+	//	*NautiliadMessage_NotifyVirtualDaaScoreChangedResponse
+	//	*NautiliadMessage_VirtualDaaScoreChangedNotification
+	//	*NautiliadMessage_GetBalanceByAddressRequest
+	//	*NautiliadMessage_GetBalanceByAddressResponse
+	//	*NautiliadMessage_GetBalancesByAddressesRequest
+	//	*NautiliadMessage_GetBalancesByAddressesResponse
+	//	*NautiliadMessage_NotifyNewBlockTemplateRequest
+	//	*NautiliadMessage_NotifyNewBlockTemplateResponse
+	//	*NautiliadMessage_NewBlockTemplateNotification
+	//	*NautiliadMessage_GetMempoolEntriesByAddressesRequest
+	//	*NautiliadMessage_GetMempoolEntriesByAddressesResponse
+	//	*NautiliadMessage_GetCoinSupplyRequest
+	//	*NautiliadMessage_GetCoinSupplyResponse
+	Payload isNautiliadMessage_Payload `protobuf_oneof:"payload"`
 }
 
-func (x *NexelliadMessage) Reset() {
-	*x = NexelliadMessage{}
+func (x *NautiliadMessage) Reset() {
+	*x = NautiliadMessage{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_messages_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -168,13 +168,13 @@ func (x *NexelliadMessage) Reset() {
 	}
 }
 
-func (x *NexelliadMessage) String() string {
+func (x *NautiliadMessage) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*NexelliadMessage) ProtoMessage() {}
+func (*NautiliadMessage) ProtoMessage() {}
 
-func (x *NexelliadMessage) ProtoReflect() protoreflect.Message {
+func (x *NautiliadMessage) ProtoReflect() protoreflect.Message {
 	mi := &file_messages_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,1711 +186,1711 @@ func (x *NexelliadMessage) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use NexelliadMessage.ProtoReflect.Descriptor instead.
-func (*NexelliadMessage) Descriptor() ([]byte, []int) {
+// Deprecated: Use NautiliadMessage.ProtoReflect.Descriptor instead.
+func (*NautiliadMessage) Descriptor() ([]byte, []int) {
 	return file_messages_proto_rawDescGZIP(), []int{0}
 }
 
-func (m *NexelliadMessage) GetPayload() isNexelliadMessage_Payload {
+func (m *NautiliadMessage) GetPayload() isNautiliadMessage_Payload {
 	if m != nil {
 		return m.Payload
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetAddresses() *AddressesMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Addresses); ok {
+func (x *NautiliadMessage) GetAddresses() *AddressesMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Addresses); ok {
 		return x.Addresses
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Block); ok {
+func (x *NautiliadMessage) GetBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Block); ok {
 		return x.Block
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetTransaction() *TransactionMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Transaction); ok {
+func (x *NautiliadMessage) GetTransaction() *TransactionMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Transaction); ok {
 		return x.Transaction
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlockLocator() *BlockLocatorMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BlockLocator); ok {
+func (x *NautiliadMessage) GetBlockLocator() *BlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BlockLocator); ok {
 		return x.BlockLocator
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestAddresses() *RequestAddressesMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestAddresses); ok {
+func (x *NautiliadMessage) GetRequestAddresses() *RequestAddressesMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestAddresses); ok {
 		return x.RequestAddresses
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestRelayBlocks); ok {
+func (x *NautiliadMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestRelayBlocks); ok {
 		return x.RequestRelayBlocks
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestTransactions() *RequestTransactionsMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestTransactions); ok {
+func (x *NautiliadMessage) GetRequestTransactions() *RequestTransactionsMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestTransactions); ok {
 		return x.RequestTransactions
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetIbdBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_IbdBlock); ok {
+func (x *NautiliadMessage) GetIbdBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_IbdBlock); ok {
 		return x.IbdBlock
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetInvRelayBlock() *InvRelayBlockMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_InvRelayBlock); ok {
+func (x *NautiliadMessage) GetInvRelayBlock() *InvRelayBlockMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_InvRelayBlock); ok {
 		return x.InvRelayBlock
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetInvTransactions() *InvTransactionsMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_InvTransactions); ok {
+func (x *NautiliadMessage) GetInvTransactions() *InvTransactionsMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_InvTransactions); ok {
 		return x.InvTransactions
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPing() *PingMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Ping); ok {
+func (x *NautiliadMessage) GetPing() *PingMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Ping); ok {
 		return x.Ping
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPong() *PongMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Pong); ok {
+func (x *NautiliadMessage) GetPong() *PongMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Pong); ok {
 		return x.Pong
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetVerack() *VerackMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Verack); ok {
+func (x *NautiliadMessage) GetVerack() *VerackMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Verack); ok {
 		return x.Verack
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetVersion() *VersionMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Version); ok {
+func (x *NautiliadMessage) GetVersion() *VersionMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Version); ok {
 		return x.Version
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_TransactionNotFound); ok {
+func (x *NautiliadMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_TransactionNotFound); ok {
 		return x.TransactionNotFound
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetReject() *RejectMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Reject); ok {
+func (x *NautiliadMessage) GetReject() *RejectMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Reject); ok {
 		return x.Reject
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_PruningPointUtxoSetChunk); ok {
+func (x *NautiliadMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_PruningPointUtxoSetChunk); ok {
 		return x.PruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestIBDBlocks); ok {
+func (x *NautiliadMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestIBDBlocks); ok {
 		return x.RequestIBDBlocks
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_UnexpectedPruningPoint); ok {
+func (x *NautiliadMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_UnexpectedPruningPoint); ok {
 		return x.UnexpectedPruningPoint
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_IbdBlockLocator); ok {
+func (x *NautiliadMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_IbdBlockLocator); ok {
 		return x.IbdBlockLocator
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_IbdBlockLocatorHighestHash); ok {
+func (x *NautiliadMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_IbdBlockLocatorHighestHash); ok {
 		return x.IbdBlockLocatorHighestHash
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestNextPruningPointUtxoSetChunk); ok {
+func (x *NautiliadMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestNextPruningPointUtxoSetChunk); ok {
 		return x.RequestNextPruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_DonePruningPointUtxoSetChunks); ok {
+func (x *NautiliadMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_DonePruningPointUtxoSetChunks); ok {
 		return x.DonePruningPointUtxoSetChunks
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_IbdBlockLocatorHighestHashNotFound); ok {
+func (x *NautiliadMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_IbdBlockLocatorHighestHashNotFound); ok {
 		return x.IbdBlockLocatorHighestHashNotFound
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BlockWithTrustedData); ok {
+func (x *NautiliadMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BlockWithTrustedData); ok {
 		return x.BlockWithTrustedData
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_DoneBlocksWithTrustedData); ok {
+func (x *NautiliadMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_DoneBlocksWithTrustedData); ok {
 		return x.DoneBlocksWithTrustedData
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestPruningPointAndItsAnticone); ok {
+func (x *NautiliadMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestPruningPointAndItsAnticone); ok {
 		return x.RequestPruningPointAndItsAnticone
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlockHeaders() *BlockHeadersMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BlockHeaders); ok {
+func (x *NautiliadMessage) GetBlockHeaders() *BlockHeadersMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BlockHeaders); ok {
 		return x.BlockHeaders
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestNextHeaders); ok {
+func (x *NautiliadMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestNextHeaders); ok {
 		return x.RequestNextHeaders
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetDoneHeaders() *DoneHeadersMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_DoneHeaders); ok {
+func (x *NautiliadMessage) GetDoneHeaders() *DoneHeadersMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_DoneHeaders); ok {
 		return x.DoneHeaders
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestPruningPointUTXOSet); ok {
+func (x *NautiliadMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestPruningPointUTXOSet); ok {
 		return x.RequestPruningPointUTXOSet
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestHeaders() *RequestHeadersMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestHeaders); ok {
+func (x *NautiliadMessage) GetRequestHeaders() *RequestHeadersMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestHeaders); ok {
 		return x.RequestHeaders
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestBlockLocator); ok {
+func (x *NautiliadMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestBlockLocator); ok {
 		return x.RequestBlockLocator
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPruningPoints() *PruningPointsMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_PruningPoints); ok {
+func (x *NautiliadMessage) GetPruningPoints() *PruningPointsMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_PruningPoints); ok {
 		return x.PruningPoints
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestPruningPointProof); ok {
+func (x *NautiliadMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestPruningPointProof); ok {
 		return x.RequestPruningPointProof
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPruningPointProof() *PruningPointProofMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_PruningPointProof); ok {
+func (x *NautiliadMessage) GetPruningPointProof() *PruningPointProofMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_PruningPointProof); ok {
 		return x.PruningPointProof
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetReady() *ReadyMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_Ready); ok {
+func (x *NautiliadMessage) GetReady() *ReadyMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_Ready); ok {
 		return x.Ready
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BlockWithTrustedDataV4); ok {
+func (x *NautiliadMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BlockWithTrustedDataV4); ok {
 		return x.BlockWithTrustedDataV4
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetTrustedData() *TrustedDataMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_TrustedData); ok {
+func (x *NautiliadMessage) GetTrustedData() *TrustedDataMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_TrustedData); ok {
 		return x.TrustedData
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestIBDChainBlockLocator); ok {
+func (x *NautiliadMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestIBDChainBlockLocator); ok {
 		return x.RequestIBDChainBlockLocator
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_IbdChainBlockLocator); ok {
+func (x *NautiliadMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_IbdChainBlockLocator); ok {
 		return x.IbdChainBlockLocator
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestAnticone() *RequestAnticoneMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestAnticone); ok {
+func (x *NautiliadMessage) GetRequestAnticone() *RequestAnticoneMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestAnticone); ok {
 		return x.RequestAnticone
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
+func (x *NautiliadMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
 		return x.RequestNextPruningPointAndItsAnticoneBlocks
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetCurrentNetworkRequest); ok {
+func (x *NautiliadMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetCurrentNetworkRequest); ok {
 		return x.GetCurrentNetworkRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetCurrentNetworkResponse); ok {
+func (x *NautiliadMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetCurrentNetworkResponse); ok {
 		return x.GetCurrentNetworkResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_SubmitBlockRequest); ok {
+func (x *NautiliadMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_SubmitBlockRequest); ok {
 		return x.SubmitBlockRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_SubmitBlockResponse); ok {
+func (x *NautiliadMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_SubmitBlockResponse); ok {
 		return x.SubmitBlockResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockTemplateRequest); ok {
+func (x *NautiliadMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockTemplateRequest); ok {
 		return x.GetBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockTemplateResponse); ok {
+func (x *NautiliadMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockTemplateResponse); ok {
 		return x.GetBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyBlockAddedRequest); ok {
+func (x *NautiliadMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyBlockAddedRequest); ok {
 		return x.NotifyBlockAddedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyBlockAddedResponse); ok {
+func (x *NautiliadMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyBlockAddedResponse); ok {
 		return x.NotifyBlockAddedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BlockAddedNotification); ok {
+func (x *NautiliadMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BlockAddedNotification); ok {
 		return x.BlockAddedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetPeerAddressesRequest); ok {
+func (x *NautiliadMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetPeerAddressesRequest); ok {
 		return x.GetPeerAddressesRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetPeerAddressesResponse); ok {
+func (x *NautiliadMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetPeerAddressesResponse); ok {
 		return x.GetPeerAddressesResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetSelectedTipHashRequest); ok {
+func (x *NautiliadMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetSelectedTipHashRequest); ok {
 		return x.GetSelectedTipHashRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetSelectedTipHashResponse); ok {
+func (x *NautiliadMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetSelectedTipHashResponse); ok {
 		return x.GetSelectedTipHashResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntryRequest); ok {
+func (x *NautiliadMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntryRequest); ok {
 		return x.GetMempoolEntryRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntryResponse); ok {
+func (x *NautiliadMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntryResponse); ok {
 		return x.GetMempoolEntryResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetConnectedPeerInfoRequest); ok {
+func (x *NautiliadMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetConnectedPeerInfoRequest); ok {
 		return x.GetConnectedPeerInfoRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetConnectedPeerInfoResponse); ok {
+func (x *NautiliadMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetConnectedPeerInfoResponse); ok {
 		return x.GetConnectedPeerInfoResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetAddPeerRequest() *AddPeerRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_AddPeerRequest); ok {
+func (x *NautiliadMessage) GetAddPeerRequest() *AddPeerRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_AddPeerRequest); ok {
 		return x.AddPeerRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetAddPeerResponse() *AddPeerResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_AddPeerResponse); ok {
+func (x *NautiliadMessage) GetAddPeerResponse() *AddPeerResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_AddPeerResponse); ok {
 		return x.AddPeerResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_SubmitTransactionRequest); ok {
+func (x *NautiliadMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_SubmitTransactionRequest); ok {
 		return x.SubmitTransactionRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_SubmitTransactionResponse); ok {
+func (x *NautiliadMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_SubmitTransactionResponse); ok {
 		return x.SubmitTransactionResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
+func (x *NautiliadMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentChainChangedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
+func (x *NautiliadMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentChainChangedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_VirtualSelectedParentChainChangedNotification); ok {
+func (x *NautiliadMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_VirtualSelectedParentChainChangedNotification); ok {
 		return x.VirtualSelectedParentChainChangedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockRequest() *GetBlockRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockRequest); ok {
+func (x *NautiliadMessage) GetGetBlockRequest() *GetBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockRequest); ok {
 		return x.GetBlockRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockResponse() *GetBlockResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockResponse); ok {
+func (x *NautiliadMessage) GetGetBlockResponse() *GetBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockResponse); ok {
 		return x.GetBlockResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetSubnetworkRequest); ok {
+func (x *NautiliadMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetSubnetworkRequest); ok {
 		return x.GetSubnetworkRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetSubnetworkResponse); ok {
+func (x *NautiliadMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetSubnetworkResponse); ok {
 		return x.GetSubnetworkResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
+func (x *NautiliadMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
 		return x.GetVirtualSelectedParentChainFromBlockRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
+func (x *NautiliadMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
 		return x.GetVirtualSelectedParentChainFromBlockResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlocksRequest); ok {
+func (x *NautiliadMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlocksRequest); ok {
 		return x.GetBlocksRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlocksResponse); ok {
+func (x *NautiliadMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlocksResponse); ok {
 		return x.GetBlocksResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockCountRequest); ok {
+func (x *NautiliadMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockCountRequest); ok {
 		return x.GetBlockCountRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockCountResponse); ok {
+func (x *NautiliadMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockCountResponse); ok {
 		return x.GetBlockCountResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockDagInfoRequest); ok {
+func (x *NautiliadMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockDagInfoRequest); ok {
 		return x.GetBlockDagInfoRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBlockDagInfoResponse); ok {
+func (x *NautiliadMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBlockDagInfoResponse); ok {
 		return x.GetBlockDagInfoResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_ResolveFinalityConflictRequest); ok {
+func (x *NautiliadMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_ResolveFinalityConflictRequest); ok {
 		return x.ResolveFinalityConflictRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_ResolveFinalityConflictResponse); ok {
+func (x *NautiliadMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_ResolveFinalityConflictResponse); ok {
 		return x.ResolveFinalityConflictResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyFinalityConflictsRequest); ok {
+func (x *NautiliadMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyFinalityConflictsRequest); ok {
 		return x.NotifyFinalityConflictsRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyFinalityConflictsResponse); ok {
+func (x *NautiliadMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyFinalityConflictsResponse); ok {
 		return x.NotifyFinalityConflictsResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_FinalityConflictNotification); ok {
+func (x *NautiliadMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_FinalityConflictNotification); ok {
 		return x.FinalityConflictNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_FinalityConflictResolvedNotification); ok {
+func (x *NautiliadMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_FinalityConflictResolvedNotification); ok {
 		return x.FinalityConflictResolvedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntriesRequest); ok {
+func (x *NautiliadMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntriesRequest); ok {
 		return x.GetMempoolEntriesRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntriesResponse); ok {
+func (x *NautiliadMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntriesResponse); ok {
 		return x.GetMempoolEntriesResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetShutDownRequest() *ShutDownRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_ShutDownRequest); ok {
+func (x *NautiliadMessage) GetShutDownRequest() *ShutDownRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_ShutDownRequest); ok {
 		return x.ShutDownRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetShutDownResponse() *ShutDownResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_ShutDownResponse); ok {
+func (x *NautiliadMessage) GetShutDownResponse() *ShutDownResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_ShutDownResponse); ok {
 		return x.ShutDownResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetHeadersRequest); ok {
+func (x *NautiliadMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetHeadersRequest); ok {
 		return x.GetHeadersRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetHeadersResponse); ok {
+func (x *NautiliadMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetHeadersResponse); ok {
 		return x.GetHeadersResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyUtxosChangedRequest); ok {
+func (x *NautiliadMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyUtxosChangedRequest); ok {
 		return x.NotifyUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyUtxosChangedResponse); ok {
+func (x *NautiliadMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyUtxosChangedResponse); ok {
 		return x.NotifyUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_UtxosChangedNotification); ok {
+func (x *NautiliadMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_UtxosChangedNotification); ok {
 		return x.UtxosChangedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetUtxosByAddressesRequest); ok {
+func (x *NautiliadMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetUtxosByAddressesRequest); ok {
 		return x.GetUtxosByAddressesRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetUtxosByAddressesResponse); ok {
+func (x *NautiliadMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetUtxosByAddressesResponse); ok {
 		return x.GetUtxosByAddressesResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
+func (x *NautiliadMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
 		return x.GetVirtualSelectedParentBlueScoreRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
+func (x *NautiliadMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
 		return x.GetVirtualSelectedParentBlueScoreResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
+func (x *NautiliadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
+func (x *NautiliadMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
+func (x *NautiliadMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
 		return x.VirtualSelectedParentBlueScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBanRequest() *BanRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BanRequest); ok {
+func (x *NautiliadMessage) GetBanRequest() *BanRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BanRequest); ok {
 		return x.BanRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetBanResponse() *BanResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_BanResponse); ok {
+func (x *NautiliadMessage) GetBanResponse() *BanResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_BanResponse); ok {
 		return x.BanResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetUnbanRequest() *UnbanRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_UnbanRequest); ok {
+func (x *NautiliadMessage) GetUnbanRequest() *UnbanRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_UnbanRequest); ok {
 		return x.UnbanRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetUnbanResponse() *UnbanResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_UnbanResponse); ok {
+func (x *NautiliadMessage) GetUnbanResponse() *UnbanResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_UnbanResponse); ok {
 		return x.UnbanResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetInfoRequest() *GetInfoRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetInfoRequest); ok {
+func (x *NautiliadMessage) GetGetInfoRequest() *GetInfoRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetInfoRequest); ok {
 		return x.GetInfoRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetInfoResponse() *GetInfoResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetInfoResponse); ok {
+func (x *NautiliadMessage) GetGetInfoResponse() *GetInfoResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetInfoResponse); ok {
 		return x.GetInfoResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_StopNotifyingUtxosChangedRequest); ok {
+func (x *NautiliadMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_StopNotifyingUtxosChangedRequest); ok {
 		return x.StopNotifyingUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_StopNotifyingUtxosChangedResponse); ok {
+func (x *NautiliadMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_StopNotifyingUtxosChangedResponse); ok {
 		return x.StopNotifyingUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
+func (x *NautiliadMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
 		return x.NotifyPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
+func (x *NautiliadMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
 		return x.NotifyPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_PruningPointUTXOSetOverrideNotification); ok {
+func (x *NautiliadMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_PruningPointUTXOSetOverrideNotification); ok {
 		return x.PruningPointUTXOSetOverrideNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
+func (x *NautiliadMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
+func (x *NautiliadMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_EstimateNetworkHashesPerSecondRequest); ok {
+func (x *NautiliadMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_EstimateNetworkHashesPerSecondRequest); ok {
 		return x.EstimateNetworkHashesPerSecondRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_EstimateNetworkHashesPerSecondResponse); ok {
+func (x *NautiliadMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
+func (x *NautiliadMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
+func (x *NautiliadMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_VirtualDaaScoreChangedNotification); ok {
+func (x *NautiliadMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBalanceByAddressRequest); ok {
+func (x *NautiliadMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBalanceByAddressResponse); ok {
+func (x *NautiliadMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBalancesByAddressesRequest); ok {
+func (x *NautiliadMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetBalancesByAddressesResponse); ok {
+func (x *NautiliadMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyNewBlockTemplateRequest); ok {
+func (x *NautiliadMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NotifyNewBlockTemplateResponse); ok {
+func (x *NautiliadMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_NewBlockTemplateNotification); ok {
+func (x *NautiliadMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntriesByAddressesRequest); ok {
+func (x *NautiliadMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetMempoolEntriesByAddressesResponse); ok {
+func (x *NautiliadMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetCoinSupplyRequest); ok {
+func (x *NautiliadMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
 	return nil
 }
 
-func (x *NexelliadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
-	if x, ok := x.GetPayload().(*NexelliadMessage_GetCoinSupplyResponse); ok {
+func (x *NautiliadMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
+	if x, ok := x.GetPayload().(*NautiliadMessage_GetCoinSupplyResponse); ok {
 		return x.GetCoinSupplyResponse
 	}
 	return nil
 }
 
-type isNexelliadMessage_Payload interface {
-	isNexelliadMessage_Payload()
+type isNautiliadMessage_Payload interface {
+	isNautiliadMessage_Payload()
 }
 
-type NexelliadMessage_Addresses struct {
+type NautiliadMessage_Addresses struct {
 	Addresses *AddressesMessage `protobuf:"bytes,1,opt,name=addresses,proto3,oneof"`
 }
 
-type NexelliadMessage_Block struct {
+type NautiliadMessage_Block struct {
 	Block *BlockMessage `protobuf:"bytes,2,opt,name=block,proto3,oneof"`
 }
 
-type NexelliadMessage_Transaction struct {
+type NautiliadMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
-type NexelliadMessage_BlockLocator struct {
+type NautiliadMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestAddresses struct {
+type NautiliadMessage_RequestAddresses struct {
 	RequestAddresses *RequestAddressesMessage `protobuf:"bytes,6,opt,name=requestAddresses,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestRelayBlocks struct {
+type NautiliadMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestTransactions struct {
+type NautiliadMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
-type NexelliadMessage_IbdBlock struct {
+type NautiliadMessage_IbdBlock struct {
 	IbdBlock *BlockMessage `protobuf:"bytes,13,opt,name=ibdBlock,proto3,oneof"`
 }
 
-type NexelliadMessage_InvRelayBlock struct {
+type NautiliadMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
-type NexelliadMessage_InvTransactions struct {
+type NautiliadMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
-type NexelliadMessage_Ping struct {
+type NautiliadMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
-type NexelliadMessage_Pong struct {
+type NautiliadMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
-type NexelliadMessage_Verack struct {
+type NautiliadMessage_Verack struct {
 	Verack *VerackMessage `protobuf:"bytes,19,opt,name=verack,proto3,oneof"`
 }
 
-type NexelliadMessage_Version struct {
+type NautiliadMessage_Version struct {
 	Version *VersionMessage `protobuf:"bytes,20,opt,name=version,proto3,oneof"`
 }
 
-type NexelliadMessage_TransactionNotFound struct {
+type NautiliadMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
-type NexelliadMessage_Reject struct {
+type NautiliadMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
-type NexelliadMessage_PruningPointUtxoSetChunk struct {
+type NautiliadMessage_PruningPointUtxoSetChunk struct {
 	PruningPointUtxoSetChunk *PruningPointUtxoSetChunkMessage `protobuf:"bytes,25,opt,name=pruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestIBDBlocks struct {
+type NautiliadMessage_RequestIBDBlocks struct {
 	RequestIBDBlocks *RequestIBDBlocksMessage `protobuf:"bytes,26,opt,name=requestIBDBlocks,proto3,oneof"`
 }
 
-type NexelliadMessage_UnexpectedPruningPoint struct {
+type NautiliadMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
-type NexelliadMessage_IbdBlockLocator struct {
+type NautiliadMessage_IbdBlockLocator struct {
 	IbdBlockLocator *IbdBlockLocatorMessage `protobuf:"bytes,30,opt,name=ibdBlockLocator,proto3,oneof"`
 }
 
-type NexelliadMessage_IbdBlockLocatorHighestHash struct {
+type NautiliadMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestNextPruningPointUtxoSetChunk struct {
+type NautiliadMessage_RequestNextPruningPointUtxoSetChunk struct {
 	RequestNextPruningPointUtxoSetChunk *RequestNextPruningPointUtxoSetChunkMessage `protobuf:"bytes,33,opt,name=requestNextPruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type NexelliadMessage_DonePruningPointUtxoSetChunks struct {
+type NautiliadMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
-type NexelliadMessage_IbdBlockLocatorHighestHashNotFound struct {
+type NautiliadMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
-type NexelliadMessage_BlockWithTrustedData struct {
+type NautiliadMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
-type NexelliadMessage_DoneBlocksWithTrustedData struct {
+type NautiliadMessage_DoneBlocksWithTrustedData struct {
 	DoneBlocksWithTrustedData *DoneBlocksWithTrustedDataMessage `protobuf:"bytes,37,opt,name=doneBlocksWithTrustedData,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestPruningPointAndItsAnticone struct {
+type NautiliadMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
-type NexelliadMessage_BlockHeaders struct {
+type NautiliadMessage_BlockHeaders struct {
 	BlockHeaders *BlockHeadersMessage `protobuf:"bytes,41,opt,name=blockHeaders,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestNextHeaders struct {
+type NautiliadMessage_RequestNextHeaders struct {
 	RequestNextHeaders *RequestNextHeadersMessage `protobuf:"bytes,42,opt,name=requestNextHeaders,proto3,oneof"`
 }
 
-type NexelliadMessage_DoneHeaders struct {
+type NautiliadMessage_DoneHeaders struct {
 	DoneHeaders *DoneHeadersMessage `protobuf:"bytes,43,opt,name=DoneHeaders,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestPruningPointUTXOSet struct {
+type NautiliadMessage_RequestPruningPointUTXOSet struct {
 	RequestPruningPointUTXOSet *RequestPruningPointUTXOSetMessage `protobuf:"bytes,44,opt,name=requestPruningPointUTXOSet,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestHeaders struct {
+type NautiliadMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestBlockLocator struct {
+type NautiliadMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
-type NexelliadMessage_PruningPoints struct {
+type NautiliadMessage_PruningPoints struct {
 	PruningPoints *PruningPointsMessage `protobuf:"bytes,47,opt,name=pruningPoints,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestPruningPointProof struct {
+type NautiliadMessage_RequestPruningPointProof struct {
 	RequestPruningPointProof *RequestPruningPointProofMessage `protobuf:"bytes,48,opt,name=requestPruningPointProof,proto3,oneof"`
 }
 
-type NexelliadMessage_PruningPointProof struct {
+type NautiliadMessage_PruningPointProof struct {
 	PruningPointProof *PruningPointProofMessage `protobuf:"bytes,49,opt,name=pruningPointProof,proto3,oneof"`
 }
 
-type NexelliadMessage_Ready struct {
+type NautiliadMessage_Ready struct {
 	Ready *ReadyMessage `protobuf:"bytes,50,opt,name=ready,proto3,oneof"`
 }
 
-type NexelliadMessage_BlockWithTrustedDataV4 struct {
+type NautiliadMessage_BlockWithTrustedDataV4 struct {
 	BlockWithTrustedDataV4 *BlockWithTrustedDataV4Message `protobuf:"bytes,51,opt,name=blockWithTrustedDataV4,proto3,oneof"`
 }
 
-type NexelliadMessage_TrustedData struct {
+type NautiliadMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestIBDChainBlockLocator struct {
+type NautiliadMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
-type NexelliadMessage_IbdChainBlockLocator struct {
+type NautiliadMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestAnticone struct {
+type NautiliadMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
-type NexelliadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
+type NautiliadMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
 	RequestNextPruningPointAndItsAnticoneBlocks *RequestNextPruningPointAndItsAnticoneBlocksMessage `protobuf:"bytes,56,opt,name=requestNextPruningPointAndItsAnticoneBlocks,proto3,oneof"`
 }
 
-type NexelliadMessage_GetCurrentNetworkRequest struct {
+type NautiliadMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetCurrentNetworkResponse struct {
+type NautiliadMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_SubmitBlockRequest struct {
+type NautiliadMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_SubmitBlockResponse struct {
+type NautiliadMessage_SubmitBlockResponse struct {
 	SubmitBlockResponse *SubmitBlockResponseMessage `protobuf:"bytes,1004,opt,name=submitBlockResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockTemplateRequest struct {
+type NautiliadMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockTemplateResponse struct {
+type NautiliadMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyBlockAddedRequest struct {
+type NautiliadMessage_NotifyBlockAddedRequest struct {
 	NotifyBlockAddedRequest *NotifyBlockAddedRequestMessage `protobuf:"bytes,1007,opt,name=notifyBlockAddedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyBlockAddedResponse struct {
+type NautiliadMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_BlockAddedNotification struct {
+type NautiliadMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetPeerAddressesRequest struct {
+type NautiliadMessage_GetPeerAddressesRequest struct {
 	GetPeerAddressesRequest *GetPeerAddressesRequestMessage `protobuf:"bytes,1010,opt,name=getPeerAddressesRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetPeerAddressesResponse struct {
+type NautiliadMessage_GetPeerAddressesResponse struct {
 	GetPeerAddressesResponse *GetPeerAddressesResponseMessage `protobuf:"bytes,1011,opt,name=getPeerAddressesResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetSelectedTipHashRequest struct {
+type NautiliadMessage_GetSelectedTipHashRequest struct {
 	GetSelectedTipHashRequest *GetSelectedTipHashRequestMessage `protobuf:"bytes,1012,opt,name=getSelectedTipHashRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetSelectedTipHashResponse struct {
+type NautiliadMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntryRequest struct {
+type NautiliadMessage_GetMempoolEntryRequest struct {
 	GetMempoolEntryRequest *GetMempoolEntryRequestMessage `protobuf:"bytes,1014,opt,name=getMempoolEntryRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntryResponse struct {
+type NautiliadMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetConnectedPeerInfoRequest struct {
+type NautiliadMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetConnectedPeerInfoResponse struct {
+type NautiliadMessage_GetConnectedPeerInfoResponse struct {
 	GetConnectedPeerInfoResponse *GetConnectedPeerInfoResponseMessage `protobuf:"bytes,1017,opt,name=getConnectedPeerInfoResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_AddPeerRequest struct {
+type NautiliadMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_AddPeerResponse struct {
+type NautiliadMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_SubmitTransactionRequest struct {
+type NautiliadMessage_SubmitTransactionRequest struct {
 	SubmitTransactionRequest *SubmitTransactionRequestMessage `protobuf:"bytes,1020,opt,name=submitTransactionRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_SubmitTransactionResponse struct {
+type NautiliadMessage_SubmitTransactionResponse struct {
 	SubmitTransactionResponse *SubmitTransactionResponseMessage `protobuf:"bytes,1021,opt,name=submitTransactionResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
+type NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
 	NotifyVirtualSelectedParentChainChangedRequest *NotifyVirtualSelectedParentChainChangedRequestMessage `protobuf:"bytes,1022,opt,name=notifyVirtualSelectedParentChainChangedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
+type NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
 	NotifyVirtualSelectedParentChainChangedResponse *NotifyVirtualSelectedParentChainChangedResponseMessage `protobuf:"bytes,1023,opt,name=notifyVirtualSelectedParentChainChangedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_VirtualSelectedParentChainChangedNotification struct {
+type NautiliadMessage_VirtualSelectedParentChainChangedNotification struct {
 	VirtualSelectedParentChainChangedNotification *VirtualSelectedParentChainChangedNotificationMessage `protobuf:"bytes,1024,opt,name=virtualSelectedParentChainChangedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockRequest struct {
+type NautiliadMessage_GetBlockRequest struct {
 	GetBlockRequest *GetBlockRequestMessage `protobuf:"bytes,1025,opt,name=getBlockRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockResponse struct {
+type NautiliadMessage_GetBlockResponse struct {
 	GetBlockResponse *GetBlockResponseMessage `protobuf:"bytes,1026,opt,name=getBlockResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetSubnetworkRequest struct {
+type NautiliadMessage_GetSubnetworkRequest struct {
 	GetSubnetworkRequest *GetSubnetworkRequestMessage `protobuf:"bytes,1027,opt,name=getSubnetworkRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetSubnetworkResponse struct {
+type NautiliadMessage_GetSubnetworkResponse struct {
 	GetSubnetworkResponse *GetSubnetworkResponseMessage `protobuf:"bytes,1028,opt,name=getSubnetworkResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
+type NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
 	GetVirtualSelectedParentChainFromBlockRequest *GetVirtualSelectedParentChainFromBlockRequestMessage `protobuf:"bytes,1029,opt,name=getVirtualSelectedParentChainFromBlockRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
+type NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
 	GetVirtualSelectedParentChainFromBlockResponse *GetVirtualSelectedParentChainFromBlockResponseMessage `protobuf:"bytes,1030,opt,name=getVirtualSelectedParentChainFromBlockResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlocksRequest struct {
+type NautiliadMessage_GetBlocksRequest struct {
 	GetBlocksRequest *GetBlocksRequestMessage `protobuf:"bytes,1031,opt,name=getBlocksRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlocksResponse struct {
+type NautiliadMessage_GetBlocksResponse struct {
 	GetBlocksResponse *GetBlocksResponseMessage `protobuf:"bytes,1032,opt,name=getBlocksResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockCountRequest struct {
+type NautiliadMessage_GetBlockCountRequest struct {
 	GetBlockCountRequest *GetBlockCountRequestMessage `protobuf:"bytes,1033,opt,name=getBlockCountRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockCountResponse struct {
+type NautiliadMessage_GetBlockCountResponse struct {
 	GetBlockCountResponse *GetBlockCountResponseMessage `protobuf:"bytes,1034,opt,name=getBlockCountResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockDagInfoRequest struct {
+type NautiliadMessage_GetBlockDagInfoRequest struct {
 	GetBlockDagInfoRequest *GetBlockDagInfoRequestMessage `protobuf:"bytes,1035,opt,name=getBlockDagInfoRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBlockDagInfoResponse struct {
+type NautiliadMessage_GetBlockDagInfoResponse struct {
 	GetBlockDagInfoResponse *GetBlockDagInfoResponseMessage `protobuf:"bytes,1036,opt,name=getBlockDagInfoResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_ResolveFinalityConflictRequest struct {
+type NautiliadMessage_ResolveFinalityConflictRequest struct {
 	ResolveFinalityConflictRequest *ResolveFinalityConflictRequestMessage `protobuf:"bytes,1037,opt,name=resolveFinalityConflictRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_ResolveFinalityConflictResponse struct {
+type NautiliadMessage_ResolveFinalityConflictResponse struct {
 	ResolveFinalityConflictResponse *ResolveFinalityConflictResponseMessage `protobuf:"bytes,1038,opt,name=resolveFinalityConflictResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyFinalityConflictsRequest struct {
+type NautiliadMessage_NotifyFinalityConflictsRequest struct {
 	NotifyFinalityConflictsRequest *NotifyFinalityConflictsRequestMessage `protobuf:"bytes,1039,opt,name=notifyFinalityConflictsRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyFinalityConflictsResponse struct {
+type NautiliadMessage_NotifyFinalityConflictsResponse struct {
 	NotifyFinalityConflictsResponse *NotifyFinalityConflictsResponseMessage `protobuf:"bytes,1040,opt,name=notifyFinalityConflictsResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_FinalityConflictNotification struct {
+type NautiliadMessage_FinalityConflictNotification struct {
 	FinalityConflictNotification *FinalityConflictNotificationMessage `protobuf:"bytes,1041,opt,name=finalityConflictNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_FinalityConflictResolvedNotification struct {
+type NautiliadMessage_FinalityConflictResolvedNotification struct {
 	FinalityConflictResolvedNotification *FinalityConflictResolvedNotificationMessage `protobuf:"bytes,1042,opt,name=finalityConflictResolvedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntriesRequest struct {
+type NautiliadMessage_GetMempoolEntriesRequest struct {
 	GetMempoolEntriesRequest *GetMempoolEntriesRequestMessage `protobuf:"bytes,1043,opt,name=getMempoolEntriesRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntriesResponse struct {
+type NautiliadMessage_GetMempoolEntriesResponse struct {
 	GetMempoolEntriesResponse *GetMempoolEntriesResponseMessage `protobuf:"bytes,1044,opt,name=getMempoolEntriesResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_ShutDownRequest struct {
+type NautiliadMessage_ShutDownRequest struct {
 	ShutDownRequest *ShutDownRequestMessage `protobuf:"bytes,1045,opt,name=shutDownRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_ShutDownResponse struct {
+type NautiliadMessage_ShutDownResponse struct {
 	ShutDownResponse *ShutDownResponseMessage `protobuf:"bytes,1046,opt,name=shutDownResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetHeadersRequest struct {
+type NautiliadMessage_GetHeadersRequest struct {
 	GetHeadersRequest *GetHeadersRequestMessage `protobuf:"bytes,1047,opt,name=getHeadersRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetHeadersResponse struct {
+type NautiliadMessage_GetHeadersResponse struct {
 	GetHeadersResponse *GetHeadersResponseMessage `protobuf:"bytes,1048,opt,name=getHeadersResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyUtxosChangedRequest struct {
+type NautiliadMessage_NotifyUtxosChangedRequest struct {
 	NotifyUtxosChangedRequest *NotifyUtxosChangedRequestMessage `protobuf:"bytes,1049,opt,name=notifyUtxosChangedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyUtxosChangedResponse struct {
+type NautiliadMessage_NotifyUtxosChangedResponse struct {
 	NotifyUtxosChangedResponse *NotifyUtxosChangedResponseMessage `protobuf:"bytes,1050,opt,name=notifyUtxosChangedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_UtxosChangedNotification struct {
+type NautiliadMessage_UtxosChangedNotification struct {
 	UtxosChangedNotification *UtxosChangedNotificationMessage `protobuf:"bytes,1051,opt,name=utxosChangedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetUtxosByAddressesRequest struct {
+type NautiliadMessage_GetUtxosByAddressesRequest struct {
 	GetUtxosByAddressesRequest *GetUtxosByAddressesRequestMessage `protobuf:"bytes,1052,opt,name=getUtxosByAddressesRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetUtxosByAddressesResponse struct {
+type NautiliadMessage_GetUtxosByAddressesResponse struct {
 	GetUtxosByAddressesResponse *GetUtxosByAddressesResponseMessage `protobuf:"bytes,1053,opt,name=getUtxosByAddressesResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
+type NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest struct {
 	GetVirtualSelectedParentBlueScoreRequest *GetVirtualSelectedParentBlueScoreRequestMessage `protobuf:"bytes,1054,opt,name=getVirtualSelectedParentBlueScoreRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
+type NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse struct {
 	GetVirtualSelectedParentBlueScoreResponse *GetVirtualSelectedParentBlueScoreResponseMessage `protobuf:"bytes,1055,opt,name=getVirtualSelectedParentBlueScoreResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
+type NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
 	NotifyVirtualSelectedParentBlueScoreChangedRequest *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage `protobuf:"bytes,1056,opt,name=notifyVirtualSelectedParentBlueScoreChangedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
+type NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
 	NotifyVirtualSelectedParentBlueScoreChangedResponse *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage `protobuf:"bytes,1057,opt,name=notifyVirtualSelectedParentBlueScoreChangedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
+type NautiliadMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
 	VirtualSelectedParentBlueScoreChangedNotification *VirtualSelectedParentBlueScoreChangedNotificationMessage `protobuf:"bytes,1058,opt,name=virtualSelectedParentBlueScoreChangedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_BanRequest struct {
+type NautiliadMessage_BanRequest struct {
 	BanRequest *BanRequestMessage `protobuf:"bytes,1059,opt,name=banRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_BanResponse struct {
+type NautiliadMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_UnbanRequest struct {
+type NautiliadMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_UnbanResponse struct {
+type NautiliadMessage_UnbanResponse struct {
 	UnbanResponse *UnbanResponseMessage `protobuf:"bytes,1062,opt,name=unbanResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetInfoRequest struct {
+type NautiliadMessage_GetInfoRequest struct {
 	GetInfoRequest *GetInfoRequestMessage `protobuf:"bytes,1063,opt,name=getInfoRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetInfoResponse struct {
+type NautiliadMessage_GetInfoResponse struct {
 	GetInfoResponse *GetInfoResponseMessage `protobuf:"bytes,1064,opt,name=getInfoResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_StopNotifyingUtxosChangedRequest struct {
+type NautiliadMessage_StopNotifyingUtxosChangedRequest struct {
 	StopNotifyingUtxosChangedRequest *StopNotifyingUtxosChangedRequestMessage `protobuf:"bytes,1065,opt,name=stopNotifyingUtxosChangedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_StopNotifyingUtxosChangedResponse struct {
+type NautiliadMessage_StopNotifyingUtxosChangedResponse struct {
 	StopNotifyingUtxosChangedResponse *StopNotifyingUtxosChangedResponseMessage `protobuf:"bytes,1066,opt,name=stopNotifyingUtxosChangedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
+type NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
 	NotifyPruningPointUTXOSetOverrideRequest *NotifyPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1067,opt,name=notifyPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
+type NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
 	NotifyPruningPointUTXOSetOverrideResponse *NotifyPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1068,opt,name=notifyPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_PruningPointUTXOSetOverrideNotification struct {
+type NautiliadMessage_PruningPointUTXOSetOverrideNotification struct {
 	PruningPointUTXOSetOverrideNotification *PruningPointUTXOSetOverrideNotificationMessage `protobuf:"bytes,1069,opt,name=pruningPointUTXOSetOverrideNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
+type NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
 	StopNotifyingPruningPointUTXOSetOverrideRequest *StopNotifyingPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1070,opt,name=stopNotifyingPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
+type NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
 	StopNotifyingPruningPointUTXOSetOverrideResponse *StopNotifyingPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1071,opt,name=stopNotifyingPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_EstimateNetworkHashesPerSecondRequest struct {
+type NautiliadMessage_EstimateNetworkHashesPerSecondRequest struct {
 	EstimateNetworkHashesPerSecondRequest *EstimateNetworkHashesPerSecondRequestMessage `protobuf:"bytes,1072,opt,name=estimateNetworkHashesPerSecondRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_EstimateNetworkHashesPerSecondResponse struct {
+type NautiliadMessage_EstimateNetworkHashesPerSecondResponse struct {
 	EstimateNetworkHashesPerSecondResponse *EstimateNetworkHashesPerSecondResponseMessage `protobuf:"bytes,1073,opt,name=estimateNetworkHashesPerSecondResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualDaaScoreChangedRequest struct {
+type NautiliadMessage_NotifyVirtualDaaScoreChangedRequest struct {
 	NotifyVirtualDaaScoreChangedRequest *NotifyVirtualDaaScoreChangedRequestMessage `protobuf:"bytes,1074,opt,name=notifyVirtualDaaScoreChangedRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyVirtualDaaScoreChangedResponse struct {
+type NautiliadMessage_NotifyVirtualDaaScoreChangedResponse struct {
 	NotifyVirtualDaaScoreChangedResponse *NotifyVirtualDaaScoreChangedResponseMessage `protobuf:"bytes,1075,opt,name=notifyVirtualDaaScoreChangedResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_VirtualDaaScoreChangedNotification struct {
+type NautiliadMessage_VirtualDaaScoreChangedNotification struct {
 	VirtualDaaScoreChangedNotification *VirtualDaaScoreChangedNotificationMessage `protobuf:"bytes,1076,opt,name=virtualDaaScoreChangedNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBalanceByAddressRequest struct {
+type NautiliadMessage_GetBalanceByAddressRequest struct {
 	GetBalanceByAddressRequest *GetBalanceByAddressRequestMessage `protobuf:"bytes,1077,opt,name=getBalanceByAddressRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBalanceByAddressResponse struct {
+type NautiliadMessage_GetBalanceByAddressResponse struct {
 	GetBalanceByAddressResponse *GetBalanceByAddressResponseMessage `protobuf:"bytes,1078,opt,name=getBalanceByAddressResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBalancesByAddressesRequest struct {
+type NautiliadMessage_GetBalancesByAddressesRequest struct {
 	GetBalancesByAddressesRequest *GetBalancesByAddressesRequestMessage `protobuf:"bytes,1079,opt,name=getBalancesByAddressesRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetBalancesByAddressesResponse struct {
+type NautiliadMessage_GetBalancesByAddressesResponse struct {
 	GetBalancesByAddressesResponse *GetBalancesByAddressesResponseMessage `protobuf:"bytes,1080,opt,name=getBalancesByAddressesResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyNewBlockTemplateRequest struct {
+type NautiliadMessage_NotifyNewBlockTemplateRequest struct {
 	NotifyNewBlockTemplateRequest *NotifyNewBlockTemplateRequestMessage `protobuf:"bytes,1081,opt,name=notifyNewBlockTemplateRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_NotifyNewBlockTemplateResponse struct {
+type NautiliadMessage_NotifyNewBlockTemplateResponse struct {
 	NotifyNewBlockTemplateResponse *NotifyNewBlockTemplateResponseMessage `protobuf:"bytes,1082,opt,name=notifyNewBlockTemplateResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_NewBlockTemplateNotification struct {
+type NautiliadMessage_NewBlockTemplateNotification struct {
 	NewBlockTemplateNotification *NewBlockTemplateNotificationMessage `protobuf:"bytes,1083,opt,name=newBlockTemplateNotification,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntriesByAddressesRequest struct {
+type NautiliadMessage_GetMempoolEntriesByAddressesRequest struct {
 	GetMempoolEntriesByAddressesRequest *GetMempoolEntriesByAddressesRequestMessage `protobuf:"bytes,1084,opt,name=getMempoolEntriesByAddressesRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetMempoolEntriesByAddressesResponse struct {
+type NautiliadMessage_GetMempoolEntriesByAddressesResponse struct {
 	GetMempoolEntriesByAddressesResponse *GetMempoolEntriesByAddressesResponseMessage `protobuf:"bytes,1085,opt,name=getMempoolEntriesByAddressesResponse,proto3,oneof"`
 }
 
-type NexelliadMessage_GetCoinSupplyRequest struct {
+type NautiliadMessage_GetCoinSupplyRequest struct {
 	GetCoinSupplyRequest *GetCoinSupplyRequestMessage `protobuf:"bytes,1086,opt,name=getCoinSupplyRequest,proto3,oneof"`
 }
 
-type NexelliadMessage_GetCoinSupplyResponse struct {
+type NautiliadMessage_GetCoinSupplyResponse struct {
 	GetCoinSupplyResponse *GetCoinSupplyResponseMessage `protobuf:"bytes,1087,opt,name=getCoinSupplyResponse,proto3,oneof"`
 }
 
-func (*NexelliadMessage_Addresses) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Addresses) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Block) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Block) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Transaction) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Transaction) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BlockLocator) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BlockLocator) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestAddresses) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestAddresses) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestRelayBlocks) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestRelayBlocks) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestTransactions) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestTransactions) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_IbdBlock) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_IbdBlock) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_InvRelayBlock) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_InvRelayBlock) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_InvTransactions) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_InvTransactions) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Ping) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Ping) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Pong) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Pong) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Verack) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Verack) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Version) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Version) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_TransactionNotFound) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_TransactionNotFound) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Reject) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Reject) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_PruningPointUtxoSetChunk) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_PruningPointUtxoSetChunk) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestIBDBlocks) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestIBDBlocks) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_UnexpectedPruningPoint) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_UnexpectedPruningPoint) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_IbdBlockLocator) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_IbdBlockLocator) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_IbdBlockLocatorHighestHash) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_IbdBlockLocatorHighestHash) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestNextPruningPointUtxoSetChunk) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestNextPruningPointUtxoSetChunk) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_DonePruningPointUtxoSetChunks) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_DonePruningPointUtxoSetChunks) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_IbdBlockLocatorHighestHashNotFound) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_IbdBlockLocatorHighestHashNotFound) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BlockWithTrustedData) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BlockWithTrustedData) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_DoneBlocksWithTrustedData) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_DoneBlocksWithTrustedData) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestPruningPointAndItsAnticone) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestPruningPointAndItsAnticone) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BlockHeaders) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BlockHeaders) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestNextHeaders) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestNextHeaders) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_DoneHeaders) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_DoneHeaders) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestPruningPointUTXOSet) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestPruningPointUTXOSet) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestHeaders) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestHeaders) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestBlockLocator) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestBlockLocator) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_PruningPoints) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_PruningPoints) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestPruningPointProof) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestPruningPointProof) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_PruningPointProof) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_PruningPointProof) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_Ready) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_Ready) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BlockWithTrustedDataV4) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BlockWithTrustedDataV4) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_TrustedData) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_TrustedData) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestIBDChainBlockLocator) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestIBDChainBlockLocator) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_IbdChainBlockLocator) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_IbdChainBlockLocator) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestAnticone) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestAnticone) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_RequestNextPruningPointAndItsAnticoneBlocks) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetCurrentNetworkRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetCurrentNetworkRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetCurrentNetworkResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetCurrentNetworkResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_SubmitBlockRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_SubmitBlockRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_SubmitBlockResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_SubmitBlockResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockTemplateRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockTemplateRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockTemplateResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockTemplateResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyBlockAddedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyBlockAddedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyBlockAddedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyBlockAddedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BlockAddedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BlockAddedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetPeerAddressesRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetPeerAddressesRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetPeerAddressesResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetPeerAddressesResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetSelectedTipHashRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetSelectedTipHashRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetSelectedTipHashResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetSelectedTipHashResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntryRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntryRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntryResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntryResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetConnectedPeerInfoRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetConnectedPeerInfoRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetConnectedPeerInfoResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetConnectedPeerInfoResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_AddPeerRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_AddPeerRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_AddPeerResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_AddPeerResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_SubmitTransactionRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_SubmitTransactionRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_SubmitTransactionResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_SubmitTransactionResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_VirtualSelectedParentChainChangedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_VirtualSelectedParentChainChangedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetSubnetworkRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetSubnetworkRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetSubnetworkResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetSubnetworkResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlocksRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlocksRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlocksResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlocksResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockCountRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockCountRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockCountResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockCountResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockDagInfoRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockDagInfoRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBlockDagInfoResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBlockDagInfoResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_ResolveFinalityConflictRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_ResolveFinalityConflictRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_ResolveFinalityConflictResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_ResolveFinalityConflictResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyFinalityConflictsRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyFinalityConflictsRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyFinalityConflictsResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyFinalityConflictsResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_FinalityConflictNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_FinalityConflictNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_FinalityConflictResolvedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_FinalityConflictResolvedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntriesRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntriesRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntriesResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntriesResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_ShutDownRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_ShutDownRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_ShutDownResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_ShutDownResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetHeadersRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetHeadersRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetHeadersResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetHeadersResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyUtxosChangedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyUtxosChangedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyUtxosChangedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyUtxosChangedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_UtxosChangedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_UtxosChangedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetUtxosByAddressesRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetUtxosByAddressesRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetUtxosByAddressesResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetUtxosByAddressesResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_VirtualSelectedParentBlueScoreChangedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_VirtualSelectedParentBlueScoreChangedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BanRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BanRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_BanResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_BanResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_UnbanRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_UnbanRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_UnbanResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_UnbanResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetInfoRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetInfoRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetInfoResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetInfoResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_StopNotifyingUtxosChangedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_StopNotifyingUtxosChangedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_StopNotifyingUtxosChangedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_StopNotifyingUtxosChangedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_PruningPointUTXOSetOverrideNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_PruningPointUTXOSetOverrideNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_EstimateNetworkHashesPerSecondRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_EstimateNetworkHashesPerSecondRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_EstimateNetworkHashesPerSecondResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_EstimateNetworkHashesPerSecondResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualDaaScoreChangedRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualDaaScoreChangedRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyVirtualDaaScoreChangedResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyVirtualDaaScoreChangedResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_VirtualDaaScoreChangedNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_VirtualDaaScoreChangedNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBalanceByAddressRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBalanceByAddressRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBalanceByAddressResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBalanceByAddressResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBalancesByAddressesRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBalancesByAddressesRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetBalancesByAddressesResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetBalancesByAddressesResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyNewBlockTemplateRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyNewBlockTemplateRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NotifyNewBlockTemplateResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NotifyNewBlockTemplateResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_NewBlockTemplateNotification) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_NewBlockTemplateNotification) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntriesByAddressesRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntriesByAddressesRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetMempoolEntriesByAddressesResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetMempoolEntriesByAddressesResponse) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetCoinSupplyRequest) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetCoinSupplyRequest) isNautiliadMessage_Payload() {}
 
-func (*NexelliadMessage_GetCoinSupplyResponse) isNexelliadMessage_Payload() {}
+func (*NautiliadMessage_GetCoinSupplyResponse) isNautiliadMessage_Payload() {}
 
 var File_messages_proto protoreflect.FileDescriptor
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*NexelliadMessage)(nil),                                              // 0: protowire.NexelliadMessage
+	(*NautiliadMessage)(nil),                                              // 0: protowire.NautiliadMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
@@ -2936,140 +2936,140 @@ var file_messages_proto_goTypes = []interface{}{
 	(*GetCoinSupplyResponseMessage)(nil),                               // 129: protowire.GetCoinSupplyResponseMessage
 }
 var file_messages_proto_depIdxs = []int32{
-	1,   // 0: protowire.NexelliadMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.NexelliadMessage.block:type_name -> protowire.BlockMessage
-	3,   // 2: protowire.NexelliadMessage.transaction:type_name -> protowire.TransactionMessage
-	4,   // 3: protowire.NexelliadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
-	5,   // 4: protowire.NexelliadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
-	6,   // 5: protowire.NexelliadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
-	7,   // 6: protowire.NexelliadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
-	2,   // 7: protowire.NexelliadMessage.ibdBlock:type_name -> protowire.BlockMessage
-	8,   // 8: protowire.NexelliadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
-	9,   // 9: protowire.NexelliadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
-	10,  // 10: protowire.NexelliadMessage.ping:type_name -> protowire.PingMessage
-	11,  // 11: protowire.NexelliadMessage.pong:type_name -> protowire.PongMessage
-	12,  // 12: protowire.NexelliadMessage.verack:type_name -> protowire.VerackMessage
-	13,  // 13: protowire.NexelliadMessage.version:type_name -> protowire.VersionMessage
-	14,  // 14: protowire.NexelliadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
-	15,  // 15: protowire.NexelliadMessage.reject:type_name -> protowire.RejectMessage
-	16,  // 16: protowire.NexelliadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
-	17,  // 17: protowire.NexelliadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
-	18,  // 18: protowire.NexelliadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
-	19,  // 19: protowire.NexelliadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
-	20,  // 20: protowire.NexelliadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
-	21,  // 21: protowire.NexelliadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
-	22,  // 22: protowire.NexelliadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
-	23,  // 23: protowire.NexelliadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
-	24,  // 24: protowire.NexelliadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
-	25,  // 25: protowire.NexelliadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
-	26,  // 26: protowire.NexelliadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
-	27,  // 27: protowire.NexelliadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
-	28,  // 28: protowire.NexelliadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
-	29,  // 29: protowire.NexelliadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
-	30,  // 30: protowire.NexelliadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
-	31,  // 31: protowire.NexelliadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
-	32,  // 32: protowire.NexelliadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
-	33,  // 33: protowire.NexelliadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
-	34,  // 34: protowire.NexelliadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
-	35,  // 35: protowire.NexelliadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
-	36,  // 36: protowire.NexelliadMessage.ready:type_name -> protowire.ReadyMessage
-	37,  // 37: protowire.NexelliadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
-	38,  // 38: protowire.NexelliadMessage.trustedData:type_name -> protowire.TrustedDataMessage
-	39,  // 39: protowire.NexelliadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
-	40,  // 40: protowire.NexelliadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
-	41,  // 41: protowire.NexelliadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
-	42,  // 42: protowire.NexelliadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
-	43,  // 43: protowire.NexelliadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
-	44,  // 44: protowire.NexelliadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
-	45,  // 45: protowire.NexelliadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
-	46,  // 46: protowire.NexelliadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
-	47,  // 47: protowire.NexelliadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
-	48,  // 48: protowire.NexelliadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
-	49,  // 49: protowire.NexelliadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
-	50,  // 50: protowire.NexelliadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
-	51,  // 51: protowire.NexelliadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
-	52,  // 52: protowire.NexelliadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
-	53,  // 53: protowire.NexelliadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
-	54,  // 54: protowire.NexelliadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
-	55,  // 55: protowire.NexelliadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
-	56,  // 56: protowire.NexelliadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
-	57,  // 57: protowire.NexelliadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
-	58,  // 58: protowire.NexelliadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
-	59,  // 59: protowire.NexelliadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
-	60,  // 60: protowire.NexelliadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
-	61,  // 61: protowire.NexelliadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
-	62,  // 62: protowire.NexelliadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
-	63,  // 63: protowire.NexelliadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
-	64,  // 64: protowire.NexelliadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
-	65,  // 65: protowire.NexelliadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
-	66,  // 66: protowire.NexelliadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
-	67,  // 67: protowire.NexelliadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
-	68,  // 68: protowire.NexelliadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
-	69,  // 69: protowire.NexelliadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
-	70,  // 70: protowire.NexelliadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
-	71,  // 71: protowire.NexelliadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
-	72,  // 72: protowire.NexelliadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
-	73,  // 73: protowire.NexelliadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
-	74,  // 74: protowire.NexelliadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
-	75,  // 75: protowire.NexelliadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
-	76,  // 76: protowire.NexelliadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
-	77,  // 77: protowire.NexelliadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
-	78,  // 78: protowire.NexelliadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
-	79,  // 79: protowire.NexelliadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
-	80,  // 80: protowire.NexelliadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
-	81,  // 81: protowire.NexelliadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
-	82,  // 82: protowire.NexelliadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
-	83,  // 83: protowire.NexelliadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
-	84,  // 84: protowire.NexelliadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
-	85,  // 85: protowire.NexelliadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
-	86,  // 86: protowire.NexelliadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
-	87,  // 87: protowire.NexelliadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
-	88,  // 88: protowire.NexelliadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
-	89,  // 89: protowire.NexelliadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
-	90,  // 90: protowire.NexelliadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
-	91,  // 91: protowire.NexelliadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
-	92,  // 92: protowire.NexelliadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
-	93,  // 93: protowire.NexelliadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
-	94,  // 94: protowire.NexelliadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
-	95,  // 95: protowire.NexelliadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
-	96,  // 96: protowire.NexelliadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
-	97,  // 97: protowire.NexelliadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
-	98,  // 98: protowire.NexelliadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
-	99,  // 99: protowire.NexelliadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
-	100, // 100: protowire.NexelliadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
-	101, // 101: protowire.NexelliadMessage.banRequest:type_name -> protowire.BanRequestMessage
-	102, // 102: protowire.NexelliadMessage.banResponse:type_name -> protowire.BanResponseMessage
-	103, // 103: protowire.NexelliadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
-	104, // 104: protowire.NexelliadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
-	105, // 105: protowire.NexelliadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
-	106, // 106: protowire.NexelliadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
-	107, // 107: protowire.NexelliadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
-	108, // 108: protowire.NexelliadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
-	109, // 109: protowire.NexelliadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
-	110, // 110: protowire.NexelliadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
-	111, // 111: protowire.NexelliadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
-	112, // 112: protowire.NexelliadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
-	113, // 113: protowire.NexelliadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
-	114, // 114: protowire.NexelliadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
-	115, // 115: protowire.NexelliadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
-	116, // 116: protowire.NexelliadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
-	117, // 117: protowire.NexelliadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
-	118, // 118: protowire.NexelliadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
-	119, // 119: protowire.NexelliadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
-	120, // 120: protowire.NexelliadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
-	121, // 121: protowire.NexelliadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
-	122, // 122: protowire.NexelliadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
-	123, // 123: protowire.NexelliadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
-	124, // 124: protowire.NexelliadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
-	125, // 125: protowire.NexelliadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
-	126, // 126: protowire.NexelliadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
-	127, // 127: protowire.NexelliadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
-	128, // 128: protowire.NexelliadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
-	129, // 129: protowire.NexelliadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
-	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.NexelliadMessage
-	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.NexelliadMessage
-	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.NexelliadMessage
-	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.NexelliadMessage
+	1,   // 0: protowire.NautiliadMessage.addresses:type_name -> protowire.AddressesMessage
+	2,   // 1: protowire.NautiliadMessage.block:type_name -> protowire.BlockMessage
+	3,   // 2: protowire.NautiliadMessage.transaction:type_name -> protowire.TransactionMessage
+	4,   // 3: protowire.NautiliadMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
+	5,   // 4: protowire.NautiliadMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
+	6,   // 5: protowire.NautiliadMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
+	7,   // 6: protowire.NautiliadMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
+	2,   // 7: protowire.NautiliadMessage.ibdBlock:type_name -> protowire.BlockMessage
+	8,   // 8: protowire.NautiliadMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
+	9,   // 9: protowire.NautiliadMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
+	10,  // 10: protowire.NautiliadMessage.ping:type_name -> protowire.PingMessage
+	11,  // 11: protowire.NautiliadMessage.pong:type_name -> protowire.PongMessage
+	12,  // 12: protowire.NautiliadMessage.verack:type_name -> protowire.VerackMessage
+	13,  // 13: protowire.NautiliadMessage.version:type_name -> protowire.VersionMessage
+	14,  // 14: protowire.NautiliadMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
+	15,  // 15: protowire.NautiliadMessage.reject:type_name -> protowire.RejectMessage
+	16,  // 16: protowire.NautiliadMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
+	17,  // 17: protowire.NautiliadMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
+	18,  // 18: protowire.NautiliadMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
+	19,  // 19: protowire.NautiliadMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
+	20,  // 20: protowire.NautiliadMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
+	21,  // 21: protowire.NautiliadMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
+	22,  // 22: protowire.NautiliadMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
+	23,  // 23: protowire.NautiliadMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
+	24,  // 24: protowire.NautiliadMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
+	25,  // 25: protowire.NautiliadMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
+	26,  // 26: protowire.NautiliadMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
+	27,  // 27: protowire.NautiliadMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
+	28,  // 28: protowire.NautiliadMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
+	29,  // 29: protowire.NautiliadMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
+	30,  // 30: protowire.NautiliadMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
+	31,  // 31: protowire.NautiliadMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
+	32,  // 32: protowire.NautiliadMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
+	33,  // 33: protowire.NautiliadMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
+	34,  // 34: protowire.NautiliadMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
+	35,  // 35: protowire.NautiliadMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
+	36,  // 36: protowire.NautiliadMessage.ready:type_name -> protowire.ReadyMessage
+	37,  // 37: protowire.NautiliadMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
+	38,  // 38: protowire.NautiliadMessage.trustedData:type_name -> protowire.TrustedDataMessage
+	39,  // 39: protowire.NautiliadMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
+	40,  // 40: protowire.NautiliadMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
+	41,  // 41: protowire.NautiliadMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
+	42,  // 42: protowire.NautiliadMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
+	43,  // 43: protowire.NautiliadMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
+	44,  // 44: protowire.NautiliadMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
+	45,  // 45: protowire.NautiliadMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
+	46,  // 46: protowire.NautiliadMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
+	47,  // 47: protowire.NautiliadMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
+	48,  // 48: protowire.NautiliadMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
+	49,  // 49: protowire.NautiliadMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
+	50,  // 50: protowire.NautiliadMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
+	51,  // 51: protowire.NautiliadMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
+	52,  // 52: protowire.NautiliadMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
+	53,  // 53: protowire.NautiliadMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
+	54,  // 54: protowire.NautiliadMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
+	55,  // 55: protowire.NautiliadMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
+	56,  // 56: protowire.NautiliadMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
+	57,  // 57: protowire.NautiliadMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
+	58,  // 58: protowire.NautiliadMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
+	59,  // 59: protowire.NautiliadMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
+	60,  // 60: protowire.NautiliadMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
+	61,  // 61: protowire.NautiliadMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
+	62,  // 62: protowire.NautiliadMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
+	63,  // 63: protowire.NautiliadMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
+	64,  // 64: protowire.NautiliadMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
+	65,  // 65: protowire.NautiliadMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
+	66,  // 66: protowire.NautiliadMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
+	67,  // 67: protowire.NautiliadMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
+	68,  // 68: protowire.NautiliadMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
+	69,  // 69: protowire.NautiliadMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
+	70,  // 70: protowire.NautiliadMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
+	71,  // 71: protowire.NautiliadMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
+	72,  // 72: protowire.NautiliadMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
+	73,  // 73: protowire.NautiliadMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
+	74,  // 74: protowire.NautiliadMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
+	75,  // 75: protowire.NautiliadMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
+	76,  // 76: protowire.NautiliadMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
+	77,  // 77: protowire.NautiliadMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
+	78,  // 78: protowire.NautiliadMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
+	79,  // 79: protowire.NautiliadMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
+	80,  // 80: protowire.NautiliadMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
+	81,  // 81: protowire.NautiliadMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
+	82,  // 82: protowire.NautiliadMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
+	83,  // 83: protowire.NautiliadMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
+	84,  // 84: protowire.NautiliadMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
+	85,  // 85: protowire.NautiliadMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
+	86,  // 86: protowire.NautiliadMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
+	87,  // 87: protowire.NautiliadMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
+	88,  // 88: protowire.NautiliadMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
+	89,  // 89: protowire.NautiliadMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
+	90,  // 90: protowire.NautiliadMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
+	91,  // 91: protowire.NautiliadMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
+	92,  // 92: protowire.NautiliadMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
+	93,  // 93: protowire.NautiliadMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
+	94,  // 94: protowire.NautiliadMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
+	95,  // 95: protowire.NautiliadMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
+	96,  // 96: protowire.NautiliadMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
+	97,  // 97: protowire.NautiliadMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
+	98,  // 98: protowire.NautiliadMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
+	99,  // 99: protowire.NautiliadMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
+	100, // 100: protowire.NautiliadMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
+	101, // 101: protowire.NautiliadMessage.banRequest:type_name -> protowire.BanRequestMessage
+	102, // 102: protowire.NautiliadMessage.banResponse:type_name -> protowire.BanResponseMessage
+	103, // 103: protowire.NautiliadMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
+	104, // 104: protowire.NautiliadMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
+	105, // 105: protowire.NautiliadMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
+	106, // 106: protowire.NautiliadMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
+	107, // 107: protowire.NautiliadMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
+	108, // 108: protowire.NautiliadMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
+	109, // 109: protowire.NautiliadMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
+	110, // 110: protowire.NautiliadMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
+	111, // 111: protowire.NautiliadMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
+	112, // 112: protowire.NautiliadMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
+	113, // 113: protowire.NautiliadMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
+	114, // 114: protowire.NautiliadMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
+	115, // 115: protowire.NautiliadMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
+	116, // 116: protowire.NautiliadMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
+	117, // 117: protowire.NautiliadMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
+	118, // 118: protowire.NautiliadMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
+	119, // 119: protowire.NautiliadMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
+	120, // 120: protowire.NautiliadMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
+	121, // 121: protowire.NautiliadMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
+	122, // 122: protowire.NautiliadMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
+	123, // 123: protowire.NautiliadMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
+	124, // 124: protowire.NautiliadMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
+	125, // 125: protowire.NautiliadMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
+	126, // 126: protowire.NautiliadMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
+	127, // 127: protowire.NautiliadMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
+	128, // 128: protowire.NautiliadMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
+	129, // 129: protowire.NautiliadMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
+	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.NautiliadMessage
+	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.NautiliadMessage
+	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.NautiliadMessage
+	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.NautiliadMessage
 	132, // [132:134] is the sub-list for method output_type
 	130, // [130:132] is the sub-list for method input_type
 	130, // [130:130] is the sub-list for extension type_name
@@ -3086,7 +3086,7 @@ func file_messages_proto_init() {
 	file_rpc_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*NexelliadMessage); i {
+			switch v := v.(*NautiliadMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,136 +3099,136 @@ func file_messages_proto_init() {
 		}
 	}
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*NexelliadMessage_Addresses)(nil),
-		(*NexelliadMessage_Block)(nil),
-		(*NexelliadMessage_Transaction)(nil),
-		(*NexelliadMessage_BlockLocator)(nil),
-		(*NexelliadMessage_RequestAddresses)(nil),
-		(*NexelliadMessage_RequestRelayBlocks)(nil),
-		(*NexelliadMessage_RequestTransactions)(nil),
-		(*NexelliadMessage_IbdBlock)(nil),
-		(*NexelliadMessage_InvRelayBlock)(nil),
-		(*NexelliadMessage_InvTransactions)(nil),
-		(*NexelliadMessage_Ping)(nil),
-		(*NexelliadMessage_Pong)(nil),
-		(*NexelliadMessage_Verack)(nil),
-		(*NexelliadMessage_Version)(nil),
-		(*NexelliadMessage_TransactionNotFound)(nil),
-		(*NexelliadMessage_Reject)(nil),
-		(*NexelliadMessage_PruningPointUtxoSetChunk)(nil),
-		(*NexelliadMessage_RequestIBDBlocks)(nil),
-		(*NexelliadMessage_UnexpectedPruningPoint)(nil),
-		(*NexelliadMessage_IbdBlockLocator)(nil),
-		(*NexelliadMessage_IbdBlockLocatorHighestHash)(nil),
-		(*NexelliadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
-		(*NexelliadMessage_DonePruningPointUtxoSetChunks)(nil),
-		(*NexelliadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
-		(*NexelliadMessage_BlockWithTrustedData)(nil),
-		(*NexelliadMessage_DoneBlocksWithTrustedData)(nil),
-		(*NexelliadMessage_RequestPruningPointAndItsAnticone)(nil),
-		(*NexelliadMessage_BlockHeaders)(nil),
-		(*NexelliadMessage_RequestNextHeaders)(nil),
-		(*NexelliadMessage_DoneHeaders)(nil),
-		(*NexelliadMessage_RequestPruningPointUTXOSet)(nil),
-		(*NexelliadMessage_RequestHeaders)(nil),
-		(*NexelliadMessage_RequestBlockLocator)(nil),
-		(*NexelliadMessage_PruningPoints)(nil),
-		(*NexelliadMessage_RequestPruningPointProof)(nil),
-		(*NexelliadMessage_PruningPointProof)(nil),
-		(*NexelliadMessage_Ready)(nil),
-		(*NexelliadMessage_BlockWithTrustedDataV4)(nil),
-		(*NexelliadMessage_TrustedData)(nil),
-		(*NexelliadMessage_RequestIBDChainBlockLocator)(nil),
-		(*NexelliadMessage_IbdChainBlockLocator)(nil),
-		(*NexelliadMessage_RequestAnticone)(nil),
-		(*NexelliadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
-		(*NexelliadMessage_GetCurrentNetworkRequest)(nil),
-		(*NexelliadMessage_GetCurrentNetworkResponse)(nil),
-		(*NexelliadMessage_SubmitBlockRequest)(nil),
-		(*NexelliadMessage_SubmitBlockResponse)(nil),
-		(*NexelliadMessage_GetBlockTemplateRequest)(nil),
-		(*NexelliadMessage_GetBlockTemplateResponse)(nil),
-		(*NexelliadMessage_NotifyBlockAddedRequest)(nil),
-		(*NexelliadMessage_NotifyBlockAddedResponse)(nil),
-		(*NexelliadMessage_BlockAddedNotification)(nil),
-		(*NexelliadMessage_GetPeerAddressesRequest)(nil),
-		(*NexelliadMessage_GetPeerAddressesResponse)(nil),
-		(*NexelliadMessage_GetSelectedTipHashRequest)(nil),
-		(*NexelliadMessage_GetSelectedTipHashResponse)(nil),
-		(*NexelliadMessage_GetMempoolEntryRequest)(nil),
-		(*NexelliadMessage_GetMempoolEntryResponse)(nil),
-		(*NexelliadMessage_GetConnectedPeerInfoRequest)(nil),
-		(*NexelliadMessage_GetConnectedPeerInfoResponse)(nil),
-		(*NexelliadMessage_AddPeerRequest)(nil),
-		(*NexelliadMessage_AddPeerResponse)(nil),
-		(*NexelliadMessage_SubmitTransactionRequest)(nil),
-		(*NexelliadMessage_SubmitTransactionResponse)(nil),
-		(*NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
-		(*NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
-		(*NexelliadMessage_VirtualSelectedParentChainChangedNotification)(nil),
-		(*NexelliadMessage_GetBlockRequest)(nil),
-		(*NexelliadMessage_GetBlockResponse)(nil),
-		(*NexelliadMessage_GetSubnetworkRequest)(nil),
-		(*NexelliadMessage_GetSubnetworkResponse)(nil),
-		(*NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
-		(*NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
-		(*NexelliadMessage_GetBlocksRequest)(nil),
-		(*NexelliadMessage_GetBlocksResponse)(nil),
-		(*NexelliadMessage_GetBlockCountRequest)(nil),
-		(*NexelliadMessage_GetBlockCountResponse)(nil),
-		(*NexelliadMessage_GetBlockDagInfoRequest)(nil),
-		(*NexelliadMessage_GetBlockDagInfoResponse)(nil),
-		(*NexelliadMessage_ResolveFinalityConflictRequest)(nil),
-		(*NexelliadMessage_ResolveFinalityConflictResponse)(nil),
-		(*NexelliadMessage_NotifyFinalityConflictsRequest)(nil),
-		(*NexelliadMessage_NotifyFinalityConflictsResponse)(nil),
-		(*NexelliadMessage_FinalityConflictNotification)(nil),
-		(*NexelliadMessage_FinalityConflictResolvedNotification)(nil),
-		(*NexelliadMessage_GetMempoolEntriesRequest)(nil),
-		(*NexelliadMessage_GetMempoolEntriesResponse)(nil),
-		(*NexelliadMessage_ShutDownRequest)(nil),
-		(*NexelliadMessage_ShutDownResponse)(nil),
-		(*NexelliadMessage_GetHeadersRequest)(nil),
-		(*NexelliadMessage_GetHeadersResponse)(nil),
-		(*NexelliadMessage_NotifyUtxosChangedRequest)(nil),
-		(*NexelliadMessage_NotifyUtxosChangedResponse)(nil),
-		(*NexelliadMessage_UtxosChangedNotification)(nil),
-		(*NexelliadMessage_GetUtxosByAddressesRequest)(nil),
-		(*NexelliadMessage_GetUtxosByAddressesResponse)(nil),
-		(*NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
-		(*NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
-		(*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
-		(*NexelliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
-		(*NexelliadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
-		(*NexelliadMessage_BanRequest)(nil),
-		(*NexelliadMessage_BanResponse)(nil),
-		(*NexelliadMessage_UnbanRequest)(nil),
-		(*NexelliadMessage_UnbanResponse)(nil),
-		(*NexelliadMessage_GetInfoRequest)(nil),
-		(*NexelliadMessage_GetInfoResponse)(nil),
-		(*NexelliadMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*NexelliadMessage_StopNotifyingUtxosChangedResponse)(nil),
-		(*NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
-		(*NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
-		(*NexelliadMessage_PruningPointUTXOSetOverrideNotification)(nil),
-		(*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
-		(*NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
-		(*NexelliadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
-		(*NexelliadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
-		(*NexelliadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
-		(*NexelliadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
-		(*NexelliadMessage_VirtualDaaScoreChangedNotification)(nil),
-		(*NexelliadMessage_GetBalanceByAddressRequest)(nil),
-		(*NexelliadMessage_GetBalanceByAddressResponse)(nil),
-		(*NexelliadMessage_GetBalancesByAddressesRequest)(nil),
-		(*NexelliadMessage_GetBalancesByAddressesResponse)(nil),
-		(*NexelliadMessage_NotifyNewBlockTemplateRequest)(nil),
-		(*NexelliadMessage_NotifyNewBlockTemplateResponse)(nil),
-		(*NexelliadMessage_NewBlockTemplateNotification)(nil),
-		(*NexelliadMessage_GetMempoolEntriesByAddressesRequest)(nil),
-		(*NexelliadMessage_GetMempoolEntriesByAddressesResponse)(nil),
-		(*NexelliadMessage_GetCoinSupplyRequest)(nil),
-		(*NexelliadMessage_GetCoinSupplyResponse)(nil),
+		(*NautiliadMessage_Addresses)(nil),
+		(*NautiliadMessage_Block)(nil),
+		(*NautiliadMessage_Transaction)(nil),
+		(*NautiliadMessage_BlockLocator)(nil),
+		(*NautiliadMessage_RequestAddresses)(nil),
+		(*NautiliadMessage_RequestRelayBlocks)(nil),
+		(*NautiliadMessage_RequestTransactions)(nil),
+		(*NautiliadMessage_IbdBlock)(nil),
+		(*NautiliadMessage_InvRelayBlock)(nil),
+		(*NautiliadMessage_InvTransactions)(nil),
+		(*NautiliadMessage_Ping)(nil),
+		(*NautiliadMessage_Pong)(nil),
+		(*NautiliadMessage_Verack)(nil),
+		(*NautiliadMessage_Version)(nil),
+		(*NautiliadMessage_TransactionNotFound)(nil),
+		(*NautiliadMessage_Reject)(nil),
+		(*NautiliadMessage_PruningPointUtxoSetChunk)(nil),
+		(*NautiliadMessage_RequestIBDBlocks)(nil),
+		(*NautiliadMessage_UnexpectedPruningPoint)(nil),
+		(*NautiliadMessage_IbdBlockLocator)(nil),
+		(*NautiliadMessage_IbdBlockLocatorHighestHash)(nil),
+		(*NautiliadMessage_RequestNextPruningPointUtxoSetChunk)(nil),
+		(*NautiliadMessage_DonePruningPointUtxoSetChunks)(nil),
+		(*NautiliadMessage_IbdBlockLocatorHighestHashNotFound)(nil),
+		(*NautiliadMessage_BlockWithTrustedData)(nil),
+		(*NautiliadMessage_DoneBlocksWithTrustedData)(nil),
+		(*NautiliadMessage_RequestPruningPointAndItsAnticone)(nil),
+		(*NautiliadMessage_BlockHeaders)(nil),
+		(*NautiliadMessage_RequestNextHeaders)(nil),
+		(*NautiliadMessage_DoneHeaders)(nil),
+		(*NautiliadMessage_RequestPruningPointUTXOSet)(nil),
+		(*NautiliadMessage_RequestHeaders)(nil),
+		(*NautiliadMessage_RequestBlockLocator)(nil),
+		(*NautiliadMessage_PruningPoints)(nil),
+		(*NautiliadMessage_RequestPruningPointProof)(nil),
+		(*NautiliadMessage_PruningPointProof)(nil),
+		(*NautiliadMessage_Ready)(nil),
+		(*NautiliadMessage_BlockWithTrustedDataV4)(nil),
+		(*NautiliadMessage_TrustedData)(nil),
+		(*NautiliadMessage_RequestIBDChainBlockLocator)(nil),
+		(*NautiliadMessage_IbdChainBlockLocator)(nil),
+		(*NautiliadMessage_RequestAnticone)(nil),
+		(*NautiliadMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
+		(*NautiliadMessage_GetCurrentNetworkRequest)(nil),
+		(*NautiliadMessage_GetCurrentNetworkResponse)(nil),
+		(*NautiliadMessage_SubmitBlockRequest)(nil),
+		(*NautiliadMessage_SubmitBlockResponse)(nil),
+		(*NautiliadMessage_GetBlockTemplateRequest)(nil),
+		(*NautiliadMessage_GetBlockTemplateResponse)(nil),
+		(*NautiliadMessage_NotifyBlockAddedRequest)(nil),
+		(*NautiliadMessage_NotifyBlockAddedResponse)(nil),
+		(*NautiliadMessage_BlockAddedNotification)(nil),
+		(*NautiliadMessage_GetPeerAddressesRequest)(nil),
+		(*NautiliadMessage_GetPeerAddressesResponse)(nil),
+		(*NautiliadMessage_GetSelectedTipHashRequest)(nil),
+		(*NautiliadMessage_GetSelectedTipHashResponse)(nil),
+		(*NautiliadMessage_GetMempoolEntryRequest)(nil),
+		(*NautiliadMessage_GetMempoolEntryResponse)(nil),
+		(*NautiliadMessage_GetConnectedPeerInfoRequest)(nil),
+		(*NautiliadMessage_GetConnectedPeerInfoResponse)(nil),
+		(*NautiliadMessage_AddPeerRequest)(nil),
+		(*NautiliadMessage_AddPeerResponse)(nil),
+		(*NautiliadMessage_SubmitTransactionRequest)(nil),
+		(*NautiliadMessage_SubmitTransactionResponse)(nil),
+		(*NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
+		(*NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
+		(*NautiliadMessage_VirtualSelectedParentChainChangedNotification)(nil),
+		(*NautiliadMessage_GetBlockRequest)(nil),
+		(*NautiliadMessage_GetBlockResponse)(nil),
+		(*NautiliadMessage_GetSubnetworkRequest)(nil),
+		(*NautiliadMessage_GetSubnetworkResponse)(nil),
+		(*NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
+		(*NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
+		(*NautiliadMessage_GetBlocksRequest)(nil),
+		(*NautiliadMessage_GetBlocksResponse)(nil),
+		(*NautiliadMessage_GetBlockCountRequest)(nil),
+		(*NautiliadMessage_GetBlockCountResponse)(nil),
+		(*NautiliadMessage_GetBlockDagInfoRequest)(nil),
+		(*NautiliadMessage_GetBlockDagInfoResponse)(nil),
+		(*NautiliadMessage_ResolveFinalityConflictRequest)(nil),
+		(*NautiliadMessage_ResolveFinalityConflictResponse)(nil),
+		(*NautiliadMessage_NotifyFinalityConflictsRequest)(nil),
+		(*NautiliadMessage_NotifyFinalityConflictsResponse)(nil),
+		(*NautiliadMessage_FinalityConflictNotification)(nil),
+		(*NautiliadMessage_FinalityConflictResolvedNotification)(nil),
+		(*NautiliadMessage_GetMempoolEntriesRequest)(nil),
+		(*NautiliadMessage_GetMempoolEntriesResponse)(nil),
+		(*NautiliadMessage_ShutDownRequest)(nil),
+		(*NautiliadMessage_ShutDownResponse)(nil),
+		(*NautiliadMessage_GetHeadersRequest)(nil),
+		(*NautiliadMessage_GetHeadersResponse)(nil),
+		(*NautiliadMessage_NotifyUtxosChangedRequest)(nil),
+		(*NautiliadMessage_NotifyUtxosChangedResponse)(nil),
+		(*NautiliadMessage_UtxosChangedNotification)(nil),
+		(*NautiliadMessage_GetUtxosByAddressesRequest)(nil),
+		(*NautiliadMessage_GetUtxosByAddressesResponse)(nil),
+		(*NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
+		(*NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
+		(*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
+		(*NautiliadMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
+		(*NautiliadMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
+		(*NautiliadMessage_BanRequest)(nil),
+		(*NautiliadMessage_BanResponse)(nil),
+		(*NautiliadMessage_UnbanRequest)(nil),
+		(*NautiliadMessage_UnbanResponse)(nil),
+		(*NautiliadMessage_GetInfoRequest)(nil),
+		(*NautiliadMessage_GetInfoResponse)(nil),
+		(*NautiliadMessage_StopNotifyingUtxosChangedRequest)(nil),
+		(*NautiliadMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
+		(*NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
+		(*NautiliadMessage_PruningPointUTXOSetOverrideNotification)(nil),
+		(*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
+		(*NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
+		(*NautiliadMessage_EstimateNetworkHashesPerSecondRequest)(nil),
+		(*NautiliadMessage_EstimateNetworkHashesPerSecondResponse)(nil),
+		(*NautiliadMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
+		(*NautiliadMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
+		(*NautiliadMessage_VirtualDaaScoreChangedNotification)(nil),
+		(*NautiliadMessage_GetBalanceByAddressRequest)(nil),
+		(*NautiliadMessage_GetBalanceByAddressResponse)(nil),
+		(*NautiliadMessage_GetBalancesByAddressesRequest)(nil),
+		(*NautiliadMessage_GetBalancesByAddressesResponse)(nil),
+		(*NautiliadMessage_NotifyNewBlockTemplateRequest)(nil),
+		(*NautiliadMessage_NotifyNewBlockTemplateResponse)(nil),
+		(*NautiliadMessage_NewBlockTemplateNotification)(nil),
+		(*NautiliadMessage_GetMempoolEntriesByAddressesRequest)(nil),
+		(*NautiliadMessage_GetMempoolEntriesByAddressesResponse)(nil),
+		(*NautiliadMessage_GetCoinSupplyRequest)(nil),
+		(*NautiliadMessage_GetCoinSupplyResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{

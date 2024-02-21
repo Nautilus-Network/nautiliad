@@ -3,18 +3,18 @@ package protowire
 import (
 	"math"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_Transaction) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_Transaction) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_Transaction is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_Transaction is nil")
 	}
 	return x.Transaction.toAppMessage()
 }
 
-func (x *NexelliadMessage_Transaction) fromAppMessage(msgTx *appmessage.MsgTx) error {
+func (x *NautiliadMessage_Transaction) fromAppMessage(msgTx *appmessage.MsgTx) error {
 	x.Transaction = new(TransactionMessage)
 	x.Transaction.fromAppMessage(msgTx)
 	return nil

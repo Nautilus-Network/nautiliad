@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
 	"github.com/pkg/errors"
 )
 
@@ -23,7 +23,7 @@ func (cf commandFailure) String() string {
 
 func commandLoop(argsChan <-chan []string) ([]commandFailure, error) {
 	failures := make([]commandFailure, 0)
-	dataDirectoryPath, err := common.TempDir("nexelliadsanity-nexelliad-datadir")
+	dataDirectoryPath, err := common.TempDir("nautiliadsanity-nautiliad-datadir")
 	if err != nil {
 		return nil, errors.Wrapf(err, "error creating temp dir")
 	}
@@ -40,7 +40,7 @@ func commandLoop(argsChan <-chan []string) ([]commandFailure, error) {
 			return nil, err
 		}
 
-		cmd := exec.Command("nexelliad", args...)
+		cmd := exec.Command("nautiliad", args...)
 		cmd.Stdout = common.NewLogWriter(log, logger.LevelTrace, "KASPAD-STDOUT")
 		cmd.Stderr = common.NewLogWriter(log, logger.LevelWarn, "KASPAD-STDERR")
 

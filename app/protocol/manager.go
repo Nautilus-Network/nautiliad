@@ -5,20 +5,20 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/Nexellia-Network/nexelliad/app/protocol/common"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/common"
 
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/domain"
+	"github.com/Nautilus-Network/nautiliad/domain"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/app/protocol/flowcontext"
-	peerpkg "github.com/Nexellia-Network/nexelliad/app/protocol/peer"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/connmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/flowcontext"
+	peerpkg "github.com/Nautilus-Network/nautiliad/app/protocol/peer"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/connmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

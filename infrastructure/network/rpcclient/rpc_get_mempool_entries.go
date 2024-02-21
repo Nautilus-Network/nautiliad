@@ -1,6 +1,6 @@
 package rpcclient
 
-import "github.com/Nexellia-Network/nexelliad/app/appmessage"
+import "github.com/Nautilus-Network/nautiliad/app/appmessage"
 
 // GetMempoolEntries sends an RPC request respective to the function's name and returns the RPC server's response
 func (c *RPCClient) GetMempoolEntries(includeOrphanPool bool, filterTransactionPool bool) (*appmessage.GetMempoolEntriesResponseMessage, error) {

@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // GHOSTDAGManagerConstructor is the function signature for a constructor of a type implementing model.GHOSTDAGManager

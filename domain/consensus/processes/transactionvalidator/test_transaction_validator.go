@@ -1,9 +1,9 @@
 package transactionvalidator
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/testapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/txscript"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/testapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/txscript"
 )
 
 type testTransactionValidator struct {

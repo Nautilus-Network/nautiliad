@@ -3,7 +3,7 @@ package dagconfig
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
 )
 
 // The documentation refers to the following constants which aren't explicated in the code:
@@ -49,8 +49,8 @@ const (
 	// in block take longer)
 	defaultMergeSetSizeLimit                       = defaultGHOSTDAGK * 10
 	defaultSubsidyGenesisReward                    = 1 * constants.SompiPerKaspa
-	defaultPreHalvingPhaseBaseSubsidy              = 12 * constants.SompiPerKaspa
-	defaultHalvingPhaseBaseSubsidy                 = 6 * constants.SompiPerKaspa
+	defaultPreHalvingPhaseBaseSubsidy              = 200 * constants.SompiPerKaspa
+	defaultHalvingPhaseBaseSubsidy                 = 100 * constants.SompiPerKaspa
 	defaultCoinbasePayloadScriptPublicKeyMaxLength = 150
 	// defaultDifficultyAdjustmentWindowSize is the number of blocks in a block's past used to calculate its difficulty
 	// target.

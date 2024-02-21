@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain"
+	"github.com/Nautilus-Network/nautiliad/domain"
 )
 
 // Domain returns the Domain object associated to the flow context.

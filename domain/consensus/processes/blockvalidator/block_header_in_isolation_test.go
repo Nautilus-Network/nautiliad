@@ -5,15 +5,15 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/testapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/testapi"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/blockheader"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/testutils"
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/blockheader"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/testutils"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 	"github.com/pkg/errors"
 )
 

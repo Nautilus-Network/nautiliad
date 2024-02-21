@@ -4,13 +4,13 @@ import (
 	"reflect"
 	"unicode"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 // protobuf generates the command types with two types:
 // 1. A concrete type that holds the fields of the command bearing the name of the command with `RequestMessage` as suffix
-// 2. A wrapper that implements isNexelliadMessage_Payload, having a single field pointing to the concrete command
-//    bearing the name of the command with `NexelliadMessage_` prefix and `Request` suffix
+// 2. A wrapper that implements isNautiliadMessage_Payload, having a single field pointing to the concrete command
+//    bearing the name of the command with `NautiliadMessage_` prefix and `Request` suffix
 
 // unwrapCommandType converts a reflect.Type signifying a wrapper type into the concrete request type
 func unwrapCommandType(requestTypeWrapped reflect.Type) reflect.Type {
@@ -28,14 +28,14 @@ func isFieldExported(field reflect.StructField) bool {
 	return unicode.IsUpper(rune(field.Name[0]))
 }
 
-// generateNexelliadMessage generates a wrapped NexelliadMessage with the given `commandValue`
-func generateNexelliadMessage(commandValue reflect.Value, commandDesc *commandDescription) (*protowire.NexelliadMessage, error) {
+// generateNautiliadMessage generates a wrapped NautiliadMessage with the given `commandValue`
+func generateNautiliadMessage(commandValue reflect.Value, commandDesc *commandDescription) (*protowire.NautiliadMessage, error) {
 	commandWrapper := reflect.New(commandDesc.typeof)
 	unwrapCommandValue(commandWrapper).Set(commandValue)
 
-	nexelliadMessage := reflect.New(reflect.TypeOf(protowire.NexelliadMessage{}))
-	nexelliadMessage.Elem().FieldByName("Payload").Set(commandWrapper)
-	return nexelliadMessage.Interface().(*protowire.NexelliadMessage), nil
+	nautiliadMessage := reflect.New(reflect.TypeOf(protowire.NautiliadMessage{}))
+	nautiliadMessage.Elem().FieldByName("Payload").Set(commandWrapper)
+	return nautiliadMessage.Interface().(*protowire.NautiliadMessage), nil
 }
 
 // pointerToValue returns a reflect.Value that represents a pointer to the given value

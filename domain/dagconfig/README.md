@@ -2,11 +2,11 @@ dagconfig
 ========
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Nexellia-Network/nexelliad/dagconfig)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Nautilus-Network/nautiliad/dagconfig)
 
 Package dagconfig defines DAG configuration parameters for the standard
-Nexelliad networks and provides the ability for callers to define their own custom
-Nexelliad networks.
+Nautiliad networks and provides the ability for callers to define their own custom
+Nautiliad networks.
 
 ## Sample Use
 
@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/Nexellia-Network/nexelliad/util"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/util"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
 var testnet = flag.Bool("testnet", false, "operate on the testnet Kaspa network")

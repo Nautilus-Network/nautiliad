@@ -1,7 +1,7 @@
 package appmessage
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // MaxInvPerRequestTransactionsMsg is the maximum number of hashes that can

@@ -1,9 +1,9 @@
 # -- multistage docker build: stage #1: build stage
 FROM golang:1.19-alpine AS build
 
-RUN mkdir -p /go/src/github.com/Nexellia-Network/nexelliad/
+RUN mkdir -p /go/src/github.com/Nautilus-Network/nautiliad/
 
-WORKDIR /go/src/github.com/Nexellia-Network/nexelliad/
+WORKDIR /go/src/github.com/Nautilus-Network/nautiliad/
 
 RUN apk add --no-cache curl git openssh binutils gcc musl-dev
 
@@ -14,8 +14,8 @@ RUN go mod download
 
 COPY . .
 
-WORKDIR /go/src/github.com/Nexellia-Network/nexelliad/cmd/nexelliaminer
-RUN GOOS=linux go build -a -installsuffix cgo -o nexelliaminer .
+WORKDIR /go/src/github.com/Nautilus-Network/nautiliad/cmd/nautilusminer
+RUN GOOS=linux go build -a -installsuffix cgo -o nautilusminer .
 
 # --- multistage docker build: stage #2: runtime image
 FROM alpine
@@ -23,7 +23,7 @@ WORKDIR /app
 
 RUN apk add --no-cache ca-certificates tini
 
-COPY --from=build /go/src/github.com/Nexellia-Network/nexelliad/cmd/nexelliaminer/nexelliaminer /app/
+COPY --from=build /go/src/github.com/Nautilus-Network/nautiliad/cmd/nautilusminer/nautilusminer /app/
 
 USER nobody
 ENTRYPOINT [ "/sbin/tini", "--" ]

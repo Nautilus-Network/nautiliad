@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet"
+	"github.com/Nautilus-Network/nautiliad/util"
 )
 
 func main() {

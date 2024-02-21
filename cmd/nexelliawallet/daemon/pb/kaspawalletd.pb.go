@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.26.0
 // 	protoc        v3.21.12
-// source: nexelliawalletd.proto
+// source: nautiluswalletd.proto
 
 package pb
 
@@ -29,7 +29,7 @@ type GetBalanceRequest struct {
 func (x *GetBalanceRequest) Reset() {
 	*x = GetBalanceRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[0]
+		mi := &file_nautiluswalletd_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -42,7 +42,7 @@ func (x *GetBalanceRequest) String() string {
 func (*GetBalanceRequest) ProtoMessage() {}
 
 func (x *GetBalanceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[0]
+	mi := &file_nautiluswalletd_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *GetBalanceRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetBalanceRequest.ProtoReflect.Descriptor instead.
 func (*GetBalanceRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{0}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{0}
 }
 
 type GetBalanceResponse struct {
@@ -71,7 +71,7 @@ type GetBalanceResponse struct {
 func (x *GetBalanceResponse) Reset() {
 	*x = GetBalanceResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[1]
+		mi := &file_nautiluswalletd_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -84,7 +84,7 @@ func (x *GetBalanceResponse) String() string {
 func (*GetBalanceResponse) ProtoMessage() {}
 
 func (x *GetBalanceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[1]
+	mi := &file_nautiluswalletd_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -97,7 +97,7 @@ func (x *GetBalanceResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetBalanceResponse.ProtoReflect.Descriptor instead.
 func (*GetBalanceResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{1}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GetBalanceResponse) GetAvailable() uint64 {
@@ -134,7 +134,7 @@ type AddressBalances struct {
 func (x *AddressBalances) Reset() {
 	*x = AddressBalances{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[2]
+		mi := &file_nautiluswalletd_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -147,7 +147,7 @@ func (x *AddressBalances) String() string {
 func (*AddressBalances) ProtoMessage() {}
 
 func (x *AddressBalances) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[2]
+	mi := &file_nautiluswalletd_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -160,7 +160,7 @@ func (x *AddressBalances) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AddressBalances.ProtoReflect.Descriptor instead.
 func (*AddressBalances) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{2}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *AddressBalances) GetAddress() string {
@@ -199,7 +199,7 @@ type CreateUnsignedTransactionsRequest struct {
 func (x *CreateUnsignedTransactionsRequest) Reset() {
 	*x = CreateUnsignedTransactionsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[3]
+		mi := &file_nautiluswalletd_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -212,7 +212,7 @@ func (x *CreateUnsignedTransactionsRequest) String() string {
 func (*CreateUnsignedTransactionsRequest) ProtoMessage() {}
 
 func (x *CreateUnsignedTransactionsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[3]
+	mi := &file_nautiluswalletd_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -225,7 +225,7 @@ func (x *CreateUnsignedTransactionsRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use CreateUnsignedTransactionsRequest.ProtoReflect.Descriptor instead.
 func (*CreateUnsignedTransactionsRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{3}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *CreateUnsignedTransactionsRequest) GetAddress() string {
@@ -274,7 +274,7 @@ type CreateUnsignedTransactionsResponse struct {
 func (x *CreateUnsignedTransactionsResponse) Reset() {
 	*x = CreateUnsignedTransactionsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[4]
+		mi := &file_nautiluswalletd_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -287,7 +287,7 @@ func (x *CreateUnsignedTransactionsResponse) String() string {
 func (*CreateUnsignedTransactionsResponse) ProtoMessage() {}
 
 func (x *CreateUnsignedTransactionsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[4]
+	mi := &file_nautiluswalletd_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -300,7 +300,7 @@ func (x *CreateUnsignedTransactionsResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CreateUnsignedTransactionsResponse.ProtoReflect.Descriptor instead.
 func (*CreateUnsignedTransactionsResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{4}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CreateUnsignedTransactionsResponse) GetUnsignedTransactions() [][]byte {
@@ -319,7 +319,7 @@ type ShowAddressesRequest struct {
 func (x *ShowAddressesRequest) Reset() {
 	*x = ShowAddressesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[5]
+		mi := &file_nautiluswalletd_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -332,7 +332,7 @@ func (x *ShowAddressesRequest) String() string {
 func (*ShowAddressesRequest) ProtoMessage() {}
 
 func (x *ShowAddressesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[5]
+	mi := &file_nautiluswalletd_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -345,7 +345,7 @@ func (x *ShowAddressesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShowAddressesRequest.ProtoReflect.Descriptor instead.
 func (*ShowAddressesRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{5}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{5}
 }
 
 type ShowAddressesResponse struct {
@@ -359,7 +359,7 @@ type ShowAddressesResponse struct {
 func (x *ShowAddressesResponse) Reset() {
 	*x = ShowAddressesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[6]
+		mi := &file_nautiluswalletd_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -372,7 +372,7 @@ func (x *ShowAddressesResponse) String() string {
 func (*ShowAddressesResponse) ProtoMessage() {}
 
 func (x *ShowAddressesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[6]
+	mi := &file_nautiluswalletd_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -385,7 +385,7 @@ func (x *ShowAddressesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShowAddressesResponse.ProtoReflect.Descriptor instead.
 func (*ShowAddressesResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{6}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *ShowAddressesResponse) GetAddress() []string {
@@ -404,7 +404,7 @@ type NewAddressRequest struct {
 func (x *NewAddressRequest) Reset() {
 	*x = NewAddressRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[7]
+		mi := &file_nautiluswalletd_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -417,7 +417,7 @@ func (x *NewAddressRequest) String() string {
 func (*NewAddressRequest) ProtoMessage() {}
 
 func (x *NewAddressRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[7]
+	mi := &file_nautiluswalletd_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -430,7 +430,7 @@ func (x *NewAddressRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NewAddressRequest.ProtoReflect.Descriptor instead.
 func (*NewAddressRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{7}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{7}
 }
 
 type NewAddressResponse struct {
@@ -444,7 +444,7 @@ type NewAddressResponse struct {
 func (x *NewAddressResponse) Reset() {
 	*x = NewAddressResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[8]
+		mi := &file_nautiluswalletd_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -457,7 +457,7 @@ func (x *NewAddressResponse) String() string {
 func (*NewAddressResponse) ProtoMessage() {}
 
 func (x *NewAddressResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[8]
+	mi := &file_nautiluswalletd_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -470,7 +470,7 @@ func (x *NewAddressResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NewAddressResponse.ProtoReflect.Descriptor instead.
 func (*NewAddressResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{8}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *NewAddressResponse) GetAddress() string {
@@ -492,7 +492,7 @@ type BroadcastRequest struct {
 func (x *BroadcastRequest) Reset() {
 	*x = BroadcastRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[9]
+		mi := &file_nautiluswalletd_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -505,7 +505,7 @@ func (x *BroadcastRequest) String() string {
 func (*BroadcastRequest) ProtoMessage() {}
 
 func (x *BroadcastRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[9]
+	mi := &file_nautiluswalletd_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -518,7 +518,7 @@ func (x *BroadcastRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BroadcastRequest.ProtoReflect.Descriptor instead.
 func (*BroadcastRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{9}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *BroadcastRequest) GetIsDomain() bool {
@@ -546,7 +546,7 @@ type BroadcastResponse struct {
 func (x *BroadcastResponse) Reset() {
 	*x = BroadcastResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[10]
+		mi := &file_nautiluswalletd_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -559,7 +559,7 @@ func (x *BroadcastResponse) String() string {
 func (*BroadcastResponse) ProtoMessage() {}
 
 func (x *BroadcastResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[10]
+	mi := &file_nautiluswalletd_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -572,7 +572,7 @@ func (x *BroadcastResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use BroadcastResponse.ProtoReflect.Descriptor instead.
 func (*BroadcastResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{10}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *BroadcastResponse) GetTxIDs() []string {
@@ -591,7 +591,7 @@ type ShutdownRequest struct {
 func (x *ShutdownRequest) Reset() {
 	*x = ShutdownRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[11]
+		mi := &file_nautiluswalletd_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -604,7 +604,7 @@ func (x *ShutdownRequest) String() string {
 func (*ShutdownRequest) ProtoMessage() {}
 
 func (x *ShutdownRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[11]
+	mi := &file_nautiluswalletd_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -617,7 +617,7 @@ func (x *ShutdownRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShutdownRequest.ProtoReflect.Descriptor instead.
 func (*ShutdownRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{11}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{11}
 }
 
 type ShutdownResponse struct {
@@ -629,7 +629,7 @@ type ShutdownResponse struct {
 func (x *ShutdownResponse) Reset() {
 	*x = ShutdownResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[12]
+		mi := &file_nautiluswalletd_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -642,7 +642,7 @@ func (x *ShutdownResponse) String() string {
 func (*ShutdownResponse) ProtoMessage() {}
 
 func (x *ShutdownResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[12]
+	mi := &file_nautiluswalletd_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -655,7 +655,7 @@ func (x *ShutdownResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShutdownResponse.ProtoReflect.Descriptor instead.
 func (*ShutdownResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{12}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{12}
 }
 
 type Outpoint struct {
@@ -670,7 +670,7 @@ type Outpoint struct {
 func (x *Outpoint) Reset() {
 	*x = Outpoint{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[13]
+		mi := &file_nautiluswalletd_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -683,7 +683,7 @@ func (x *Outpoint) String() string {
 func (*Outpoint) ProtoMessage() {}
 
 func (x *Outpoint) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[13]
+	mi := &file_nautiluswalletd_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -696,7 +696,7 @@ func (x *Outpoint) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Outpoint.ProtoReflect.Descriptor instead.
 func (*Outpoint) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{13}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *Outpoint) GetTransactionId() string {
@@ -726,7 +726,7 @@ type UtxosByAddressesEntry struct {
 func (x *UtxosByAddressesEntry) Reset() {
 	*x = UtxosByAddressesEntry{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[14]
+		mi := &file_nautiluswalletd_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -739,7 +739,7 @@ func (x *UtxosByAddressesEntry) String() string {
 func (*UtxosByAddressesEntry) ProtoMessage() {}
 
 func (x *UtxosByAddressesEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[14]
+	mi := &file_nautiluswalletd_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -752,7 +752,7 @@ func (x *UtxosByAddressesEntry) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UtxosByAddressesEntry.ProtoReflect.Descriptor instead.
 func (*UtxosByAddressesEntry) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{14}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *UtxosByAddressesEntry) GetAddress() string {
@@ -788,7 +788,7 @@ type ScriptPublicKey struct {
 func (x *ScriptPublicKey) Reset() {
 	*x = ScriptPublicKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[15]
+		mi := &file_nautiluswalletd_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -801,7 +801,7 @@ func (x *ScriptPublicKey) String() string {
 func (*ScriptPublicKey) ProtoMessage() {}
 
 func (x *ScriptPublicKey) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[15]
+	mi := &file_nautiluswalletd_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -814,7 +814,7 @@ func (x *ScriptPublicKey) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ScriptPublicKey.ProtoReflect.Descriptor instead.
 func (*ScriptPublicKey) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{15}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *ScriptPublicKey) GetVersion() uint32 {
@@ -845,7 +845,7 @@ type UtxoEntry struct {
 func (x *UtxoEntry) Reset() {
 	*x = UtxoEntry{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[16]
+		mi := &file_nautiluswalletd_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -858,7 +858,7 @@ func (x *UtxoEntry) String() string {
 func (*UtxoEntry) ProtoMessage() {}
 
 func (x *UtxoEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[16]
+	mi := &file_nautiluswalletd_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -871,7 +871,7 @@ func (x *UtxoEntry) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UtxoEntry.ProtoReflect.Descriptor instead.
 func (*UtxoEntry) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{16}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *UtxoEntry) GetAmount() uint64 {
@@ -913,7 +913,7 @@ type GetExternalSpendableUTXOsRequest struct {
 func (x *GetExternalSpendableUTXOsRequest) Reset() {
 	*x = GetExternalSpendableUTXOsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[17]
+		mi := &file_nautiluswalletd_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -926,7 +926,7 @@ func (x *GetExternalSpendableUTXOsRequest) String() string {
 func (*GetExternalSpendableUTXOsRequest) ProtoMessage() {}
 
 func (x *GetExternalSpendableUTXOsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[17]
+	mi := &file_nautiluswalletd_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -939,7 +939,7 @@ func (x *GetExternalSpendableUTXOsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetExternalSpendableUTXOsRequest.ProtoReflect.Descriptor instead.
 func (*GetExternalSpendableUTXOsRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{17}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *GetExternalSpendableUTXOsRequest) GetAddress() string {
@@ -960,7 +960,7 @@ type GetExternalSpendableUTXOsResponse struct {
 func (x *GetExternalSpendableUTXOsResponse) Reset() {
 	*x = GetExternalSpendableUTXOsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[18]
+		mi := &file_nautiluswalletd_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -973,7 +973,7 @@ func (x *GetExternalSpendableUTXOsResponse) String() string {
 func (*GetExternalSpendableUTXOsResponse) ProtoMessage() {}
 
 func (x *GetExternalSpendableUTXOsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[18]
+	mi := &file_nautiluswalletd_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -986,7 +986,7 @@ func (x *GetExternalSpendableUTXOsResponse) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use GetExternalSpendableUTXOsResponse.ProtoReflect.Descriptor instead.
 func (*GetExternalSpendableUTXOsResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{18}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *GetExternalSpendableUTXOsResponse) GetEntries() []*UtxosByAddressesEntry {
@@ -1013,7 +1013,7 @@ type SendRequest struct {
 func (x *SendRequest) Reset() {
 	*x = SendRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[19]
+		mi := &file_nautiluswalletd_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1026,7 +1026,7 @@ func (x *SendRequest) String() string {
 func (*SendRequest) ProtoMessage() {}
 
 func (x *SendRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[19]
+	mi := &file_nautiluswalletd_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1039,7 +1039,7 @@ func (x *SendRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendRequest.ProtoReflect.Descriptor instead.
 func (*SendRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{19}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *SendRequest) GetToAddress() string {
@@ -1096,7 +1096,7 @@ type SendResponse struct {
 func (x *SendResponse) Reset() {
 	*x = SendResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[20]
+		mi := &file_nautiluswalletd_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1109,7 +1109,7 @@ func (x *SendResponse) String() string {
 func (*SendResponse) ProtoMessage() {}
 
 func (x *SendResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[20]
+	mi := &file_nautiluswalletd_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1122,7 +1122,7 @@ func (x *SendResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SendResponse.ProtoReflect.Descriptor instead.
 func (*SendResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{20}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *SendResponse) GetTxIDs() []string {
@@ -1152,7 +1152,7 @@ type SignRequest struct {
 func (x *SignRequest) Reset() {
 	*x = SignRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[21]
+		mi := &file_nautiluswalletd_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1165,7 +1165,7 @@ func (x *SignRequest) String() string {
 func (*SignRequest) ProtoMessage() {}
 
 func (x *SignRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[21]
+	mi := &file_nautiluswalletd_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1178,7 +1178,7 @@ func (x *SignRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SignRequest.ProtoReflect.Descriptor instead.
 func (*SignRequest) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{21}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *SignRequest) GetUnsignedTransactions() [][]byte {
@@ -1206,7 +1206,7 @@ type SignResponse struct {
 func (x *SignResponse) Reset() {
 	*x = SignResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_nexelliawalletd_proto_msgTypes[22]
+		mi := &file_nautiluswalletd_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1219,7 +1219,7 @@ func (x *SignResponse) String() string {
 func (*SignResponse) ProtoMessage() {}
 
 func (x *SignResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_nexelliawalletd_proto_msgTypes[22]
+	mi := &file_nautiluswalletd_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1232,7 +1232,7 @@ func (x *SignResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SignResponse.ProtoReflect.Descriptor instead.
 func (*SignResponse) Descriptor() ([]byte, []int) {
-	return file_nexelliawalletd_proto_rawDescGZIP(), []int{22}
+	return file_nautiluswalletd_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *SignResponse) GetSignedTransactions() [][]byte {
@@ -1242,9 +1242,9 @@ func (x *SignResponse) GetSignedTransactions() [][]byte {
 	return nil
 }
 
-var File_nexelliawalletd_proto protoreflect.FileDescriptor
+var File_nautiluswalletd_proto protoreflect.FileDescriptor
 
-var file_nexelliawalletd_proto_rawDesc = []byte{
+var file_nautiluswalletd_proto_rawDesc = []byte{
 	0x0a, 0x12, 0x6b, 0x61, 0x73, 0x70, 0x61, 0x77, 0x61, 0x6c, 0x6c, 0x65, 0x74, 0x64, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x12, 0x0c, 0x6b, 0x61, 0x73, 0x70, 0x61, 0x77, 0x61, 0x6c, 0x6c, 0x65,
 	0x74, 0x64, 0x22, 0x13, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x42, 0x61, 0x6c, 0x61, 0x6e, 0x63, 0x65,
@@ -1430,67 +1430,67 @@ var file_nexelliawalletd_proto_rawDesc = []byte{
 }
 
 var (
-	file_nexelliawalletd_proto_rawDescOnce sync.Once
-	file_nexelliawalletd_proto_rawDescData = file_nexelliawalletd_proto_rawDesc
+	file_nautiluswalletd_proto_rawDescOnce sync.Once
+	file_nautiluswalletd_proto_rawDescData = file_nautiluswalletd_proto_rawDesc
 )
 
-func file_nexelliawalletd_proto_rawDescGZIP() []byte {
-	file_nexelliawalletd_proto_rawDescOnce.Do(func() {
-		file_nexelliawalletd_proto_rawDescData = protoimpl.X.CompressGZIP(file_nexelliawalletd_proto_rawDescData)
+func file_nautiluswalletd_proto_rawDescGZIP() []byte {
+	file_nautiluswalletd_proto_rawDescOnce.Do(func() {
+		file_nautiluswalletd_proto_rawDescData = protoimpl.X.CompressGZIP(file_nautiluswalletd_proto_rawDescData)
 	})
-	return file_nexelliawalletd_proto_rawDescData
+	return file_nautiluswalletd_proto_rawDescData
 }
 
-var file_nexelliawalletd_proto_msgTypes = make([]protoimpl.MessageInfo, 23)
-var file_nexelliawalletd_proto_goTypes = []interface{}{
-	(*GetBalanceRequest)(nil),                  // 0: nexelliawalletd.GetBalanceRequest
-	(*GetBalanceResponse)(nil),                 // 1: nexelliawalletd.GetBalanceResponse
-	(*AddressBalances)(nil),                    // 2: nexelliawalletd.AddressBalances
-	(*CreateUnsignedTransactionsRequest)(nil),  // 3: nexelliawalletd.CreateUnsignedTransactionsRequest
-	(*CreateUnsignedTransactionsResponse)(nil), // 4: nexelliawalletd.CreateUnsignedTransactionsResponse
-	(*ShowAddressesRequest)(nil),               // 5: nexelliawalletd.ShowAddressesRequest
-	(*ShowAddressesResponse)(nil),              // 6: nexelliawalletd.ShowAddressesResponse
-	(*NewAddressRequest)(nil),                  // 7: nexelliawalletd.NewAddressRequest
-	(*NewAddressResponse)(nil),                 // 8: nexelliawalletd.NewAddressResponse
-	(*BroadcastRequest)(nil),                   // 9: nexelliawalletd.BroadcastRequest
-	(*BroadcastResponse)(nil),                  // 10: nexelliawalletd.BroadcastResponse
-	(*ShutdownRequest)(nil),                    // 11: nexelliawalletd.ShutdownRequest
-	(*ShutdownResponse)(nil),                   // 12: nexelliawalletd.ShutdownResponse
-	(*Outpoint)(nil),                           // 13: nexelliawalletd.Outpoint
-	(*UtxosByAddressesEntry)(nil),              // 14: nexelliawalletd.UtxosByAddressesEntry
-	(*ScriptPublicKey)(nil),                    // 15: nexelliawalletd.ScriptPublicKey
-	(*UtxoEntry)(nil),                          // 16: nexelliawalletd.UtxoEntry
-	(*GetExternalSpendableUTXOsRequest)(nil),   // 17: nexelliawalletd.GetExternalSpendableUTXOsRequest
-	(*GetExternalSpendableUTXOsResponse)(nil),  // 18: nexelliawalletd.GetExternalSpendableUTXOsResponse
-	(*SendRequest)(nil),                        // 19: nexelliawalletd.SendRequest
-	(*SendResponse)(nil),                       // 20: nexelliawalletd.SendResponse
-	(*SignRequest)(nil),                        // 21: nexelliawalletd.SignRequest
-	(*SignResponse)(nil),                       // 22: nexelliawalletd.SignResponse
+var file_nautiluswalletd_proto_msgTypes = make([]protoimpl.MessageInfo, 23)
+var file_nautiluswalletd_proto_goTypes = []interface{}{
+	(*GetBalanceRequest)(nil),                  // 0: nautiluswalletd.GetBalanceRequest
+	(*GetBalanceResponse)(nil),                 // 1: nautiluswalletd.GetBalanceResponse
+	(*AddressBalances)(nil),                    // 2: nautiluswalletd.AddressBalances
+	(*CreateUnsignedTransactionsRequest)(nil),  // 3: nautiluswalletd.CreateUnsignedTransactionsRequest
+	(*CreateUnsignedTransactionsResponse)(nil), // 4: nautiluswalletd.CreateUnsignedTransactionsResponse
+	(*ShowAddressesRequest)(nil),               // 5: nautiluswalletd.ShowAddressesRequest
+	(*ShowAddressesResponse)(nil),              // 6: nautiluswalletd.ShowAddressesResponse
+	(*NewAddressRequest)(nil),                  // 7: nautiluswalletd.NewAddressRequest
+	(*NewAddressResponse)(nil),                 // 8: nautiluswalletd.NewAddressResponse
+	(*BroadcastRequest)(nil),                   // 9: nautiluswalletd.BroadcastRequest
+	(*BroadcastResponse)(nil),                  // 10: nautiluswalletd.BroadcastResponse
+	(*ShutdownRequest)(nil),                    // 11: nautiluswalletd.ShutdownRequest
+	(*ShutdownResponse)(nil),                   // 12: nautiluswalletd.ShutdownResponse
+	(*Outpoint)(nil),                           // 13: nautiluswalletd.Outpoint
+	(*UtxosByAddressesEntry)(nil),              // 14: nautiluswalletd.UtxosByAddressesEntry
+	(*ScriptPublicKey)(nil),                    // 15: nautiluswalletd.ScriptPublicKey
+	(*UtxoEntry)(nil),                          // 16: nautiluswalletd.UtxoEntry
+	(*GetExternalSpendableUTXOsRequest)(nil),   // 17: nautiluswalletd.GetExternalSpendableUTXOsRequest
+	(*GetExternalSpendableUTXOsResponse)(nil),  // 18: nautiluswalletd.GetExternalSpendableUTXOsResponse
+	(*SendRequest)(nil),                        // 19: nautiluswalletd.SendRequest
+	(*SendResponse)(nil),                       // 20: nautiluswalletd.SendResponse
+	(*SignRequest)(nil),                        // 21: nautiluswalletd.SignRequest
+	(*SignResponse)(nil),                       // 22: nautiluswalletd.SignResponse
 }
-var file_nexelliawalletd_proto_depIdxs = []int32{
-	2,  // 0: nexelliawalletd.GetBalanceResponse.addressBalances:type_name -> nexelliawalletd.AddressBalances
-	13, // 1: nexelliawalletd.UtxosByAddressesEntry.outpoint:type_name -> nexelliawalletd.Outpoint
-	16, // 2: nexelliawalletd.UtxosByAddressesEntry.utxoEntry:type_name -> nexelliawalletd.UtxoEntry
-	15, // 3: nexelliawalletd.UtxoEntry.scriptPublicKey:type_name -> nexelliawalletd.ScriptPublicKey
-	14, // 4: nexelliawalletd.GetExternalSpendableUTXOsResponse.Entries:type_name -> nexelliawalletd.UtxosByAddressesEntry
-	0,  // 5: nexelliawalletd.nexelliawalletd.GetBalance:input_type -> nexelliawalletd.GetBalanceRequest
-	17, // 6: nexelliawalletd.nexelliawalletd.GetExternalSpendableUTXOs:input_type -> nexelliawalletd.GetExternalSpendableUTXOsRequest
-	3,  // 7: nexelliawalletd.nexelliawalletd.CreateUnsignedTransactions:input_type -> nexelliawalletd.CreateUnsignedTransactionsRequest
-	5,  // 8: nexelliawalletd.nexelliawalletd.ShowAddresses:input_type -> nexelliawalletd.ShowAddressesRequest
-	7,  // 9: nexelliawalletd.nexelliawalletd.NewAddress:input_type -> nexelliawalletd.NewAddressRequest
-	11, // 10: nexelliawalletd.nexelliawalletd.Shutdown:input_type -> nexelliawalletd.ShutdownRequest
-	9,  // 11: nexelliawalletd.nexelliawalletd.Broadcast:input_type -> nexelliawalletd.BroadcastRequest
-	19, // 12: nexelliawalletd.nexelliawalletd.Send:input_type -> nexelliawalletd.SendRequest
-	21, // 13: nexelliawalletd.nexelliawalletd.Sign:input_type -> nexelliawalletd.SignRequest
-	1,  // 14: nexelliawalletd.nexelliawalletd.GetBalance:output_type -> nexelliawalletd.GetBalanceResponse
-	18, // 15: nexelliawalletd.nexelliawalletd.GetExternalSpendableUTXOs:output_type -> nexelliawalletd.GetExternalSpendableUTXOsResponse
-	4,  // 16: nexelliawalletd.nexelliawalletd.CreateUnsignedTransactions:output_type -> nexelliawalletd.CreateUnsignedTransactionsResponse
-	6,  // 17: nexelliawalletd.nexelliawalletd.ShowAddresses:output_type -> nexelliawalletd.ShowAddressesResponse
-	8,  // 18: nexelliawalletd.nexelliawalletd.NewAddress:output_type -> nexelliawalletd.NewAddressResponse
-	12, // 19: nexelliawalletd.nexelliawalletd.Shutdown:output_type -> nexelliawalletd.ShutdownResponse
-	10, // 20: nexelliawalletd.nexelliawalletd.Broadcast:output_type -> nexelliawalletd.BroadcastResponse
-	20, // 21: nexelliawalletd.nexelliawalletd.Send:output_type -> nexelliawalletd.SendResponse
-	22, // 22: nexelliawalletd.nexelliawalletd.Sign:output_type -> nexelliawalletd.SignResponse
+var file_nautiluswalletd_proto_depIdxs = []int32{
+	2,  // 0: nautiluswalletd.GetBalanceResponse.addressBalances:type_name -> nautiluswalletd.AddressBalances
+	13, // 1: nautiluswalletd.UtxosByAddressesEntry.outpoint:type_name -> nautiluswalletd.Outpoint
+	16, // 2: nautiluswalletd.UtxosByAddressesEntry.utxoEntry:type_name -> nautiluswalletd.UtxoEntry
+	15, // 3: nautiluswalletd.UtxoEntry.scriptPublicKey:type_name -> nautiluswalletd.ScriptPublicKey
+	14, // 4: nautiluswalletd.GetExternalSpendableUTXOsResponse.Entries:type_name -> nautiluswalletd.UtxosByAddressesEntry
+	0,  // 5: nautiluswalletd.nautiluswalletd.GetBalance:input_type -> nautiluswalletd.GetBalanceRequest
+	17, // 6: nautiluswalletd.nautiluswalletd.GetExternalSpendableUTXOs:input_type -> nautiluswalletd.GetExternalSpendableUTXOsRequest
+	3,  // 7: nautiluswalletd.nautiluswalletd.CreateUnsignedTransactions:input_type -> nautiluswalletd.CreateUnsignedTransactionsRequest
+	5,  // 8: nautiluswalletd.nautiluswalletd.ShowAddresses:input_type -> nautiluswalletd.ShowAddressesRequest
+	7,  // 9: nautiluswalletd.nautiluswalletd.NewAddress:input_type -> nautiluswalletd.NewAddressRequest
+	11, // 10: nautiluswalletd.nautiluswalletd.Shutdown:input_type -> nautiluswalletd.ShutdownRequest
+	9,  // 11: nautiluswalletd.nautiluswalletd.Broadcast:input_type -> nautiluswalletd.BroadcastRequest
+	19, // 12: nautiluswalletd.nautiluswalletd.Send:input_type -> nautiluswalletd.SendRequest
+	21, // 13: nautiluswalletd.nautiluswalletd.Sign:input_type -> nautiluswalletd.SignRequest
+	1,  // 14: nautiluswalletd.nautiluswalletd.GetBalance:output_type -> nautiluswalletd.GetBalanceResponse
+	18, // 15: nautiluswalletd.nautiluswalletd.GetExternalSpendableUTXOs:output_type -> nautiluswalletd.GetExternalSpendableUTXOsResponse
+	4,  // 16: nautiluswalletd.nautiluswalletd.CreateUnsignedTransactions:output_type -> nautiluswalletd.CreateUnsignedTransactionsResponse
+	6,  // 17: nautiluswalletd.nautiluswalletd.ShowAddresses:output_type -> nautiluswalletd.ShowAddressesResponse
+	8,  // 18: nautiluswalletd.nautiluswalletd.NewAddress:output_type -> nautiluswalletd.NewAddressResponse
+	12, // 19: nautiluswalletd.nautiluswalletd.Shutdown:output_type -> nautiluswalletd.ShutdownResponse
+	10, // 20: nautiluswalletd.nautiluswalletd.Broadcast:output_type -> nautiluswalletd.BroadcastResponse
+	20, // 21: nautiluswalletd.nautiluswalletd.Send:output_type -> nautiluswalletd.SendResponse
+	22, // 22: nautiluswalletd.nautiluswalletd.Sign:output_type -> nautiluswalletd.SignResponse
 	14, // [14:23] is the sub-list for method output_type
 	5,  // [5:14] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -1498,13 +1498,13 @@ var file_nexelliawalletd_proto_depIdxs = []int32{
 	0,  // [0:5] is the sub-list for field type_name
 }
 
-func init() { file_nexelliawalletd_proto_init() }
-func file_nexelliawalletd_proto_init() {
-	if File_nexelliawalletd_proto != nil {
+func init() { file_nautiluswalletd_proto_init() }
+func file_nautiluswalletd_proto_init() {
+	if File_nautiluswalletd_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_nexelliawalletd_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetBalanceRequest); i {
 			case 0:
 				return &v.state
@@ -1516,7 +1516,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetBalanceResponse); i {
 			case 0:
 				return &v.state
@@ -1528,7 +1528,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AddressBalances); i {
 			case 0:
 				return &v.state
@@ -1540,7 +1540,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateUnsignedTransactionsRequest); i {
 			case 0:
 				return &v.state
@@ -1552,7 +1552,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateUnsignedTransactionsResponse); i {
 			case 0:
 				return &v.state
@@ -1564,7 +1564,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ShowAddressesRequest); i {
 			case 0:
 				return &v.state
@@ -1576,7 +1576,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ShowAddressesResponse); i {
 			case 0:
 				return &v.state
@@ -1588,7 +1588,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NewAddressRequest); i {
 			case 0:
 				return &v.state
@@ -1600,7 +1600,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NewAddressResponse); i {
 			case 0:
 				return &v.state
@@ -1612,7 +1612,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*BroadcastRequest); i {
 			case 0:
 				return &v.state
@@ -1624,7 +1624,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*BroadcastResponse); i {
 			case 0:
 				return &v.state
@@ -1636,7 +1636,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ShutdownRequest); i {
 			case 0:
 				return &v.state
@@ -1648,7 +1648,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ShutdownResponse); i {
 			case 0:
 				return &v.state
@@ -1660,7 +1660,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Outpoint); i {
 			case 0:
 				return &v.state
@@ -1672,7 +1672,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UtxosByAddressesEntry); i {
 			case 0:
 				return &v.state
@@ -1684,7 +1684,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ScriptPublicKey); i {
 			case 0:
 				return &v.state
@@ -1696,7 +1696,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UtxoEntry); i {
 			case 0:
 				return &v.state
@@ -1708,7 +1708,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetExternalSpendableUTXOsRequest); i {
 			case 0:
 				return &v.state
@@ -1720,7 +1720,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetExternalSpendableUTXOsResponse); i {
 			case 0:
 				return &v.state
@@ -1732,7 +1732,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendRequest); i {
 			case 0:
 				return &v.state
@@ -1744,7 +1744,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendResponse); i {
 			case 0:
 				return &v.state
@@ -1756,7 +1756,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SignRequest); i {
 			case 0:
 				return &v.state
@@ -1768,7 +1768,7 @@ func file_nexelliawalletd_proto_init() {
 				return nil
 			}
 		}
-		file_nexelliawalletd_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_nautiluswalletd_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SignResponse); i {
 			case 0:
 				return &v.state
@@ -1785,18 +1785,18 @@ func file_nexelliawalletd_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_nexelliawalletd_proto_rawDesc,
+			RawDescriptor: file_nautiluswalletd_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   23,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_nexelliawalletd_proto_goTypes,
-		DependencyIndexes: file_nexelliawalletd_proto_depIdxs,
-		MessageInfos:      file_nexelliawalletd_proto_msgTypes,
+		GoTypes:           file_nautiluswalletd_proto_goTypes,
+		DependencyIndexes: file_nautiluswalletd_proto_depIdxs,
+		MessageInfos:      file_nautiluswalletd_proto_msgTypes,
 	}.Build()
-	File_nexelliawalletd_proto = out.File
-	file_nexelliawalletd_proto_rawDesc = nil
-	file_nexelliawalletd_proto_goTypes = nil
-	file_nexelliawalletd_proto_depIdxs = nil
+	File_nautiluswalletd_proto = out.File
+	file_nautiluswalletd_proto_rawDesc = nil
+	file_nautiluswalletd_proto_goTypes = nil
+	file_nautiluswalletd_proto_depIdxs = nil
 }

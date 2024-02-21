@@ -4,14 +4,14 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database/ldb"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database/ldb"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
 
-	"github.com/Nexellia-Network/nexelliad/app"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/app"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
 )
 
 type appHarness struct {

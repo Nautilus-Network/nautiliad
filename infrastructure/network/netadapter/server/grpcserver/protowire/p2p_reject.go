@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_Reject) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_Reject) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_Reject is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_Reject is nil")
 	}
 	return x.Reject.toAppMessage()
 }
@@ -21,7 +21,7 @@ func (x *RejectMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_Reject) fromAppMessage(msgReject *appmessage.MsgReject) error {
+func (x *NautiliadMessage_Reject) fromAppMessage(msgReject *appmessage.MsgReject) error {
 	x.Reject = &RejectMessage{
 		Reason: msgReject.Reason,
 	}

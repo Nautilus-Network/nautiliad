@@ -4,18 +4,18 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/domain"
+	"github.com/Nautilus-Network/nautiliad/domain"
 
-	peerpkg "github.com/Nexellia-Network/nexelliad/app/protocol/peer"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/connmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
+	peerpkg "github.com/Nautilus-Network/nautiliad/app/protocol/peer"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/connmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
 )
 
 // OnNewBlockTemplateHandler is a handler function that's triggered when a new block template is available

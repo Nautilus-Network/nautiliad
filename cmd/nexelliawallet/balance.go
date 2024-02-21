@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/client"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/pb"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/utils"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/client"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/pb"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/utils"
 )
 
 func balance(conf *balanceConfig) error {
@@ -37,7 +37,7 @@ func balance(conf *balanceConfig) error {
 		println("-----------------------------------------------------------------------------------------------------------")
 		print("                                                 ")
 	}
-	fmt.Printf("Total balance, NXL %s %s%s\n", utils.FormatKas(response.Available), utils.FormatKas(response.Pending), pendingSuffix)
+	fmt.Printf("Total balance, NTL %s %s%s\n", utils.FormatKas(response.Available), utils.FormatKas(response.Pending), pendingSuffix)
 
 	return nil
 }

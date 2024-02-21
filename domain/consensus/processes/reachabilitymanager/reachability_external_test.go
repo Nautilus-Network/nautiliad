@@ -4,11 +4,11 @@ import (
 	"math"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/testutils"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/testutils"
 )
 
 func TestAddChildThatPointsDirectlyToTheSelectedParentChainBelowReindexRoot(t *testing.T) {

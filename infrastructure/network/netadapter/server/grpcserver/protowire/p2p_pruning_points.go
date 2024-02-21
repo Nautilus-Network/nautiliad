@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_PruningPoints) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_PruningPoints) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_PruningPoints is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_PruningPoints is nil")
 	}
 
 	if x.PruningPoints == nil {
@@ -27,7 +27,7 @@ func (x *NexelliadMessage_PruningPoints) toAppMessage() (appmessage.Message, err
 	}, nil
 }
 
-func (x *NexelliadMessage_PruningPoints) fromAppMessage(msgPruningPoints *appmessage.MsgPruningPoints) error {
+func (x *NautiliadMessage_PruningPoints) fromAppMessage(msgPruningPoints *appmessage.MsgPruningPoints) error {
 	blockHeaders := make([]*BlockHeader, len(msgPruningPoints.Headers))
 	for i, blockHeader := range msgPruningPoints.Headers {
 		blockHeaders[i] = &BlockHeader{}

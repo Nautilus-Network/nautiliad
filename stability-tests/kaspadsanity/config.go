@@ -3,13 +3,13 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
 	"github.com/jessevdk/go-flags"
 )
 
 const (
-	defaultLogFilename    = "nexelliadsanity.log"
-	defaultErrLogFilename = "nexelliadsanity_err.log"
+	defaultLogFilename    = "nautiliadsanity.log"
+	defaultErrLogFilename = "nautiliadsanity_err.log"
 )
 
 var (

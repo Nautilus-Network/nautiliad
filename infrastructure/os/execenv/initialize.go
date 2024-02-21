@@ -5,10 +5,10 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/limits"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/limits"
 )
 
-// Initialize initializes the execution environment required to run nexelliad
+// Initialize initializes the execution environment required to run nautiliad
 func Initialize(desiredLimits *limits.DesiredLimits) {
 	// Use all processor cores.
 	runtime.GOMAXPROCS(runtime.NumCPU())

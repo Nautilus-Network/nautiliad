@@ -3,11 +3,11 @@ package integration
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 )
 
 func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
-	// Setup a single nexelliad instance
+	// Setup a single nautiliad instance
 	harnessParams := &harnessParams{
 		p2pAddress:              p2pAddress1,
 		rpcAddress:              rpcAddress1,
@@ -15,11 +15,11 @@ func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
 		miningAddressPrivateKey: miningAddress1PrivateKey,
 		utxoIndex:               true,
 	}
-	nexelliad, teardown := setupHarness(t, harnessParams)
+	nautiliad, teardown := setupHarness(t, harnessParams)
 	defer teardown()
 
 	// Make sure that the initial selected parent blue score is 0
-	response, err := nexelliad.rpcClient.GetVirtualSelectedParentBlueScore()
+	response, err := nautiliad.rpcClient.GetVirtualSelectedParentBlueScore()
 	if err != nil {
 		t.Fatalf("Error getting virtual selected parent blue score: %s", err)
 	}
@@ -30,7 +30,7 @@ func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
 
 	// Register to virtual selected parent blue score changes
 	onVirtualSelectedParentBlueScoreChangedChan := make(chan *appmessage.VirtualSelectedParentBlueScoreChangedNotificationMessage)
-	err = nexelliad.rpcClient.RegisterForVirtualSelectedParentBlueScoreChangedNotifications(
+	err = nautiliad.rpcClient.RegisterForVirtualSelectedParentBlueScoreChangedNotifications(
 		func(notification *appmessage.VirtualSelectedParentBlueScoreChangedNotificationMessage) {
 			onVirtualSelectedParentBlueScoreChangedChan <- notification
 		})
@@ -41,7 +41,7 @@ func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
 
 	// Register to virtual DAA score changes
 	onVirtualDaaScoreChangedChan := make(chan *appmessage.VirtualDaaScoreChangedNotificationMessage)
-	err = nexelliad.rpcClient.RegisterForVirtualDaaScoreChangedNotifications(
+	err = nautiliad.rpcClient.RegisterForVirtualDaaScoreChangedNotifications(
 		func(notification *appmessage.VirtualDaaScoreChangedNotificationMessage) {
 			onVirtualDaaScoreChangedChan <- notification
 		})
@@ -53,7 +53,7 @@ func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
 	// report correct values
 	const blockAmountToMine = 100
 	for i := 0; i < blockAmountToMine; i++ {
-		mineNextBlock(t, nexelliad)
+		mineNextBlock(t, nautiliad)
 		blueScoreChangedNotification := <-onVirtualSelectedParentBlueScoreChangedChan
 		if blueScoreChangedNotification.VirtualSelectedParentBlueScore != 1+uint64(i) {
 			t.Fatalf("Unexpected virtual selected parent blue score. Want: %d, got: %d",
@@ -67,7 +67,7 @@ func TestVirtualSelectedParentBlueScoreAndVirtualDAAScore(t *testing.T) {
 	}
 
 	// Make sure that the blue score after all that mining is as expected
-	response, err = nexelliad.rpcClient.GetVirtualSelectedParentBlueScore()
+	response, err = nautiliad.rpcClient.GetVirtualSelectedParentBlueScore()
 	if err != nil {
 		t.Fatalf("Error getting virtual selected parent blue score: %s", err)
 	}

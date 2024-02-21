@@ -1,19 +1,19 @@
 package handshake
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/app/protocol/common"
-	peerpkg "github.com/Nexellia-Network/nexelliad/app/protocol/peer"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/common"
+	peerpkg "github.com/Nautilus-Network/nautiliad/app/protocol/peer"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/version"
 	"github.com/pkg/errors"
 )
 
 var (
 	// userAgentName is the user agent name and is used to help identify
 	// ourselves to other kaspa peers.
-	userAgentName = "nexelliad"
+	userAgentName = "nautiliad"
 
 	// userAgentVersion is the user agent version and is used to help
 	// identify ourselves to other kaspa peers.

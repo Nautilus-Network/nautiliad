@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_AddPeerRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_AddPeerRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_AddPeerRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_AddPeerRequest is nil")
 	}
 	return x.AddPeerRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_AddPeerRequest) fromAppMessage(message *appmessage.AddPeerRequestMessage) error {
+func (x *NautiliadMessage_AddPeerRequest) fromAppMessage(message *appmessage.AddPeerRequestMessage) error {
 	x.AddPeerRequest = &AddPeerRequestMessage{
 		Address:     message.Address,
 		IsPermanent: message.IsPermanent,
@@ -30,14 +30,14 @@ func (x *AddPeerRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_AddPeerResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_AddPeerResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_AddPeerResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_AddPeerResponse is nil")
 	}
 	return x.AddPeerResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_AddPeerResponse) fromAppMessage(message *appmessage.AddPeerResponseMessage) error {
+func (x *NautiliadMessage_AddPeerResponse) fromAppMessage(message *appmessage.AddPeerResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

@@ -8,7 +8,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/util/bech32"
+	"github.com/Nautilus-Network/nautiliad/util/bech32"
 )
 
 // This example demonstrates how to decode a bech32 encoded string.

@@ -4,25 +4,25 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/domain/miningmanager/mempool"
+	"github.com/Nautilus-Network/nautiliad/domain/miningmanager/mempool"
 
-	"github.com/Nexellia-Network/nexelliad/app/protocol"
-	"github.com/Nexellia-Network/nexelliad/app/rpc"
-	"github.com/Nexellia-Network/nexelliad/domain"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/utxoindex"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	infrastructuredatabase "github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/connmanager"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/app/protocol"
+	"github.com/Nautilus-Network/nautiliad/app/rpc"
+	"github.com/Nautilus-Network/nautiliad/domain"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/utxoindex"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	infrastructuredatabase "github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/connmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
-// ComponentManager is a wrapper for all the nexelliad services
+// ComponentManager is a wrapper for all the nautiliad services
 type ComponentManager struct {
 	cfg               *config.Config
 	addressManager    *addressmanager.AddressManager
@@ -34,14 +34,14 @@ type ComponentManager struct {
 	started, shutdown int32
 }
 
-// Start launches all the nexelliad services.
+// Start launches all the nautiliad services.
 func (a *ComponentManager) Start() {
 	// Already started?
 	if atomic.AddInt32(&a.started, 1) != 1 {
 		return
 	}
 
-	log.Trace("Starting nexelliad")
+	log.Trace("Starting nautiliad")
 
 	err := a.netAdapter.Start()
 	if err != nil {
@@ -51,15 +51,15 @@ func (a *ComponentManager) Start() {
 	a.connectionManager.Start()
 }
 
-// Stop gracefully shuts down all the nexelliad services.
+// Stop gracefully shuts down all the nautiliad services.
 func (a *ComponentManager) Stop() {
 	// Make sure this only happens once.
 	if atomic.AddInt32(&a.shutdown, 1) != 1 {
-		log.Infof("Nexelliad is already in the process of shutting down")
+		log.Infof("Nautiliad is already in the process of shutting down")
 		return
 	}
 
-	log.Warnf("Nexelliad shutting down")
+	log.Warnf("Nautiliad shutting down")
 
 	a.connectionManager.Stop()
 

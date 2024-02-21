@@ -3,12 +3,12 @@ package rpchandlers
 import (
 	"encoding/json"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/app/protocol/protocolerrors"
-	"github.com/Nexellia-Network/nexelliad/app/rpc/rpccontext"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/protocolerrors"
+	"github.com/Nautilus-Network/nautiliad/app/rpc/rpccontext"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

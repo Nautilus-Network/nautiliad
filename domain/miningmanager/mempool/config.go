@@ -3,11 +3,11 @@ package mempool
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
 
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/util"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
 const (

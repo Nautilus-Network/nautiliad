@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_RequestBlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_RequestBlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_RequestBlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_RequestBlockLocator is nil")
 	}
 	return x.RequestBlockLocator.toAppMessage()
 }
@@ -29,7 +29,7 @@ func (x *RequestBlockLocatorMessage) toAppMessage() (appmessage.Message, error) 
 
 }
 
-func (x *NexelliadMessage_RequestBlockLocator) fromAppMessage(msgGetBlockLocator *appmessage.MsgRequestBlockLocator) error {
+func (x *NautiliadMessage_RequestBlockLocator) fromAppMessage(msgGetBlockLocator *appmessage.MsgRequestBlockLocator) error {
 	x.RequestBlockLocator = &RequestBlockLocatorMessage{
 		HighHash: domainHashToProto(msgGetBlockLocator.HighHash),
 		Limit:    msgGetBlockLocator.Limit,

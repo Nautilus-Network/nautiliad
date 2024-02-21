@@ -4,18 +4,18 @@ import (
 	"math"
 	"sort"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/processes/coinbasemanager"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/merkle"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/transactionhelper"
-	"github.com/Nexellia-Network/nexelliad/domain/consensusreference"
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/processes/coinbasemanager"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/merkle"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/transactionhelper"
+	"github.com/Nautilus-Network/nautiliad/domain/consensusreference"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 
-	"github.com/Nexellia-Network/nexelliad/util/difficulty"
+	"github.com/Nautilus-Network/nautiliad/util/difficulty"
 
-	consensusexternalapi "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/Nexellia-Network/nexelliad/domain/miningmanager/model"
+	consensusexternalapi "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/Nautilus-Network/nautiliad/domain/miningmanager/model"
 	"github.com/pkg/errors"
 )
 
@@ -156,7 +156,7 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 		if err != nil {
 			// mempool.RemoveTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/Nexellia-Network/nexelliad/issues/1553
+			// https://github.com/Nautilus-Network/nautiliad/issues/1553
 			log.Criticalf("Error from mempool.RemoveTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen

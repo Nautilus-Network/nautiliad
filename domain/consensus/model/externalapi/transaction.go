@@ -224,7 +224,7 @@ func NewDomainOutpoint(id *DomainTransactionID, index uint32) *DomainOutpoint {
 	}
 }
 
-// ScriptPublicKey represents a Nexelliad ScriptPublicKey
+// ScriptPublicKey represents a Nautiliad ScriptPublicKey
 type ScriptPublicKey struct {
 	Script  []byte
 	Version uint16
@@ -260,7 +260,7 @@ func NewScriptPublicKeyFromString(ScriptPublicKeyString string) *ScriptPublicKey
 	return &ScriptPublicKey{Script: script, Version: version}
 }
 
-// DomainTransactionOutput represents a Nexelliad transaction output
+// DomainTransactionOutput represents a Nautiliad transaction output
 type DomainTransactionOutput struct {
 	Value           uint64
 	ScriptPublicKey *ScriptPublicKey

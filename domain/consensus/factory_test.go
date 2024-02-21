@@ -4,10 +4,10 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/prefixmanager/prefix"
+	"github.com/Nautilus-Network/nautiliad/domain/prefixmanager/prefix"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database/ldb"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database/ldb"
 )
 
 func TestNewConsensus(t *testing.T) {

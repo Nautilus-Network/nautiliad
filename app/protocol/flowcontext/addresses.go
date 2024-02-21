@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
 )
 
 // AddressManager returns the address manager associated to the flow context.

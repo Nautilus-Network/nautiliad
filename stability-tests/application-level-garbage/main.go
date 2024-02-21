@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/standalone"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/standalone"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 )
 
 func main() {
@@ -25,10 +25,10 @@ func main() {
 		profiling.Start(cfg.Profile, log)
 	}
 
-	nexelliadConfig := config.DefaultConfig()
-	nexelliadConfig.NetworkFlags = cfg.NetworkFlags
+	nautiliadConfig := config.DefaultConfig()
+	nautiliadConfig.NetworkFlags = cfg.NetworkFlags
 
-	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(nexelliadConfig)
+	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(nautiliadConfig)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error creating minimalNetAdapter: %+v", err)
 		backendLog.Close()

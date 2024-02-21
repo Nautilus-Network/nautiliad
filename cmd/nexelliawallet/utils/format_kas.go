@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
 )
 
 // FormatKas takes the amount of sompis as uint64, and returns amount of KAS with 8  decimal places

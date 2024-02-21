@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"

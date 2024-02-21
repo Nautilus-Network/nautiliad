@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BlockWithTrustedDataV4 is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BlockWithTrustedDataV4 is nil")
 	}
 
 	msgBlock, err := x.BlockWithTrustedDataV4.Block.toAppMessage()
@@ -22,7 +22,7 @@ func (x *NexelliadMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Mes
 	}, nil
 }
 
-func (x *NexelliadMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
+func (x *NautiliadMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
 	x.BlockWithTrustedDataV4 = &BlockWithTrustedDataV4Message{
 		Block:               &BlockMessage{},
 		DaaWindowIndices:    msgBlockWithTrustedData.DAAWindowIndices,

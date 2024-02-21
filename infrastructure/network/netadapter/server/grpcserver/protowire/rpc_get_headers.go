@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetHeadersRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetHeadersRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetHeadersRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetHeadersRequest is nil")
 	}
 	return x.GetHeadersRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetHeadersRequest) fromAppMessage(message *appmessage.GetHeadersRequestMessage) error {
+func (x *NautiliadMessage_GetHeadersRequest) fromAppMessage(message *appmessage.GetHeadersRequestMessage) error {
 	x.GetHeadersRequest = &GetHeadersRequestMessage{
 		StartHash:   message.StartHash,
 		Limit:       message.Limit,
@@ -32,14 +32,14 @@ func (x *GetHeadersRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_GetHeadersResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetHeadersResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetHeadersResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetHeadersResponse is nil")
 	}
 	return x.GetHeadersResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetHeadersResponse) fromAppMessage(message *appmessage.GetHeadersResponseMessage) error {
+func (x *NautiliadMessage_GetHeadersResponse) fromAppMessage(message *appmessage.GetHeadersResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

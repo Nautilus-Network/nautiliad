@@ -1,11 +1,11 @@
-# Contributing to Nexelliad
+# Contributing to Nautiliad
 
-Any contribution to Nexelliad is very welcome.
+Any contribution to Nautiliad is very welcome.
 
 ## Getting started
 
-If you want to start contributing to Nexelliad and don't know where to start, you can pick an issue from
-the [list](https://github.com/Nexellia-Network/nexelliad/issues).
+If you want to start contributing to Nautiliad and don't know where to start, you can pick an issue from
+the [list](https://github.com/Nautilus-Network/nautiliad/issues).
 
 If you want to make a big change it's better to discuss it first by opening an issue or talk about it in
 [Discord](https://discord.gg/WmGhhzk) to avoid duplicate work.

@@ -1,30 +1,30 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest is nil")
 	}
 	return &appmessage.GetVirtualSelectedParentBlueScoreRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreRequestMessage) error {
+func (x *NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreRequestMessage) error {
 	x.GetVirtualSelectedParentBlueScoreRequest = &GetVirtualSelectedParentBlueScoreRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse is nil")
 	}
 	return x.GetVirtualSelectedParentBlueScoreResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentBlueScoreResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreResponseMessage) error {
+func (x *NautiliadMessage_GetVirtualSelectedParentBlueScoreResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentBlueScoreResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

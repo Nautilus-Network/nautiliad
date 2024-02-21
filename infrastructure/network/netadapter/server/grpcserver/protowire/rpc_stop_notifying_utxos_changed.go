@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_StopNotifyingUtxosChangedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_StopNotifyingUtxosChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_StopNotifyingUtxosChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_StopNotifyingUtxosChangedRequest is nil")
 	}
 	return x.StopNotifyingUtxosChangedRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_StopNotifyingUtxosChangedRequest) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedRequestMessage) error {
+func (x *NautiliadMessage_StopNotifyingUtxosChangedRequest) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedRequestMessage) error {
 	x.StopNotifyingUtxosChangedRequest = &StopNotifyingUtxosChangedRequestMessage{
 		Addresses: message.Addresses,
 	}
@@ -28,14 +28,14 @@ func (x *StopNotifyingUtxosChangedRequestMessage) toAppMessage() (appmessage.Mes
 	}, nil
 }
 
-func (x *NexelliadMessage_StopNotifyingUtxosChangedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_StopNotifyingUtxosChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_StopNotifyingUtxosChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_StopNotifyingUtxosChangedResponse is nil")
 	}
 	return x.StopNotifyingUtxosChangedResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_StopNotifyingUtxosChangedResponse) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedResponseMessage) error {
+func (x *NautiliadMessage_StopNotifyingUtxosChangedResponse) fromAppMessage(message *appmessage.StopNotifyingUTXOsChangedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

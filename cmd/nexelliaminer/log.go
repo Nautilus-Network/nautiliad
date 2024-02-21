@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
 var (
 	backendLog = logger.NewBackend()
-	log        = backendLog.Logger("NXLMN")
+	log        = backendLog.Logger("NTLMN")
 	spawn      = panics.GoroutineWrapperFunc(log)
 )
 

@@ -3,7 +3,7 @@ package integration
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
 )
 
 func TestAddressExchange(t *testing.T) {

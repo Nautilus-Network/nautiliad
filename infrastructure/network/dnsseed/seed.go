@@ -12,15 +12,15 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	pb2 "github.com/Nexellia-Network/nexelliad/infrastructure/network/dnsseed/pb"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	pb2 "github.com/Nautilus-Network/nautiliad/infrastructure/network/dnsseed/pb"
 	"google.golang.org/grpc"
 
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
 const (

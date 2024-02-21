@@ -1,4 +1,4 @@
-module github.com/Nexellia-Network/nexelliad
+module github.com/Nautilus-Network/nautiliad
 
 go 1.18
 

@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetBlockRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBlockRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetBlockRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetBlockRequest is nil")
 	}
 	return x.GetBlockRequest.toAppMessage()
 }
@@ -22,7 +22,7 @@ func (x *GetBlockRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_GetBlockRequest) fromAppMessage(message *appmessage.GetBlockRequestMessage) error {
+func (x *NautiliadMessage_GetBlockRequest) fromAppMessage(message *appmessage.GetBlockRequestMessage) error {
 	x.GetBlockRequest = &GetBlockRequestMessage{
 		Hash:                message.Hash,
 		IncludeTransactions: message.IncludeTransactions,
@@ -30,9 +30,9 @@ func (x *NexelliadMessage_GetBlockRequest) fromAppMessage(message *appmessage.Ge
 	return nil
 }
 
-func (x *NexelliadMessage_GetBlockResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBlockResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetBlockResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetBlockResponse is nil")
 	}
 	return x.GetBlockResponse.toAppMessage()
 }
@@ -63,7 +63,7 @@ func (x *GetBlockResponseMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_GetBlockResponse) fromAppMessage(message *appmessage.GetBlockResponseMessage) error {
+func (x *NautiliadMessage_GetBlockResponse) fromAppMessage(message *appmessage.GetBlockResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

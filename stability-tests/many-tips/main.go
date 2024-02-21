@@ -11,15 +11,15 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/mining"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/mining"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/kaspanet/go-secp256k1"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 	"github.com/pkg/errors"
 )
 
@@ -103,14 +103,14 @@ func realMain() error {
 
 func startNode() (teardown func(), err error) {
 	log.Infof("Starting node")
-	dataDir, err := common.TempDir("nexelliad-datadir")
+	dataDir, err := common.TempDir("nautiliad-datadir")
 	if err != nil {
 		panic(errors.Wrapf(err, "Error in Tempdir"))
 	}
-	log.Infof("nexelliad datadir: %s", dataDir)
+	log.Infof("nautiliad datadir: %s", dataDir)
 
-	nexelliadCmd, err := common.StartCmd("KASPAD",
-		"nexelliad",
+	nautiliadCmd, err := common.StartCmd("KASPAD",
+		"nautiliad",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
 		"--logdir", dataDir,
@@ -125,15 +125,15 @@ func startNode() (teardown func(), err error) {
 
 	processesStoppedWg := sync.WaitGroup{}
 	processesStoppedWg.Add(1)
-	spawn("startNode-nexelliadCmd.Wait", func() {
-		err := nexelliadCmd.Wait()
+	spawn("startNode-nautiliadCmd.Wait", func() {
+		err := nautiliadCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {
-				panics.Exit(log, fmt.Sprintf("nexelliadCmd closed unexpectedly: %s. See logs at: %s", err, dataDir))
+				panics.Exit(log, fmt.Sprintf("nautiliadCmd closed unexpectedly: %s. See logs at: %s", err, dataDir))
 			}
 			if !strings.Contains(err.Error(), "signal: killed") {
-				// TODO: Panic here and check why sometimes nexelliad closes ungracefully
-				log.Errorf("nexelliadCmd closed with an error: %s. See logs at: %s", err, dataDir)
+				// TODO: Panic here and check why sometimes nautiliad closes ungracefully
+				log.Errorf("nautiliadCmd closed with an error: %s. See logs at: %s", err, dataDir)
 			}
 		}
 		processesStoppedWg.Done()
@@ -141,7 +141,7 @@ func startNode() (teardown func(), err error) {
 	return func() {
 		log.Infof("defer start-node")
 		atomic.StoreUint64(&shutdown, 1)
-		killWithSigterm(nexelliadCmd, "nexelliadCmd")
+		killWithSigterm(nautiliadCmd, "nautiliadCmd")
 
 		processesStoppedChan := make(chan struct{})
 		spawn("startNode-processStoppedWg.Wait", func() {
@@ -227,8 +227,8 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	}
 	numOfBlocksBeforeMining := dagInfo.BlockCount
 
-	nexelliaminerCmd, err := common.StartCmd("MINER",
-		"nexelliaminer",
+	nautilusminerCmd, err := common.StartCmd("MINER",
+		"nautilusminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", rpcAddress,
 		"--mine-when-not-synced",
@@ -242,7 +242,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	shutdown := uint64(0)
 
 	spawn("kaspa-miner-Cmd.Wait", func() {
-		err := nexelliaminerCmd.Wait()
+		err := nautilusminerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {
 				panics.Exit(log, fmt.Sprintf("minerCmd closed unexpectedly: %s.", err))
@@ -284,7 +284,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	numOfAddedBlocks := dagInfo.BlockCount - numOfBlocksBeforeMining
 	log.Infof("Added %d blocks to reach this.", numOfAddedBlocks)
 	atomic.StoreUint64(&shutdown, 1)
-	killWithSigterm(nexelliaminerCmd, "nexelliaminerCmd")
+	killWithSigterm(nautilusminerCmd, "nautilusminerCmd")
 	return nil
 }
 

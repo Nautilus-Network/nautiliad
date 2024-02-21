@@ -8,14 +8,14 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/mine"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
-	"github.com/Nexellia-Network/nexelliad/util"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/mine"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/util"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 	"github.com/pkg/errors"
 )
 
@@ -31,7 +31,7 @@ func startNode(name string, rpcAddress, listen, connect, profilePort, dataDir st
 	log.Infof("Data directory for %s is %s", name, dataDir)
 
 	args := []string{
-		"nexelliad",
+		"nautiliad",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"--appdir", dataDir,
 		"--logdir", dataDir,
@@ -120,7 +120,7 @@ func setupNodeWithRPC(name, listen, rpcListen, connect, profilePort, dataDir str
 func setupSyncee() (*rpc.Client, func(), error) {
 	const syncedProfilePort = "6061"
 
-	synceeDataDir, err := useDirOrCreateTemp(activeConfig().SynceeDataDirectory, "syncee-nexelliad-data-dir")
+	synceeDataDir, err := useDirOrCreateTemp(activeConfig().SynceeDataDirectory, "syncee-nautiliad-data-dir")
 	if err != nil {
 		return nil, nil, err
 	}
@@ -132,7 +132,7 @@ func setupSyncee() (*rpc.Client, func(), error) {
 func setupSyncer() (*rpc.Client, func(), error) {
 	const syncerProfilePort = "6062"
 
-	syncerDataDir, err := useDirOrCreateTemp(activeConfig().SyncerDataDirectory, "syncer-nexelliad-data-dir")
+	syncerDataDir, err := useDirOrCreateTemp(activeConfig().SyncerDataDirectory, "syncer-nautiliad-data-dir")
 	if err != nil {
 		return nil, nil, err
 	}

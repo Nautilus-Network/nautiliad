@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetBalanceByAddressRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBalanceByAddressRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetBalanceByAddressRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetBalanceByAddressRequest is nil")
 	}
 	return x.GetBalanceByAddressRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetBalanceByAddressRequest) fromAppMessage(message *appmessage.GetBalanceByAddressRequestMessage) error {
+func (x *NautiliadMessage_GetBalanceByAddressRequest) fromAppMessage(message *appmessage.GetBalanceByAddressRequestMessage) error {
 	x.GetBalanceByAddressRequest = &GetBalanceByAddressRequestMessage{
 		Address: message.Address,
 	}
@@ -28,14 +28,14 @@ func (x *GetBalanceByAddressRequestMessage) toAppMessage() (appmessage.Message, 
 	}, nil
 }
 
-func (x *NexelliadMessage_GetBalanceByAddressResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetBalanceByAddressResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GetBalanceByAddressResponse is nil")
 	}
 	return x.GetBalanceByAddressResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetBalanceByAddressResponse) fromAppMessage(message *appmessage.GetBalanceByAddressResponseMessage) error {
+func (x *NautiliadMessage_GetBalanceByAddressResponse) fromAppMessage(message *appmessage.GetBalanceByAddressResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

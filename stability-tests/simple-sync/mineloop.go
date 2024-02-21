@@ -3,10 +3,10 @@ package main
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )
@@ -32,7 +32,7 @@ func mineLoop(syncerRPCClient, syncedRPCClient *rpc.Client) error {
 		err = mineBlock(syncerRPCClient.Address(), miningAddr)
 		if err != nil {
 			// Ignore error and instead check that the block count changed correctly.
-			// TODO: Fix the race condition in nexelliaminer so it won't panic (proper shutdown handler)
+			// TODO: Fix the race condition in nautilusminer so it won't panic (proper shutdown handler)
 			log.Warnf("mineBlock returned an err: %s", err)
 		}
 
@@ -129,8 +129,8 @@ func areTipsAreEqual(resultA, resultB *appmessage.GetBlockDAGInfoResponseMessage
 }
 
 func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
-	nexelliaminerCmd, err := common.StartCmd("MINER",
-		"nexelliaminer",
+	nautilusminerCmd, err := common.StartCmd("MINER",
+		"nautilusminer",
 		common.NetworkCliArgumentFromNetParams(activeConfig().NetParams()),
 		"-s", syncerRPCAddress,
 		"--mine-when-not-synced",
@@ -140,5 +140,5 @@ func mineBlock(syncerRPCAddress string, miningAddress util.Address) error {
 	if err != nil {
 		return err
 	}
-	return errors.Wrapf(nexelliaminerCmd.Wait(), "error with command '%s'", nexelliaminerCmd)
+	return errors.Wrapf(nautilusminerCmd.Wait(), "error with command '%s'", nautilusminerCmd)
 }

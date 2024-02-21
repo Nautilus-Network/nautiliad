@@ -1,6 +1,6 @@
-# nexelliactl
+# nautilusctl
 
-nexelliactl is an RPC client for nexelliad
+nautilusctl is an RPC client for nautiliad
 
 ## Requirements
 
@@ -19,15 +19,15 @@ Go 1.19 or later.
 $ go version
 ```
 
-- Run the following commands to obtain and install nexelliad including all dependencies:
+- Run the following commands to obtain and install nautiliad including all dependencies:
 
 ```bash
-$ git clone https://github.com/Nexellia-Network/nexelliad/
-$ cd nexelliad/cmd/nexelliactl
+$ git clone https://github.com/Nautilus-Network/nautiliad/
+$ cd nautiliad/cmd/nautilusctl
 $ go install .
 ```
 
-- nexelliactl should now be installed in `$(go env GOPATH)/bin`. If you did not already add the bin directory to your
+- nautilusctl should now be installed in `$(go env GOPATH)/bin`. If you did not already add the bin directory to your
   system path during Go installation, you are encouraged to do so now.
 
 ## Usage
@@ -41,13 +41,13 @@ $ kaspctl --help
 But the minimum configuration needed to run it is:
 
 ```bash
-$ nexelliactl <REQUEST_JSON>
+$ nautilusctl <REQUEST_JSON>
 ```
 
 For example:
 
 ```
-$ nexelliactl '{"getBlockDagInfoRequest":{}}'
+$ nautilusctl '{"getBlockDagInfoRequest":{}}'
 ```
 
 For a list of all available requests check out the [RPC documentation](infrastructure/network/netadapter/server/grpcserver/protowire/rpc.md)

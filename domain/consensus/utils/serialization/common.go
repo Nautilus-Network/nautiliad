@@ -3,8 +3,8 @@ package serialization
 import (
 	"io"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/util/binaryserializer"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BanRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BanRequest is nil")
 	}
 	return x.BanRequest.toAppMessage()
 }
@@ -21,14 +21,14 @@ func (x *BanRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
+func (x *NautiliadMessage_BanRequest) fromAppMessage(message *appmessage.BanRequestMessage) error {
 	x.BanRequest = &BanRequestMessage{Ip: message.IP}
 	return nil
 }
 
-func (x *NexelliadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BanResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BanResponse is nil")
 	}
 	return x.BanResponse.toAppMessage()
 }
@@ -47,7 +47,7 @@ func (x *BanResponseMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
+func (x *NautiliadMessage_BanResponse) fromAppMessage(message *appmessage.BanResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

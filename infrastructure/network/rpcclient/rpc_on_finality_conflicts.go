@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	routerpkg "github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	routerpkg "github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

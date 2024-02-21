@@ -5,42 +5,42 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 var commandTypes = []reflect.Type{
-	reflect.TypeOf(protowire.NexelliadMessage_AddPeerRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetConnectedPeerInfoRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetPeerAddressesRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetCurrentNetworkRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetInfoRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_AddPeerRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetConnectedPeerInfoRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetPeerAddressesRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetCurrentNetworkRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetInfoRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_GetBlockRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetBlocksRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetHeadersRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetBlockCountRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetBlockDagInfoRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetSelectedTipHashRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_ResolveFinalityConflictRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_EstimateNetworkHashesPerSecondRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBlockRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBlocksRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetHeadersRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBlockCountRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBlockDagInfoRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetSelectedTipHashRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetVirtualSelectedParentBlueScoreRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_ResolveFinalityConflictRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_EstimateNetworkHashesPerSecondRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_GetBlockTemplateRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_SubmitBlockRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBlockTemplateRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_SubmitBlockRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_GetMempoolEntryRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetMempoolEntriesRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetMempoolEntriesByAddressesRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetMempoolEntryRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetMempoolEntriesRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetMempoolEntriesByAddressesRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_SubmitTransactionRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_SubmitTransactionRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_GetUtxosByAddressesRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetBalanceByAddressRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_GetCoinSupplyRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetUtxosByAddressesRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetBalanceByAddressRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_GetCoinSupplyRequest{}),
 
-	reflect.TypeOf(protowire.NexelliadMessage_BanRequest{}),
-	reflect.TypeOf(protowire.NexelliadMessage_UnbanRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_BanRequest{}),
+	reflect.TypeOf(protowire.NautiliadMessage_UnbanRequest{}),
 }
 
 type commandDescription struct {

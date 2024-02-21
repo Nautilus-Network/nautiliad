@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

@@ -1,9 +1,9 @@
 // RPC-related types. Request messages, response messages, and dependant types.
 //
-// Clients are expected to build RequestMessages and wrap them in NexelliadMessage. (see messages.proto)
+// Clients are expected to build RequestMessages and wrap them in NautiliadMessage. (see messages.proto)
 //
-// Having received a RequestMessage, (wrapped in a NexelliadMessage) the RPC server will respond with a
-// ResponseMessage (likewise wrapped in a NexelliadMessage) respective to the original RequestMessage.
+// Having received a RequestMessage, (wrapped in a NautiliadMessage) the RPC server will respond with a
+// ResponseMessage (likewise wrapped in a NautiliadMessage) respective to the original RequestMessage.
 //
 // **IMPORTANT:** This API is a work in progress and is subject to break between versions.
 //
@@ -1091,7 +1091,7 @@ func (x *RpcTransactionOutputVerboseData) GetScriptPublicKeyAddress() string {
 	return ""
 }
 
-// GetCurrentNetworkRequestMessage requests the network nexelliad is currently running against.
+// GetCurrentNetworkRequestMessage requests the network nautiliad is currently running against.
 //
 // Possible networks are: Mainnet, Testnet, Simnet, Devnet
 type GetCurrentNetworkRequestMessage struct {
@@ -1367,9 +1367,9 @@ type GetBlockTemplateResponseMessage struct {
 	unknownFields protoimpl.UnknownFields
 
 	Block *RpcBlock `protobuf:"bytes,3,opt,name=block,proto3" json:"block,omitempty"`
-	// Whether nexelliad thinks that it's synced.
-	// Callers are discouraged (but not forbidden) from solving blocks when nexelliad is not synced.
-	// That is because when nexelliad isn't in sync with the rest of the network there's a high
+	// Whether nautiliad thinks that it's synced.
+	// Callers are discouraged (but not forbidden) from solving blocks when nautiliad is not synced.
+	// That is because when nautiliad isn't in sync with the rest of the network there's a high
 	// chance the block will never be accepted, thus the solving effort would have been wasted.
 	IsSynced bool      `protobuf:"varint,2,opt,name=isSynced,proto3" json:"isSynced,omitempty"`
 	Error    *RPCError `protobuf:"bytes,1000,opt,name=error,proto3" json:"error,omitempty"`
@@ -1567,7 +1567,7 @@ func (x *BlockAddedNotificationMessage) GetBlock() *RpcBlock {
 	return nil
 }
 
-// GetPeerAddressesRequestMessage requests the list of known nexelliad addresses in the
+// GetPeerAddressesRequestMessage requests the list of known nautiliad addresses in the
 // current network. (mainnet, testnet, etc.)
 type GetPeerAddressesRequestMessage struct {
 	state         protoimpl.MessageState
@@ -2109,7 +2109,7 @@ func (x *MempoolEntry) GetIsOrphan() bool {
 }
 
 // GetConnectedPeerInfoRequestMessage requests information about all the p2p peers
-// currently connected to this nexelliad.
+// currently connected to this nautiliad.
 type GetConnectedPeerInfoRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -2212,13 +2212,13 @@ type GetConnectedPeerInfoMessage struct {
 	Address string `protobuf:"bytes,2,opt,name=address,proto3" json:"address,omitempty"`
 	// How long did the last ping/pong exchange take
 	LastPingDuration int64 `protobuf:"varint,3,opt,name=lastPingDuration,proto3" json:"lastPingDuration,omitempty"`
-	// Whether this nexelliad initiated the connection
+	// Whether this nautiliad initiated the connection
 	IsOutbound bool   `protobuf:"varint,6,opt,name=isOutbound,proto3" json:"isOutbound,omitempty"`
 	TimeOffset int64  `protobuf:"varint,7,opt,name=timeOffset,proto3" json:"timeOffset,omitempty"`
 	UserAgent  string `protobuf:"bytes,8,opt,name=userAgent,proto3" json:"userAgent,omitempty"`
 	// The protocol version that this peer claims to support
 	AdvertisedProtocolVersion uint32 `protobuf:"varint,9,opt,name=advertisedProtocolVersion,proto3" json:"advertisedProtocolVersion,omitempty"`
-	// The timestamp of when this peer connected to this nexelliad
+	// The timestamp of when this peer connected to this nautiliad
 	TimeConnected int64 `protobuf:"varint,10,opt,name=timeConnected,proto3" json:"timeConnected,omitempty"`
 	// Whether this peer is the IBD peer (if IBD is running)
 	IsIbdPeer bool `protobuf:"varint,11,opt,name=isIbdPeer,proto3" json:"isIbdPeer,omitempty"`
@@ -2319,8 +2319,8 @@ func (x *GetConnectedPeerInfoMessage) GetIsIbdPeer() bool {
 	return false
 }
 
-// AddPeerRequestMessage adds a peer to nexelliad's outgoing connection list.
-// This will, in most cases, result in nexelliad connecting to said peer.
+// AddPeerRequestMessage adds a peer to nautiliad's outgoing connection list.
+// This will, in most cases, result in nautiliad connecting to said peer.
 type AddPeerRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -2922,7 +2922,7 @@ func (x *GetSubnetworkResponseMessage) GetError() *RPCError {
 }
 
 // GetVirtualSelectedParentChainFromBlockRequestMessage requests the virtual selected
-// parent chain from some startHash to this nexelliad's current virtual
+// parent chain from some startHash to this nautiliad's current virtual
 type GetVirtualSelectedParentChainFromBlockRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -3109,7 +3109,7 @@ func (x *GetVirtualSelectedParentChainFromBlockResponseMessage) GetError() *RPCE
 }
 
 // GetBlocksRequestMessage requests blocks between a certain block lowHash up to this
-// nexelliad's current virtual.
+// nautiliad's current virtual.
 type GetBlocksRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -3236,7 +3236,7 @@ func (x *GetBlocksResponseMessage) GetError() *RPCError {
 	return nil
 }
 
-// GetBlockCountRequestMessage requests the current number of blocks in this nexelliad.
+// GetBlockCountRequestMessage requests the current number of blocks in this nautiliad.
 // Note that this number may decrease as pruning occurs.
 type GetBlockCountRequestMessage struct {
 	state         protoimpl.MessageState
@@ -3340,7 +3340,7 @@ func (x *GetBlockCountResponseMessage) GetError() *RPCError {
 }
 
 // GetBlockDagInfoRequestMessage requests general information about the current state
-// of this nexelliad's DAG.
+// of this nautiliad's DAG.
 type GetBlockDagInfoRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -3771,7 +3771,7 @@ func (x *FinalityConflictResolvedNotificationMessage) GetFinalityBlockHash() str
 	return ""
 }
 
-// ShutDownRequestMessage shuts down this nexelliad.
+// ShutDownRequestMessage shuts down this nautiliad.
 type ShutDownRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -3980,7 +3980,7 @@ func (x *GetHeadersResponseMessage) GetError() *RPCError {
 // NotifyUtxosChangedRequestMessage registers this connection for utxoChanged notifications
 // for the given addresses.
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 //
 // See: UtxosChangedNotificationMessage
 type NotifyUtxosChangedRequestMessage struct {
@@ -4201,7 +4201,7 @@ func (x *UtxosByAddressesEntry) GetUtxoEntry() *RpcUtxoEntry {
 // StopNotifyingUtxosChangedRequestMessage unregisters this connection for utxoChanged notifications
 // for the given addresses.
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 //
 // See: UtxosChangedNotificationMessage
 type StopNotifyingUtxosChangedRequestMessage struct {
@@ -4298,9 +4298,9 @@ func (x *StopNotifyingUtxosChangedResponseMessage) GetError() *RPCError {
 	return nil
 }
 
-// GetUtxosByAddressesRequestMessage requests all current UTXOs for the given nexelliad addresses
+// GetUtxosByAddressesRequestMessage requests all current UTXOs for the given nautiliad addresses
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 type GetUtxosByAddressesRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -4405,7 +4405,7 @@ func (x *GetUtxosByAddressesResponseMessage) GetError() *RPCError {
 
 // GetBalanceByAddressRequest returns the total balance in unspent transactions towards a given address
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 type GetBalanceByAddressRequestMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -5051,7 +5051,7 @@ func (x *VirtualDaaScoreChangedNotificationMessage) GetVirtualDaaScore() uint64 
 // NotifyPruningPointUTXOSetOverrideRequestMessage registers this connection for
 // pruning point UTXO set override notifications.
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 //
 // See: NotifyPruningPointUTXOSetOverrideResponseMessage
 type NotifyPruningPointUTXOSetOverrideRequestMessage struct {
@@ -5184,7 +5184,7 @@ func (*PruningPointUTXOSetOverrideNotificationMessage) Descriptor() ([]byte, []i
 // StopNotifyingPruningPointUTXOSetOverrideRequestMessage unregisters this connection for
 // pruning point UTXO set override notifications.
 //
-// This call is only available when this nexelliad was started with `--utxoindex`
+// This call is only available when this nautiliad was started with `--utxoindex`
 //
 // See: PruningPointUTXOSetOverrideNotificationMessage
 type StopNotifyingPruningPointUTXOSetOverrideRequestMessage struct {

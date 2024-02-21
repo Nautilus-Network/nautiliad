@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 )
 

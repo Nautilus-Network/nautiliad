@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
 )
 
 // RenderDAGToDot is a helper function for debugging tests.

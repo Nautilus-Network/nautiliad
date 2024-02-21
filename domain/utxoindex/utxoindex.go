@@ -3,10 +3,10 @@ package utxoindex
 import (
 	"sync"
 
-	"github.com/Nexellia-Network/nexelliad/domain"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/domain"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
 // UTXOIndex maintains an index between transaction scriptPublicKeys

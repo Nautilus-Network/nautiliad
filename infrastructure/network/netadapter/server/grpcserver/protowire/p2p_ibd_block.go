@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_IbdBlock is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_IbdBlock is nil")
 	}
 	msgBlock, err := x.IbdBlock.toAppMessage()
 	if err != nil {
@@ -16,7 +16,7 @@ func (x *NexelliadMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.MsgIBDBlock{MsgBlock: msgBlock}, nil
 }
 
-func (x *NexelliadMessage_IbdBlock) fromAppMessage(msgIBDBlock *appmessage.MsgIBDBlock) error {
+func (x *NautiliadMessage_IbdBlock) fromAppMessage(msgIBDBlock *appmessage.MsgIBDBlock) error {
 	x.IbdBlock = new(BlockMessage)
 	return x.IbdBlock.fromAppMessage(msgIBDBlock.MsgBlock)
 }

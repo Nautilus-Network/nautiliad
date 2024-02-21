@@ -7,17 +7,17 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database/ldb"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/execenv"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/limits"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/signal"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/winservice"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database/ldb"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/execenv"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/limits"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/signal"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/winservice"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/version"
 )
 
 const (
@@ -31,17 +31,17 @@ var desiredLimits = &limits.DesiredLimits{
 }
 
 var serviceDescription = &winservice.ServiceDescription{
-	Name:        "nexelliadsvc",
-	DisplayName: "Nexelliad Service",
+	Name:        "nautiliadsvc",
+	DisplayName: "Nautiliad Service",
 	Description: "Downloads and stays synchronized with the Kaspa blockDAG and " +
 		"provides DAG services to applications.",
 }
 
-type nexelliadApp struct {
+type nautiliadApp struct {
 	cfg *config.Config
 }
 
-// StartApp starts the nexelliad app, and blocks until it finishes running
+// StartApp starts the nautiliad app, and blocks until it finishes running
 func StartApp() error {
 	execenv.Initialize(desiredLimits)
 
@@ -55,7 +55,7 @@ func StartApp() error {
 	defer logger.BackendLog.Close()
 	defer panics.HandlePanic(log, "MAIN", nil)
 
-	app := &nexelliadApp{cfg: cfg}
+	app := &nautiliadApp{cfg: cfg}
 
 	// Call serviceMain on Windows to handle running as a service. When
 	// the return isService flag is true, exit now since we ran as a
@@ -73,7 +73,7 @@ func StartApp() error {
 	return app.main(nil)
 }
 
-func (app *nexelliadApp) main(startedChan chan<- struct{}) error {
+func (app *nautiliadApp) main(startedChan chan<- struct{}) error {
 	// Get a channel that will be closed when a shutdown signal has been
 	// triggered either from an OS signal such as SIGINT (Ctrl+C) or from
 	// another subsystem such as the RPC server.
@@ -125,12 +125,12 @@ func (app *nexelliadApp) main(startedChan chan<- struct{}) error {
 	// Create componentManager and start it.
 	componentManager, err := NewComponentManager(app.cfg, databaseContext, interrupt)
 	if err != nil {
-		log.Errorf("Unable to start nexelliad: %+v", err)
+		log.Errorf("Unable to start nautiliad: %+v", err)
 		return err
 	}
 
 	defer func() {
-		log.Infof("Gracefully shutting down nexelliad...")
+		log.Infof("Gracefully shutting down nautiliad...")
 
 		shutdownDone := make(chan struct{})
 		go func() {
@@ -145,7 +145,7 @@ func (app *nexelliadApp) main(startedChan chan<- struct{}) error {
 		case <-time.After(shutdownTimeout):
 			log.Criticalf("Graceful shutdown timed out %s. Terminating...", shutdownTimeout)
 		}
-		log.Infof("Nexelliad shutdown complete")
+		log.Infof("Nautiliad shutdown complete")
 	}()
 
 	componentManager.Start()

@@ -6,15 +6,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/version"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliaminer/templatemanager"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/pow"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautilusminer/templatemanager"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/pow"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/pkg/errors"
 )
 
@@ -177,7 +177,7 @@ func getBlockForMining(mineWhenNotSynced bool) (*externalapi.DomainBlock, *pow.S
 		}
 		if !isSynced && !mineWhenNotSynced {
 			if shouldLog {
-				log.Warnf("Nexelliad is not synced. Skipping current block template")
+				log.Warnf("Nautiliad is not synced. Skipping current block template")
 			}
 			time.Sleep(sleepTimeWhenNotSynced)
 			continue
@@ -189,7 +189,7 @@ func getBlockForMining(mineWhenNotSynced bool) (*externalapi.DomainBlock, *pow.S
 
 func templatesLoop(client *minerClient, miningAddr util.Address, errChan chan error) {
 	getBlockTemplate := func() {
-		template, err := client.GetBlockTemplate(miningAddr.String(), "nexelliaminer-"+version.Version())
+		template, err := client.GetBlockTemplate(miningAddr.String(), "nautilusminer-"+version.Version())
 		if nativeerrors.Is(err, router.ErrTimeout) {
 			log.Warnf("Got timeout while requesting block template from %s: %s", client.Address(), err)
 			reconnectErr := client.Reconnect()

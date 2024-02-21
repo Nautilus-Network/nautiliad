@@ -3,8 +3,8 @@ package libkaspawallet
 import (
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet/bip32"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet/bip32"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 	"github.com/pkg/errors"
 	"github.com/tyler-smith/go-bip39"
 )

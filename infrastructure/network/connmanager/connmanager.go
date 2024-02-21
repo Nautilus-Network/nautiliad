@@ -6,15 +6,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/dnsseed"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/dnsseed"
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/addressmanager"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/addressmanager"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
 )
 
 // connectionRequest represents a user request (either through CLI or RPC) to connect to a certain node
@@ -258,7 +258,7 @@ func (c *ConnectionManager) seedFromDNS() {
 	if len(c.activeOutgoing) == 0 && !cfg.DisableDNSSeed {
 		dnsseed.SeedFromDNS(cfg.NetParams(), cfg.DNSSeed, false, nil,
 			cfg.Lookup, func(addresses []*appmessage.NetAddress) {
-				// Nexelliad uses a lookup of the dns seeder here. Since seeder returns
+				// Nautiliad uses a lookup of the dns seeder here. Since seeder returns
 				// IPs of nodes and not its own IP, we can not know real IP of
 				// source. So we'll take first returned address as source.
 				_ = c.addressManager.AddAddresses(addresses...)

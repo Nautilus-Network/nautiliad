@@ -5,7 +5,7 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("BLTB")

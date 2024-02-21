@@ -6,7 +6,7 @@
 package app
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 )
 
-var log = logger.RegisterSubSystem("NXLD")
+var log = logger.RegisterSubSystem("NTLD")

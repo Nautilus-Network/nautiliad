@@ -9,12 +9,12 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/subnetworks"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/subnetworks"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // TestBlock tests the MsgBlock API.

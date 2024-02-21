@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_InvRelayBlock) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_InvRelayBlock is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_InvRelayBlock is nil")
 	}
 	return x.InvRelayBlock.toAppMessage()
 }
@@ -25,7 +25,7 @@ func (x *InvRelayBlockMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *NexelliadMessage_InvRelayBlock) fromAppMessage(msgInvRelayBlock *appmessage.MsgInvRelayBlock) error {
+func (x *NautiliadMessage_InvRelayBlock) fromAppMessage(msgInvRelayBlock *appmessage.MsgInvRelayBlock) error {
 	x.InvRelayBlock = &InvRelayBlockMessage{
 		Hash: domainHashToProto(msgInvRelayBlock.Hash),
 	}

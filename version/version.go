@@ -15,7 +15,7 @@ const (
 )
 
 // appBuild is defined as a variable so it can be overridden during the build
-// process with '-ldflags "-X github.com/Nexellia-Network/nexelliad/version.appBuild=foo"' if needed.
+// process with '-ldflags "-X github.com/Nautilus-Network/nautiliad/version.appBuild=foo"' if needed.
 // It MUST only contain characters from validCharacters.
 var appBuild string
 

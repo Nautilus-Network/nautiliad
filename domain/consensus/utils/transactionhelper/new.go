@@ -1,8 +1,8 @@
 package transactionhelper
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/subnetworks"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/subnetworks"
 )
 
 // NewSubnetworkTransaction returns a new trsnactions in the specified subnetwork with specified gas and payload

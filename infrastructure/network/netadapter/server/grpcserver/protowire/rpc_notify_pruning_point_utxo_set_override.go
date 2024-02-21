@@ -1,30 +1,30 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest is nil")
 	}
 	return &appmessage.NotifyPruningPointUTXOSetOverrideRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_NotifyPruningPointUTXOSetOverrideRequest) fromAppMessage(_ *appmessage.NotifyPruningPointUTXOSetOverrideRequestMessage) error {
+func (x *NautiliadMessage_NotifyPruningPointUTXOSetOverrideRequest) fromAppMessage(_ *appmessage.NotifyPruningPointUTXOSetOverrideRequestMessage) error {
 	x.NotifyPruningPointUTXOSetOverrideRequest = &NotifyPruningPointUTXOSetOverrideRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse is nil")
 	}
 	return x.NotifyPruningPointUTXOSetOverrideResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_NotifyPruningPointUTXOSetOverrideResponse) fromAppMessage(message *appmessage.NotifyPruningPointUTXOSetOverrideResponseMessage) error {
+func (x *NautiliadMessage_NotifyPruningPointUTXOSetOverrideResponse) fromAppMessage(message *appmessage.NotifyPruningPointUTXOSetOverrideResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -49,38 +49,38 @@ func (x *NotifyPruningPointUTXOSetOverrideResponseMessage) toAppMessage() (appme
 	}, nil
 }
 
-func (x *NexelliadMessage_PruningPointUTXOSetOverrideNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_PruningPointUTXOSetOverrideNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_PruningPointUTXOSetOverrideNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_PruningPointUTXOSetOverrideNotification is nil")
 	}
 	return &appmessage.PruningPointUTXOSetOverrideNotificationMessage{}, nil
 }
 
-func (x *NexelliadMessage_PruningPointUTXOSetOverrideNotification) fromAppMessage(_ *appmessage.PruningPointUTXOSetOverrideNotificationMessage) error {
+func (x *NautiliadMessage_PruningPointUTXOSetOverrideNotification) fromAppMessage(_ *appmessage.PruningPointUTXOSetOverrideNotificationMessage) error {
 	x.PruningPointUTXOSetOverrideNotification = &PruningPointUTXOSetOverrideNotificationMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest is nil")
 	}
 	return &appmessage.StopNotifyingPruningPointUTXOSetOverrideRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) fromAppMessage(_ *appmessage.StopNotifyingPruningPointUTXOSetOverrideRequestMessage) error {
+func (x *NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) fromAppMessage(_ *appmessage.StopNotifyingPruningPointUTXOSetOverrideRequestMessage) error {
 	x.StopNotifyingPruningPointUTXOSetOverrideRequest = &StopNotifyingPruningPointUTXOSetOverrideRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse is nil")
 	}
 	return x.StopNotifyingPruningPointUTXOSetOverrideResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) fromAppMessage(
+func (x *NautiliadMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) fromAppMessage(
 	message *appmessage.StopNotifyingPruningPointUTXOSetOverrideResponseMessage) error {
 
 	var err *RPCError

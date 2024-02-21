@@ -1,27 +1,27 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_NotifyFinalityConflictsRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyFinalityConflictsRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.NotifyFinalityConflictsRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_NotifyFinalityConflictsRequest) fromAppMessage(_ *appmessage.NotifyFinalityConflictsRequestMessage) error {
+func (x *NautiliadMessage_NotifyFinalityConflictsRequest) fromAppMessage(_ *appmessage.NotifyFinalityConflictsRequestMessage) error {
 	x.NotifyFinalityConflictsRequest = &NotifyFinalityConflictsRequestMessage{}
 	return nil
 }
 
-func (x *NexelliadMessage_NotifyFinalityConflictsResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyFinalityConflictsResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyFinalityConflictsResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyFinalityConflictsResponse is nil")
 	}
 	return x.NotifyFinalityConflictsResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_NotifyFinalityConflictsResponse) fromAppMessage(message *appmessage.NotifyFinalityConflictsResponseMessage) error {
+func (x *NautiliadMessage_NotifyFinalityConflictsResponse) fromAppMessage(message *appmessage.NotifyFinalityConflictsResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -46,14 +46,14 @@ func (x *NotifyFinalityConflictsResponseMessage) toAppMessage() (appmessage.Mess
 	}, nil
 }
 
-func (x *NexelliadMessage_FinalityConflictNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_FinalityConflictNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_FinalityConflictNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_FinalityConflictNotification is nil")
 	}
 	return x.FinalityConflictNotification.toAppMessage()
 }
 
-func (x *NexelliadMessage_FinalityConflictNotification) fromAppMessage(message *appmessage.FinalityConflictNotificationMessage) error {
+func (x *NautiliadMessage_FinalityConflictNotification) fromAppMessage(message *appmessage.FinalityConflictNotificationMessage) error {
 	x.FinalityConflictNotification = &FinalityConflictNotificationMessage{
 		ViolatingBlockHash: message.ViolatingBlockHash,
 	}
@@ -69,14 +69,14 @@ func (x *FinalityConflictNotificationMessage) toAppMessage() (appmessage.Message
 	}, nil
 }
 
-func (x *NexelliadMessage_FinalityConflictResolvedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_FinalityConflictResolvedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_FinalityConflictResolvedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_FinalityConflictResolvedNotification is nil")
 	}
 	return x.FinalityConflictResolvedNotification.toAppMessage()
 }
 
-func (x *NexelliadMessage_FinalityConflictResolvedNotification) fromAppMessage(message *appmessage.FinalityConflictResolvedNotificationMessage) error {
+func (x *NautiliadMessage_FinalityConflictResolvedNotification) fromAppMessage(message *appmessage.FinalityConflictResolvedNotificationMessage) error {
 	x.FinalityConflictResolvedNotification = &FinalityConflictResolvedNotificationMessage{
 		FinalityBlockHash: message.FinalityBlockHash,
 	}

@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
 	"github.com/pkg/errors"
 )
 

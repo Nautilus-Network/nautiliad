@@ -2,9 +2,9 @@ database
 ========
 
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Nexellia-Network/nexelliad/database)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Nautilus-Network/nautiliad/database)
 
-Package database provides a database for nexelliad.
+Package database provides a database for nautiliad.
 
 Overview
 --------
@@ -18,7 +18,7 @@ Implementors of additional backends are required to implement the following inte
 
 DataAccessor
 ------------
-This defines the common interface by which data gets accessed in a generic nexelliad
+This defines the common interface by which data gets accessed in a generic nautiliad
 database. Both the Database and the Transaction interfaces (see below) implement it.
 
 Database
@@ -27,7 +27,7 @@ This defines the interface of a database that can begin transactions and close i
 
 Transaction
 -----------
-This defines the interface of a generic nexelliad database transaction.
+This defines the interface of a generic nautiliad database transaction.
 
 Note: Transactions provide data consistency over the state of the database as it was
 when the transaction started. There is NO guarantee that if one puts data into the

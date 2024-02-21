@@ -3,8 +3,8 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
 	"github.com/jessevdk/go-flags"
 )
 

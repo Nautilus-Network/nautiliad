@@ -1,26 +1,26 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetSelectedTipHashRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetSelectedTipHashRequest) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.GetSelectedTipHashRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_GetSelectedTipHashRequest) fromAppMessage(_ *appmessage.GetSelectedTipHashRequestMessage) error {
+func (x *NautiliadMessage_GetSelectedTipHashRequest) fromAppMessage(_ *appmessage.GetSelectedTipHashRequestMessage) error {
 	return nil
 }
 
-func (x *NexelliadMessage_GetSelectedTipHashResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetSelectedTipHashResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetSelectedTipHashResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetSelectedTipHashResponse is nil")
 	}
 	return x.GetSelectedTipHashResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetSelectedTipHashResponse) fromAppMessage(message *appmessage.GetSelectedTipHashResponseMessage) error {
+func (x *NautiliadMessage_GetSelectedTipHashResponse) fromAppMessage(message *appmessage.GetSelectedTipHashResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

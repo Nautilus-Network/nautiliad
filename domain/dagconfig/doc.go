@@ -27,8 +27,8 @@ variable (either directly, or hidden in a library call).
 		"fmt"
 		"log"
 
-		"github.com/Nexellia-Network/nexelliad/util"
-		"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+		"github.com/Nautilus-Network/nautiliad/util"
+		"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 	)
 
 	var testnet = flag.Bool("testnet", false, "operate on the testnet Kaspa network")

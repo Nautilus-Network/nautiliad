@@ -16,23 +16,23 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util"
-	"github.com/Nexellia-Network/nexelliad/util/network"
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util"
+	"github.com/Nautilus-Network/nautiliad/util/network"
+	"github.com/Nautilus-Network/nautiliad/version"
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
 	"github.com/pkg/errors"
 )
 
 const (
-	defaultConfigFilename      = "nexelliad.conf"
+	defaultConfigFilename      = "nautiliad.conf"
 	defaultLogLevel            = "info"
 	defaultLogDirname          = "logs"
-	defaultLogFilename         = "nexelliad.log"
-	defaultErrLogFilename      = "nexelliad_err.log"
+	defaultLogFilename         = "nautiliad.log"
+	defaultErrLogFilename      = "nautiliad_err.log"
 	defaultTargetOutboundPeers = 8
 	defaultMaxInboundPeers     = 117
 	defaultBanDuration         = time.Hour * 24
@@ -51,14 +51,14 @@ const (
 	//DefaultMaxOrphanTxSize is the default maximum size for an orphan transaction
 	DefaultMaxOrphanTxSize  = 100_000
 	defaultSigCacheMaxSize  = 100_000
-	sampleConfigFilename    = "sample-nexelliad.conf"
+	sampleConfigFilename    = "sample-nautiliad.conf"
 	defaultMaxUTXOCacheSize = 5_000_000_000
 	defaultProtocolVersion  = 5
 )
 
 var (
-	// DefaultAppDir is the default home directory for nexelliad.
-	DefaultAppDir = util.AppDir("nexelliad", false)
+	// DefaultAppDir is the default home directory for nautiliad.
+	DefaultAppDir = util.AppDir("nautiliad", false)
 
 	defaultConfigFile  = filepath.Join(DefaultAppDir, defaultConfigFilename)
 	defaultDataDir     = filepath.Join(DefaultAppDir)
@@ -66,14 +66,14 @@ var (
 	defaultRPCCertFile = filepath.Join(DefaultAppDir, "rpc.cert")
 )
 
-//go:embed sample-nexelliad.conf
+//go:embed sample-nautiliad.conf
 var sampleConfig string
 
 // RunServiceCommand is only set to a real function on Windows. It is used
 // to parse and execute service commands specified via the -s flag.
 var RunServiceCommand func(string) error
 
-// Flags defines the configuration options for nexelliad.
+// Flags defines the configuration options for nautiliad.
 //
 // See loadConfig for details on the configuration load process.
 type Flags struct {
@@ -130,7 +130,7 @@ type Flags struct {
 	ServiceOptions *ServiceOptions
 }
 
-// Config defines the configuration options for nexelliad.
+// Config defines the configuration options for nautiliad.
 //
 // See loadConfig for details on the configuration load process.
 type Config struct {
@@ -196,7 +196,7 @@ func defaultFlags() *Flags {
 	}
 }
 
-// DefaultConfig returns the default nexelliad configuration
+// DefaultConfig returns the default nautiliad configuration
 func DefaultConfig() *Config {
 	config := &Config{Flags: defaultFlags()}
 	config.NetworkFlags.ActiveNetParams = &dagconfig.MainnetParams
@@ -212,7 +212,7 @@ func DefaultConfig() *Config {
 //  3. Load configuration file overwriting defaults with any specified options
 //  4. Parse CLI options and overwrite/add any specified options
 //
-// The above results in nexelliad functioning properly without any config settings
+// The above results in nautiliad functioning properly without any config settings
 // while still allowing the user to override settings with config files and
 // command line options. Command line options always take precedence.
 func LoadConfig() (*Config, error) {
@@ -575,7 +575,7 @@ func LoadConfig() (*Config, error) {
 	return cfg, nil
 }
 
-// createDefaultConfig copies the file sample-nexelliad.conf to the given destination path,
+// createDefaultConfig copies the file sample-nautiliad.conf to the given destination path,
 // and populates it with some randomly generated RPC username and password.
 func createDefaultConfigFile(destinationPath string) error {
 	// Create the destination directory if it does not exists

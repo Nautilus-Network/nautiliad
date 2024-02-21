@@ -4,8 +4,8 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 

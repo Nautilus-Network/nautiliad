@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/Nexellia-Network/nexelliad/util/bech32"
+	"github.com/Nautilus-Network/nautiliad/util/bech32"
 )
 
 var (
@@ -54,10 +54,10 @@ const (
 
 // Map from strings to Bech32 address prefix constants for parsing purposes.
 var stringsToBech32Prefixes = map[string]Bech32Prefix{
-	"nexellia":     Bech32PrefixKaspa,
-	"nexelliadev":  Bech32PrefixKaspaDev,
-	"nexelliatest": Bech32PrefixKaspaTest,
-	"nexelliasim":  Bech32PrefixKaspaSim,
+	"nautilus":     Bech32PrefixKaspa,
+	"nautiliadev":  Bech32PrefixKaspaDev,
+	"nautilustest": Bech32PrefixKaspaTest,
+	"nautilussim":  Bech32PrefixKaspaSim,
 }
 
 // ParsePrefix attempts to parse a Bech32 address prefix.

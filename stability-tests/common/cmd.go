@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 
@@ -26,7 +26,7 @@ func StartCmd(name string, args ...string) (*exec.Cmd, error) {
 	return cmd, nil
 }
 
-// NetworkCliArgumentFromNetParams returns the nexelliad command line argument that starts the given network.
+// NetworkCliArgumentFromNetParams returns the nautiliad command line argument that starts the given network.
 func NetworkCliArgumentFromNetParams(params *dagconfig.Params) string {
 	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "kaspa-"))
 }

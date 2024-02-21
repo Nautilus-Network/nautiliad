@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/standalone"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {
 	cfg := activeConfig()
 
-	nexelliadConfig := config.DefaultConfig()
-	nexelliadConfig.NetworkFlags = cfg.NetworkFlags
+	nautiliadConfig := config.DefaultConfig()
+	nautiliadConfig.NetworkFlags = cfg.NetworkFlags
 
-	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(nexelliadConfig)
+	minimalNetAdapter, err := standalone.NewMinimalNetAdapter(nautiliadConfig)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "error creating minimalNetAdapter: %+v", err)
 		os.Exit(1)

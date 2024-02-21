@@ -3,16 +3,16 @@ package standalone
 import (
 	"sync"
 
-	"github.com/Nexellia-Network/nexelliad/app/protocol/common"
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/common"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 )

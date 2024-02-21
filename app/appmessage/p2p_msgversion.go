@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/version"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 )
 
 // MaxUserAgentLen is the maximum allowed length for the user agent field in a
@@ -20,7 +20,7 @@ import (
 const MaxUserAgentLen = 256
 
 // DefaultUserAgent for appmessage in the stack
-var DefaultUserAgent = fmt.Sprintf("/nexelliad:%s/", version.Version())
+var DefaultUserAgent = fmt.Sprintf("/nautiliad:%s/", version.Version())
 
 // MsgVersion implements the Message interface and represents a kaspa version
 // message. It is used for a peer to advertise itself as soon as an outbound

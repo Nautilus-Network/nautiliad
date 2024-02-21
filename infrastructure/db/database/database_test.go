@@ -9,7 +9,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
 )
 
 func TestDatabasePut(t *testing.T) {

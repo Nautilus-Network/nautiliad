@@ -1,12 +1,12 @@
 syntax = "proto3";
 package protowire;
 
-option go_package = "github.com/Nexellia-Network/nexelliad/protowire";
+option go_package = "github.com/Nautilus-Network/nautiliad/protowire";
 
 import "p2p.proto";
 import "rpc.proto";
 
-message NexelliadMessage {
+message NautiliadMessage {
   oneof payload {
     AddressesMessage addresses = 1;
     BlockMessage block = 2;
@@ -143,9 +143,9 @@ message NexelliadMessage {
 }
 
 service P2P {
-  rpc MessageStream (stream NexelliadMessage) returns (stream NexelliadMessage) {}
+  rpc MessageStream (stream NautiliadMessage) returns (stream NautiliadMessage) {}
 }
 
 service RPC {
-  rpc MessageStream (stream NexelliadMessage) returns (stream NexelliadMessage) {}
+  rpc MessageStream (stream NautiliadMessage) returns (stream NautiliadMessage) {}
 }

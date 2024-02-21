@@ -1,34 +1,34 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest is nil")
 	}
 	return &appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage{
 		IncludeAcceptedTransactionIDs: x.NotifyVirtualSelectedParentChainChangedRequest.IncludeAcceptedTransactionIds,
 	}, nil
 }
 
-func (x *NexelliadMessage_NotifyVirtualSelectedParentChainChangedRequest) fromAppMessage(appmessage *appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage) error {
+func (x *NautiliadMessage_NotifyVirtualSelectedParentChainChangedRequest) fromAppMessage(appmessage *appmessage.NotifyVirtualSelectedParentChainChangedRequestMessage) error {
 	x.NotifyVirtualSelectedParentChainChangedRequest = &NotifyVirtualSelectedParentChainChangedRequestMessage{
 		IncludeAcceptedTransactionIds: appmessage.IncludeAcceptedTransactionIDs,
 	}
 	return nil
 }
 
-func (x *NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse is nil")
 	}
 	return x.NotifyVirtualSelectedParentChainChangedResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_NotifyVirtualSelectedParentChainChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentChainChangedResponseMessage) error {
+func (x *NautiliadMessage_NotifyVirtualSelectedParentChainChangedResponse) fromAppMessage(message *appmessage.NotifyVirtualSelectedParentChainChangedResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}
@@ -53,14 +53,14 @@ func (x *NotifyVirtualSelectedParentChainChangedResponseMessage) toAppMessage() 
 	}, nil
 }
 
-func (x *NexelliadMessage_VirtualSelectedParentChainChangedNotification) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_VirtualSelectedParentChainChangedNotification) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_VirtualSelectedParentChainChangedNotification is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_VirtualSelectedParentChainChangedNotification is nil")
 	}
 	return x.VirtualSelectedParentChainChangedNotification.toAppMessage()
 }
 
-func (x *NexelliadMessage_VirtualSelectedParentChainChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentChainChangedNotificationMessage) error {
+func (x *NautiliadMessage_VirtualSelectedParentChainChangedNotification) fromAppMessage(message *appmessage.VirtualSelectedParentChainChangedNotificationMessage) error {
 	x.VirtualSelectedParentChainChangedNotification = &VirtualSelectedParentChainChangedNotificationMessage{
 		RemovedChainBlockHashes: message.RemovedChainBlockHashes,
 		AddedChainBlockHashes:   message.AddedChainBlockHashes,

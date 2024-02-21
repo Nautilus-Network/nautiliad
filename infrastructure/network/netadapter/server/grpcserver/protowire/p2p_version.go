@@ -1,15 +1,15 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
-	"github.com/Nexellia-Network/nexelliad/util/mstime"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/util/mstime"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_Version) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_Version) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_Version is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_Version is nil")
 	}
 	return x.Version.toAppMessage()
 }
@@ -57,7 +57,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
+func (x *NautiliadMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
 	err := appmessage.ValidateUserAgent(msgVersion.UserAgent)
 	if err != nil {
 		return err

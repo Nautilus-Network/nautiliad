@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 	"github.com/pkg/errors"
 )
 
 func main() {
-	defer panics.HandlePanic(log, "nexelliadsanity-main", nil)
+	defer panics.HandlePanic(log, "nautiliadsanity-main", nil)
 	err := parseConfig()
 	if err != nil {
 		panic(errors.Wrap(err, "error in parseConfig"))

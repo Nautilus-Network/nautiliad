@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_TransactionNotFound) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_TransactionNotFound) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_TransactionNotFound is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_TransactionNotFound is nil")
 	}
 	return x.TransactionNotFound.toAppMessage()
 }
@@ -23,7 +23,7 @@ func (x *TransactionNotFoundMessage) toAppMessage() (appmessage.Message, error) 
 	return appmessage.NewMsgTransactionNotFound(id), nil
 }
 
-func (x *NexelliadMessage_TransactionNotFound) fromAppMessage(msgTransactionsNotFound *appmessage.MsgTransactionNotFound) error {
+func (x *NautiliadMessage_TransactionNotFound) fromAppMessage(msgTransactionsNotFound *appmessage.MsgTransactionNotFound) error {
 	x.TransactionNotFound = &TransactionNotFoundMessage{
 		Id: domainTransactionIDToProto(msgTransactionsNotFound.ID),
 	}

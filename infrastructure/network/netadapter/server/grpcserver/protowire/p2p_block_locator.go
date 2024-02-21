@@ -1,14 +1,14 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_BlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_BlockLocator is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_BlockLocator is nil")
 	}
 	hashes, err := x.BlockLocator.toAppMessage()
 	if err != nil {
@@ -28,7 +28,7 @@ func (x *BlockLocatorMessage) toAppMessage() ([]*externalapi.DomainHash, error) 
 	return protoHashesToDomain(x.Hashes)
 }
 
-func (x *NexelliadMessage_BlockLocator) fromAppMessage(msgBlockLocator *appmessage.MsgBlockLocator) error {
+func (x *NautiliadMessage_BlockLocator) fromAppMessage(msgBlockLocator *appmessage.MsgBlockLocator) error {
 	if len(msgBlockLocator.BlockLocatorHashes) > appmessage.MaxBlockLocatorsPerMsg {
 		return errors.Errorf("too many block locator hashes for message "+
 			"[count %d, max %d]", len(msgBlockLocator.BlockLocatorHashes), appmessage.MaxBlockLocatorsPerMsg)

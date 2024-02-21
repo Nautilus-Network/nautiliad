@@ -7,7 +7,7 @@ package bech32_test
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/util/bech32"
+	"github.com/Nautilus-Network/nautiliad/util/bech32"
 )
 
 var checkEncodingStringTests = []struct {

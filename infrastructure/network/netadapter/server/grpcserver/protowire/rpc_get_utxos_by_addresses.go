@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetUtxosByAddressesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetUtxosByAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetUtxosByAddressesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetUtxosByAddressesRequest is nil")
 	}
 	return x.GetUtxosByAddressesRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetUtxosByAddressesRequest) fromAppMessage(message *appmessage.GetUTXOsByAddressesRequestMessage) error {
+func (x *NautiliadMessage_GetUtxosByAddressesRequest) fromAppMessage(message *appmessage.GetUTXOsByAddressesRequestMessage) error {
 	x.GetUtxosByAddressesRequest = &GetUtxosByAddressesRequestMessage{
 		Addresses: message.Addresses,
 	}
@@ -28,14 +28,14 @@ func (x *GetUtxosByAddressesRequestMessage) toAppMessage() (appmessage.Message, 
 	}, nil
 }
 
-func (x *NexelliadMessage_GetUtxosByAddressesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetUtxosByAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "GetUtxosByAddressesResponseMessage is nil")
 	}
 	return x.GetUtxosByAddressesResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetUtxosByAddressesResponse) fromAppMessage(message *appmessage.GetUTXOsByAddressesResponseMessage) error {
+func (x *NautiliadMessage_GetUtxosByAddressesResponse) fromAppMessage(message *appmessage.GetUTXOsByAddressesResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

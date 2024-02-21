@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // MsgTransactionNotFound defines a kaspa TransactionNotFound message which is sent in response to

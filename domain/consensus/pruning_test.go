@@ -3,9 +3,9 @@ package consensus_test
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/testutils"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/testutils"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 )
 
 func TestPruningDepth(t *testing.T) {

@@ -5,14 +5,14 @@ import (
 	"os"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/version"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver/protowire"
 
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient/grpcclient"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient/grpcclient"
 )
 
 func main() {
@@ -36,13 +36,13 @@ func main() {
 	defer client.Disconnect()
 
 	if !cfg.AllowConnectionToDifferentVersions {
-		nexelliadMessage, err := client.Post(&protowire.NexelliadMessage{Payload: &protowire.NexelliadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
+		nautiliadMessage, err := client.Post(&protowire.NautiliadMessage{Payload: &protowire.NautiliadMessage_GetInfoRequest{GetInfoRequest: &protowire.GetInfoRequestMessage{}}})
 		if err != nil {
 			printErrorAndExit(fmt.Sprintf("Cannot post GetInfo message: %s", err))
 		}
 
 		localVersion := version.Version()
-		remoteVersion := nexelliadMessage.GetGetInfoResponse().ServerVersion
+		remoteVersion := nautiliadMessage.GetGetInfoResponse().ServerVersion
 
 		if localVersion != remoteVersion {
 			printErrorAndExit(fmt.Sprintf("Server version mismatch, expect: %s, got: %s", localVersion, remoteVersion))
@@ -101,8 +101,8 @@ func postJSON(cfg *configFlags, client *grpcclient.GRPCClient, doneChan chan str
 }
 
 func prettifyResponse(response string) string {
-	nexelliadMessage := &protowire.NexelliadMessage{}
-	err := protojson.Unmarshal([]byte(response), nexelliadMessage)
+	nautiliadMessage := &protowire.NautiliadMessage{}
+	err := protojson.Unmarshal([]byte(response), nautiliadMessage)
 	if err != nil {
 		printErrorAndExit(fmt.Sprintf("error parsing the response from the RPC server: %s", err))
 	}
@@ -110,7 +110,7 @@ func prettifyResponse(response string) string {
 	marshalOptions := &protojson.MarshalOptions{}
 	marshalOptions.Indent = "    "
 	marshalOptions.EmitUnpopulated = true
-	return marshalOptions.Format(nexelliadMessage)
+	return marshalOptions.Format(nautiliadMessage)
 }
 
 func printErrorAndExit(message string) {

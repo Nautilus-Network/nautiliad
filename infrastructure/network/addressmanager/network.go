@@ -7,7 +7,7 @@ package addressmanager
 import (
 	"net"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 )
 
 var (

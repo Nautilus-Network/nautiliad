@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 )
 
 func Test16IncomingConnections(t *testing.T) {

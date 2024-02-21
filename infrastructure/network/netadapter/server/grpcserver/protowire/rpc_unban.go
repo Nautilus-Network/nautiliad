@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_UnbanRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_UnbanRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_UnbanRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_UnbanRequest is nil")
 	}
 	return x.UnbanRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_UnbanRequest) fromAppMessage(message *appmessage.UnbanRequestMessage) error {
+func (x *NautiliadMessage_UnbanRequest) fromAppMessage(message *appmessage.UnbanRequestMessage) error {
 	x.UnbanRequest = &UnbanRequestMessage{Ip: message.IP}
 	return nil
 }
@@ -26,14 +26,14 @@ func (x *UnbanRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_UnbanResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_UnbanResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_UnbanResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_UnbanResponse is nil")
 	}
 	return x.UnbanResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_UnbanResponse) fromAppMessage(message *appmessage.UnbanResponseMessage) error {
+func (x *NautiliadMessage_UnbanResponse) fromAppMessage(message *appmessage.UnbanResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

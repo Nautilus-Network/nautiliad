@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_RequestAnticone) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_RequestAnticone) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_RequestAnticone is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_RequestAnticone is nil")
 	}
 	return x.RequestAnticone.toAppMessage()
 }
@@ -33,7 +33,7 @@ func (x *RequestAnticoneMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *NexelliadMessage_RequestAnticone) fromAppMessage(msgRequestPastDiff *appmessage.MsgRequestAnticone) error {
+func (x *NautiliadMessage_RequestAnticone) fromAppMessage(msgRequestPastDiff *appmessage.MsgRequestAnticone) error {
 	x.RequestAnticone = &RequestAnticoneMessage{
 		BlockHash:   domainHashToProto(msgRequestPastDiff.BlockHash),
 		ContextHash: domainHashToProto(msgRequestPastDiff.ContextHash),

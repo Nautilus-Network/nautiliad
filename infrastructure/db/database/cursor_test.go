@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/db/database"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/db/database"
 )
 
 func prepareCursorForTest(t *testing.T, db database.Database, testName string) database.Cursor {

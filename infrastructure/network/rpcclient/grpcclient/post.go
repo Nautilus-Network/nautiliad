@@ -1,8 +1,8 @@
 package grpcclient
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 )
@@ -12,7 +12,7 @@ import (
 // that arrives back, and returns the response as JSON
 func (c *GRPCClient) PostJSON(requestJSON string) (string, error) {
 	requestBytes := []byte(requestJSON)
-	var parsedRequest protowire.NexelliadMessage
+	var parsedRequest protowire.NautiliadMessage
 	err := protojson.Unmarshal(requestBytes, &parsedRequest)
 	if err != nil {
 		return "", errors.Wrapf(err, "error parsing the request")
@@ -51,7 +51,7 @@ func (c *GRPCClient) PostAppMessage(requestAppMessage appmessage.Message) (appme
 // Post is a helper function that sends the given request to the
 // RPC server, accepts the first response that arrives back, and
 // returns the response
-func (c *GRPCClient) Post(request *protowire.NexelliadMessage) (*protowire.NexelliadMessage, error) {
+func (c *GRPCClient) Post(request *protowire.NautiliadMessage) (*protowire.NautiliadMessage, error) {
 	err := c.stream.Send(request)
 	if err != nil {
 		return nil, errors.Wrapf(err, "error sending the request to the RPC server")

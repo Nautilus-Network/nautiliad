@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	routerpkg "github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/router"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	routerpkg "github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/id"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/netadapter/server"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/id"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/netadapter/server"
 )
 
 // NetConnection is a wrapper to a server connection for use by services external to NetAdapter

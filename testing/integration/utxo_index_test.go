@@ -4,20 +4,20 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/utxo"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/utxo"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/consensushashing"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/constants"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/transactionid"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/utils/txscript"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/consensushashing"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/constants"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/transactionid"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/utils/txscript"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/kaspanet/go-secp256k1"
 )
 
 func TestUTXOIndex(t *testing.T) {
-	// Setup a single nexelliad instance
+	// Setup a single nautiliad instance
 	harnessParams := &harnessParams{
 		p2pAddress:              p2pAddress1,
 		rpcAddress:              rpcAddress1,
@@ -25,17 +25,17 @@ func TestUTXOIndex(t *testing.T) {
 		miningAddressPrivateKey: miningAddress1PrivateKey,
 		utxoIndex:               true,
 	}
-	nexelliad, teardown := setupHarness(t, harnessParams)
+	nautiliad, teardown := setupHarness(t, harnessParams)
 	defer teardown()
 
 	// skip the first block because it's paying to genesis script,
 	// which contains no outputs
-	mineNextBlock(t, nexelliad)
+	mineNextBlock(t, nautiliad)
 
 	// Register for UTXO changes
 	const blockAmountToMine = 100
 	onUTXOsChangedChan := make(chan *appmessage.UTXOsChangedNotificationMessage, blockAmountToMine)
-	err := nexelliad.rpcClient.RegisterForUTXOsChangedNotifications([]string{miningAddress1}, func(
+	err := nautiliad.rpcClient.RegisterForUTXOsChangedNotifications([]string{miningAddress1}, func(
 		notification *appmessage.UTXOsChangedNotificationMessage) {
 
 		onUTXOsChangedChan <- notification
@@ -46,17 +46,17 @@ func TestUTXOIndex(t *testing.T) {
 
 	// Mine some blocks
 	for i := 0; i < blockAmountToMine; i++ {
-		mineNextBlock(t, nexelliad)
+		mineNextBlock(t, nautiliad)
 	}
 
 	//check if rewards corrosponds to circulating supply.
-	getCoinSupplyResponse, err := nexelliad.rpcClient.GetCoinSupply()
+	getCoinSupplyResponse, err := nautiliad.rpcClient.GetCoinSupply()
 	if err != nil {
 		t.Fatalf("Error Retriving Coin supply: %s", err)
 	}
 
 	rewardsMinedSompi := uint64(blockAmountToMine * constants.SompiPerKaspa * 500)
-	getBlockCountResponse, err := nexelliad.rpcClient.GetBlockCount()
+	getBlockCountResponse, err := nautiliad.rpcClient.GetBlockCount()
 	if err != nil {
 		t.Fatalf("Error Retriving BlockCount: %s", err)
 	}
@@ -89,14 +89,14 @@ func TestUTXOIndex(t *testing.T) {
 	const transactionAmountToSpend = 5
 	for i := 0; i < transactionAmountToSpend; i++ {
 		rpcTransaction := buildTransactionForUTXOIndexTest(t, notificationEntries[i])
-		_, err = nexelliad.rpcClient.SubmitTransaction(rpcTransaction, false)
+		_, err = nautiliad.rpcClient.SubmitTransaction(rpcTransaction, false)
 		if err != nil {
 			t.Fatalf("Error submitting transaction: %s", err)
 		}
 	}
 
 	// Mine a block to include the above transactions
-	mineNextBlock(t, nexelliad)
+	mineNextBlock(t, nautiliad)
 
 	// Make sure this block removed the UTXOs we spent
 	notification := <-onUTXOsChangedChan
@@ -128,7 +128,7 @@ func TestUTXOIndex(t *testing.T) {
 
 	// Get all the UTXOs and make sure the response is equivalent
 	// to the data collected via notifications
-	utxosByAddressesResponse, err := nexelliad.rpcClient.GetUTXOsByAddresses([]string{miningAddress1})
+	utxosByAddressesResponse, err := nautiliad.rpcClient.GetUTXOsByAddresses([]string{miningAddress1})
 	if err != nil {
 		t.Fatalf("Failed to get UTXOs: %s", err)
 	}

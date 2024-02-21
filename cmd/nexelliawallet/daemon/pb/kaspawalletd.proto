@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option go_package = "github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/daemon/pb";
-package nexelliawalletd;
+option go_package = "github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/daemon/pb";
+package nautiluswalletd;
 
-service nexelliawalletd {
+service nautiluswalletd {
   rpc GetBalance (GetBalanceRequest) returns (GetBalanceResponse) {}
   rpc GetExternalSpendableUTXOs (GetExternalSpendableUTXOsRequest) returns (GetExternalSpendableUTXOsResponse) {}
   rpc CreateUnsignedTransactions (CreateUnsignedTransactionsRequest) returns (CreateUnsignedTransactionsResponse) {}

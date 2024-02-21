@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest is nil")
 	}
 	return x.GetVirtualSelectedParentChainFromBlockRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentChainFromBlockRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentChainFromBlockRequestMessage) error {
+func (x *NautiliadMessage_GetVirtualSelectedParentChainFromBlockRequest) fromAppMessage(message *appmessage.GetVirtualSelectedParentChainFromBlockRequestMessage) error {
 	x.GetVirtualSelectedParentChainFromBlockRequest = &GetVirtualSelectedParentChainFromBlockRequestMessage{
 		StartHash:                     message.StartHash,
 		IncludeAcceptedTransactionIds: message.IncludeAcceptedTransactionIDs,
@@ -30,14 +30,14 @@ func (x *GetVirtualSelectedParentChainFromBlockRequestMessage) toAppMessage() (a
 	}, nil
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse is nil")
 	}
 	return x.GetVirtualSelectedParentChainFromBlockResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetVirtualSelectedParentChainFromBlockResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentChainFromBlockResponseMessage) error {
+func (x *NautiliadMessage_GetVirtualSelectedParentChainFromBlockResponse) fromAppMessage(message *appmessage.GetVirtualSelectedParentChainFromBlockResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

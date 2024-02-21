@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/libkaspawallet/bip32"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/libkaspawallet/bip32"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/pkg/errors"
 )

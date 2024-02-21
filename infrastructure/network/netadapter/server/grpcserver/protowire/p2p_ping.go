@@ -1,13 +1,13 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_Ping) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_Ping) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_Ping is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_Ping is nil")
 	}
 	return x.Ping.toAppMessage()
 }
@@ -21,7 +21,7 @@ func (x *PingMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_Ping) fromAppMessage(msgPing *appmessage.MsgPing) error {
+func (x *NautiliadMessage_Ping) fromAppMessage(msgPing *appmessage.MsgPing) error {
 	x.Ping = &PingMessage{
 		Nonce: msgPing.Nonce,
 	}

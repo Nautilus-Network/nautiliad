@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+import "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
 // UTXODiffReversalData is used by ConsensusStateManager to reverse the UTXODiffs during a re-org
 type UTXODiffReversalData struct {

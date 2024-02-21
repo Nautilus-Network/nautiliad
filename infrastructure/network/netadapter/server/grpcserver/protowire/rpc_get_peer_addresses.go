@@ -1,29 +1,29 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_GetPeerAddressesRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetPeerAddressesRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetPeerAddressesRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetPeerAddressesRequest is nil")
 	}
 	return &appmessage.GetPeerAddressesRequestMessage{}, nil
 }
 
-func (x *NexelliadMessage_GetPeerAddressesRequest) fromAppMessage(_ *appmessage.GetPeerAddressesRequestMessage) error {
+func (x *NautiliadMessage_GetPeerAddressesRequest) fromAppMessage(_ *appmessage.GetPeerAddressesRequestMessage) error {
 	return nil
 }
 
-func (x *NexelliadMessage_GetPeerAddressesResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_GetPeerAddressesResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_GetPeerAddressesResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_GetPeerAddressesResponse is nil")
 	}
 	return x.GetPeerAddressesResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_GetPeerAddressesResponse) fromAppMessage(message *appmessage.GetPeerAddressesResponseMessage) error {
+func (x *NautiliadMessage_GetPeerAddressesResponse) fromAppMessage(message *appmessage.GetPeerAddressesResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

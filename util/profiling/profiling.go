@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
 
 	// Required for profiling
 	_ "net/http/pprof"
@@ -16,7 +16,7 @@ import (
 	"runtime"
 	"runtime/pprof"
 
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
 // heapDumpFileName is the name of the heap dump file. We want every run to have its own

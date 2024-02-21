@@ -1,8 +1,8 @@
 package mine
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/logger"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/logger"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

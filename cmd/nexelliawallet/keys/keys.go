@@ -13,17 +13,17 @@ import (
 
 	"github.com/gofrs/flock"
 
-	"github.com/Nexellia-Network/nexelliad/cmd/nexelliawallet/utils"
+	"github.com/Nautilus-Network/nautiliad/cmd/nautiluswallet/utils"
 
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/argon2"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 
 var (
-	defaultAppDir = util.AppDir("nexelliawallet", false)
+	defaultAppDir = util.AppDir("nautiluswallet", false)
 )
 
 // LastVersion is the most up to date file format version

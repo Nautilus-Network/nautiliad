@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient/grpcclient"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient/grpcclient"
 	"github.com/pkg/errors"
 )
 

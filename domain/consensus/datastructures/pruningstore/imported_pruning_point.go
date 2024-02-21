@@ -1,9 +1,9 @@
 package pruningstore
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/database/serialization"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/database/serialization"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
 )

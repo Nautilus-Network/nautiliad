@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/util/txmass"
+	"github.com/Nautilus-Network/nautiliad/util/txmass"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/util/difficulty"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

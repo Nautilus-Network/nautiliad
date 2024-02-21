@@ -7,7 +7,7 @@ package dagconfig
 import (
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 func TestNewHashFromStr(t *testing.T) {

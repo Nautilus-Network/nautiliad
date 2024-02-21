@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/Nexellia-Network/nexelliad/infrastructure/network/rpcclient/grpcclient"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/util/panics"
-	"github.com/Nexellia-Network/nexelliad/util/profiling"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/network/rpcclient/grpcclient"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/util/panics"
+	"github.com/Nautilus-Network/nautiliad/util/profiling"
 	"github.com/pkg/errors"
 )
 

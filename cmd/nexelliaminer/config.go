@@ -7,24 +7,24 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
 
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/util"
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/version"
 	"github.com/jessevdk/go-flags"
 )
 
 const (
-	defaultLogFilename          = "nexelliaminer.log"
-	defaultErrLogFilename       = "nexelliaminer_err.log"
+	defaultLogFilename          = "nautilusminer.log"
+	defaultErrLogFilename       = "nautilusminer_err.log"
 	defaultTargetBlockRateRatio = 2.0
 )
 
 var (
 	// Default configuration options
-	defaultAppDir     = util.AppDir("nexelliaminer", false)
+	defaultAppDir     = util.AppDir("nautilusminer", false)
 	defaultLogFile    = filepath.Join(defaultAppDir, defaultLogFilename)
 	defaultErrLogFile = filepath.Join(defaultAppDir, defaultErrLogFilename)
 	defaultRPCServer  = "localhost"

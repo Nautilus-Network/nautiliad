@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common"
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/mine"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

@@ -8,12 +8,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/testapi"
-	"github.com/Nexellia-Network/nexelliad/domain/dagconfig"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/testapi"
+	"github.com/Nautilus-Network/nautiliad/domain/dagconfig"
 	"github.com/pkg/errors"
 )
 

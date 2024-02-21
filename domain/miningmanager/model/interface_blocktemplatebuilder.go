@@ -1,7 +1,7 @@
 package model
 
 import (
-	consensusexternalapi "github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	consensusexternalapi "github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 )
 
 // BlockTemplateBuilder builds block templates for miners to consume

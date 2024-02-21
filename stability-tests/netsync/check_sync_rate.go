@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/stability-tests/common/rpc"
+	"github.com/Nautilus-Network/nautiliad/stability-tests/common/rpc"
 
 	"github.com/pkg/errors"
 )

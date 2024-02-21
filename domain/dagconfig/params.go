@@ -8,14 +8,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/model/externalapi"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/model/externalapi"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
-	"github.com/Nexellia-Network/nexelliad/util/network"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/Nexellia-Network/nexelliad/util"
+	"github.com/Nautilus-Network/nautiliad/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -175,7 +175,7 @@ type Params struct {
 	// CoinbasePayloadScriptPublicKeyMaxLength is the maximum allowed script public key in the coinbase's payload
 	CoinbasePayloadScriptPublicKeyMaxLength uint8
 
-	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/Nexellia-Network/research/issues/3
+	// PruningProofM is the 'm' constant in the pruning proof. For more details see: https://github.com/Nautilus-Network/research/issues/3
 	PruningProofM uint64
 
 	// HalvingPhaseDaaScore is the DAA score after which the monetary policy switches
@@ -209,15 +209,12 @@ func (p *Params) PruningDepth() uint64 {
 // MainnetParams defines the network parameters for the main Kaspa network.
 var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "nexellia-mainnet",
+	Name:        "nautilus-mainnet",
 	Net:         appmessage.Mainnet,
-	RPCPort:     "33455",
-	DefaultPort: "33456",
+	RPCPort:     "55110",
+	DefaultPort: "55111",
 	DNSSeeds: []string{
-		"mainnet-dnsseed1.nexell-ia.net",
-		"mainnet-dnsseed2.nexell-ia.net",
-		"mainnet-dnsseed3.nexell-ia.net",
-		"mainnet-dnsseed3.nexell-ia.net",
+		"",
 	},
 
 	// DAG parameters
@@ -280,13 +277,12 @@ var MainnetParams = Params{
 // TestnetParams defines the network parameters for the test Kaspa network.
 var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "nexellia-testnet",
+	Name:        "nautilus-testnet",
 	Net:         appmessage.Testnet,
-	RPCPort:     "33555",
-	DefaultPort: "33556",
+	RPCPort:     "55210",
+	DefaultPort: "55211",
 	DNSSeeds: []string{
-		"testnet-dnsseed1.nexell-ia.net",
-		"testnet-dnsseed2.nexell-ia.net",
+		"",
 	},
 
 	// DAG parameters
@@ -351,10 +347,10 @@ var TestnetParams = Params{
 // just turn into another public testnet.
 var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "nexellia-simnet",
+	Name:        "nautilus-simnet",
 	Net:         appmessage.Simnet,
-	RPCPort:     "33755",
-	DefaultPort: "33756",
+	RPCPort:     "55310",
+	DefaultPort: "55311",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -411,10 +407,10 @@ var SimnetParams = Params{
 // DevnetParams defines the network parameters for the development Kaspa network.
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "nexellia-devnet",
+	Name:        "nautilus-devnet",
 	Net:         appmessage.Devnet,
-	RPCPort:     "33655",
-	DefaultPort: "33656",
+	RPCPort:     "55410",
+	DefaultPort: "55411",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters

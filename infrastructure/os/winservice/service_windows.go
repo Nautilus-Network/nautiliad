@@ -7,9 +7,9 @@ package winservice
 import (
 	"fmt"
 
-	"github.com/Nexellia-Network/nexelliad/infrastructure/config"
-	"github.com/Nexellia-Network/nexelliad/infrastructure/os/signal"
-	"github.com/Nexellia-Network/nexelliad/version"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/config"
+	"github.com/Nautilus-Network/nautiliad/infrastructure/os/signal"
+	"github.com/Nautilus-Network/nautiliad/version"
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
 )
@@ -51,20 +51,20 @@ func (s *Service) Start() error {
 
 // Execute is the main entry point the winsvc package calls when receiving
 // information from the Windows service control manager. It launches the
-// long-running nexelliadMain (which is the real meat of nexelliad), handles service
+// long-running nautiliadMain (which is the real meat of nautiliad), handles service
 // change requests, and notifies the service control manager of changes.
 func (s *Service) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (bool, uint32) {
 	// Service start is pending.
 	const cmdsAccepted = svc.AcceptStop | svc.AcceptShutdown
 	changes <- svc.Status{State: svc.StartPending}
 
-	// Start nexelliadMain in a separate goroutine so the service can start
+	// Start nautiliadMain in a separate goroutine so the service can start
 	// quickly. Shutdown (along with a potential error) is reported via
-	// doneChan. startedChan is notified once nexelliad is started so this can
+	// doneChan. startedChan is notified once nautiliad is started so this can
 	// be properly logged
 	doneChan := make(chan error)
 	startedChan := make(chan struct{})
-	spawn("nexelliadMain-windows", func() {
+	spawn("nautiliadMain-windows", func() {
 		err := s.main(startedChan)
 		doneChan <- err
 	})
@@ -108,7 +108,7 @@ loop:
 	return false, 0
 }
 
-// logServiceStart logs information about nexelliad when the main server has
+// logServiceStart logs information about nautiliad when the main server has
 // been started to the Windows event log.
 func (s *Service) logServiceStart() {
 	var message string

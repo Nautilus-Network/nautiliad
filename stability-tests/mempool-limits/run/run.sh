@@ -1,11 +1,11 @@
 #!/bin/bash
 
-APPDIR=/tmp/nexelliad-temp
+APPDIR=/tmp/nautiliad-temp
 KASPAD_RPC_PORT=29587
 
 rm -rf "${APPDIR}"
 
-nexelliad --simnet --appdir="${APPDIR}" --rpclisten=0.0.0.0:"${KASPAD_RPC_PORT}" --profile=6061 &
+nautiliad --simnet --appdir="${APPDIR}" --rpclisten=0.0.0.0:"${KASPAD_RPC_PORT}" --profile=6061 &
 KASPAD_PID=$!
 
 sleep 1
@@ -19,7 +19,7 @@ wait $KASPAD_PID
 KASPAD_EXIT_CODE=$?
 
 echo "Exit code: $TEST_EXIT_CODE"
-echo "Nexelliad exit code: $KASPAD_EXIT_CODE"
+echo "Nautiliad exit code: $KASPAD_EXIT_CODE"
 
 if [ $TEST_EXIT_CODE -eq 0 ] && [ $KASPAD_EXIT_CODE -eq 0 ]; then
   echo "mempool-limits test: PASSED"

@@ -1,18 +1,18 @@
 package protowire
 
 import (
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_EstimateNetworkHashesPerSecondRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_EstimateNetworkHashesPerSecondRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_EstimateNetworkHashesPerSecondRequest is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_EstimateNetworkHashesPerSecondRequest is nil")
 	}
 	return x.EstimateNetworkHashesPerSecondRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_EstimateNetworkHashesPerSecondRequest) fromAppMessage(message *appmessage.EstimateNetworkHashesPerSecondRequestMessage) error {
+func (x *NautiliadMessage_EstimateNetworkHashesPerSecondRequest) fromAppMessage(message *appmessage.EstimateNetworkHashesPerSecondRequestMessage) error {
 	x.EstimateNetworkHashesPerSecondRequest = &EstimateNetworkHashesPerSecondRequestMessage{
 		WindowSize: message.WindowSize,
 		StartHash:  message.StartHash,
@@ -30,14 +30,14 @@ func (x *EstimateNetworkHashesPerSecondRequestMessage) toAppMessage() (appmessag
 	}, nil
 }
 
-func (x *NexelliadMessage_EstimateNetworkHashesPerSecondResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_EstimateNetworkHashesPerSecondResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_EstimateNetworkHashesPerSecondResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_EstimateNetworkHashesPerSecondResponse is nil")
 	}
 	return x.EstimateNetworkHashesPerSecondResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_EstimateNetworkHashesPerSecondResponse) fromAppMessage(message *appmessage.EstimateNetworkHashesPerSecondResponseMessage) error {
+func (x *NautiliadMessage_EstimateNetworkHashesPerSecondResponse) fromAppMessage(message *appmessage.EstimateNetworkHashesPerSecondResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

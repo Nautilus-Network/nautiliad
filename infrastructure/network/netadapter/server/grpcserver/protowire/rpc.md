@@ -125,10 +125,10 @@
 ## rpc.proto
 RPC-related types. Request messages, response messages, and dependant types.
 
-Clients are expected to build RequestMessages and wrap them in NexelliadMessage. (see messages.proto)
+Clients are expected to build RequestMessages and wrap them in NautiliadMessage. (see messages.proto)
 
-Having received a RequestMessage, (wrapped in a NexelliadMessage) the RPC server will respond with a
-ResponseMessage (likewise wrapped in a NexelliadMessage) respective to the original RequestMessage.
+Having received a RequestMessage, (wrapped in a NautiliadMessage) the RPC server will respond with a
+ResponseMessage (likewise wrapped in a NautiliadMessage) respective to the original RequestMessage.
 
 **IMPORTANT:** This API is a work in progress and is subject to break between versions.
 
@@ -388,7 +388,7 @@ Receivers of any ResponseMessage are expected to check whether its error field i
 <a name="protowire.GetCurrentNetworkRequestMessage"></a>
 
 ### GetCurrentNetworkRequestMessage
-GetCurrentNetworkRequestMessage requests the network nexelliad is currently running against.
+GetCurrentNetworkRequestMessage requests the network nautiliad is currently running against.
 
 Possible networks are: Mainnet, Testnet, Simnet, Devnet
 
@@ -476,7 +476,7 @@ See: SubmitBlockRequestMessage
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | block | [RpcBlock](#protowire.RpcBlock) |  |  |
-| isSynced | [bool](#bool) |  | Whether nexelliad thinks that it&#39;s synced. Callers are discouraged (but not forbidden) from solving blocks when nexelliad is not synced. That is because when nexelliad isn&#39;t in sync with the rest of the network there&#39;s a high chance the block will never be accepted, thus the solving effort would have been wasted. |
+| isSynced | [bool](#bool) |  | Whether nautiliad thinks that it&#39;s synced. Callers are discouraged (but not forbidden) from solving blocks when nautiliad is not synced. That is because when nautiliad isn&#39;t in sync with the rest of the network there&#39;s a high chance the block will never be accepted, thus the solving effort would have been wasted. |
 | error | [RPCError](#protowire.RPCError) |  |  |
 
 
@@ -532,7 +532,7 @@ See: NotifyBlockAddedRequestMessage
 <a name="protowire.GetPeerAddressesRequestMessage"></a>
 
 ### GetPeerAddressesRequestMessage
-GetPeerAddressesRequestMessage requests the list of known nexelliad addresses in the
+GetPeerAddressesRequestMessage requests the list of known nautiliad addresses in the
 current network. (mainnet, testnet, etc.)
 
 
@@ -687,7 +687,7 @@ currently in the mempool.
 
 ### GetConnectedPeerInfoRequestMessage
 GetConnectedPeerInfoRequestMessage requests information about all the p2p peers
-currently connected to this nexelliad.
+currently connected to this nautiliad.
 
 
 
@@ -721,11 +721,11 @@ currently connected to this nexelliad.
 | id | [string](#string) |  |  |
 | address | [string](#string) |  |  |
 | lastPingDuration | [int64](#int64) |  | How long did the last ping/pong exchange take |
-| isOutbound | [bool](#bool) |  | Whether this nexelliad initiated the connection |
+| isOutbound | [bool](#bool) |  | Whether this nautiliad initiated the connection |
 | timeOffset | [int64](#int64) |  |  |
 | userAgent | [string](#string) |  |  |
 | advertisedProtocolVersion | [uint32](#uint32) |  | The protocol version that this peer claims to support |
-| timeConnected | [int64](#int64) |  | The timestamp of when this peer connected to this nexelliad |
+| timeConnected | [int64](#int64) |  | The timestamp of when this peer connected to this nautiliad |
 | isIbdPeer | [bool](#bool) |  | Whether this peer is the IBD peer (if IBD is running) |
 
 
@@ -736,8 +736,8 @@ currently connected to this nexelliad.
 <a name="protowire.AddPeerRequestMessage"></a>
 
 ### AddPeerRequestMessage
-AddPeerRequestMessage adds a peer to nexelliad&#39;s outgoing connection list.
-This will, in most cases, result in nexelliad connecting to said peer.
+AddPeerRequestMessage adds a peer to nautiliad&#39;s outgoing connection list.
+This will, in most cases, result in nautiliad connecting to said peer.
 
 
 | Field | Type | Label | Description |
@@ -918,7 +918,7 @@ Currently unimplemented
 
 ### GetVirtualSelectedParentChainFromBlockRequestMessage
 GetVirtualSelectedParentChainFromBlockRequestMessage requests the virtual selected
-parent chain from some startHash to this nexelliad&#39;s current virtual
+parent chain from some startHash to this nautiliad&#39;s current virtual
 
 
 | Field | Type | Label | Description |
@@ -969,7 +969,7 @@ parent chain from some startHash to this nexelliad&#39;s current virtual
 
 ### GetBlocksRequestMessage
 GetBlocksRequestMessage requests blocks between a certain block lowHash up to this
-nexelliad&#39;s current virtual.
+nautiliad&#39;s current virtual.
 
 
 | Field | Type | Label | Description |
@@ -1003,7 +1003,7 @@ nexelliad&#39;s current virtual.
 <a name="protowire.GetBlockCountRequestMessage"></a>
 
 ### GetBlockCountRequestMessage
-GetBlockCountRequestMessage requests the current number of blocks in this nexelliad.
+GetBlockCountRequestMessage requests the current number of blocks in this nautiliad.
 Note that this number may decrease as pruning occurs.
 
 
@@ -1032,7 +1032,7 @@ Note that this number may decrease as pruning occurs.
 
 ### GetBlockDagInfoRequestMessage
 GetBlockDagInfoRequestMessage requests general information about the current state
-of this nexelliad&#39;s DAG.
+of this nautiliad&#39;s DAG.
 
 
 
@@ -1151,7 +1151,7 @@ of this nexelliad&#39;s DAG.
 <a name="protowire.ShutDownRequestMessage"></a>
 
 ### ShutDownRequestMessage
-ShutDownRequestMessage shuts down this nexelliad.
+ShutDownRequestMessage shuts down this nautiliad.
 
 
 
@@ -1213,7 +1213,7 @@ current virtual, up to the given limit.
 NotifyUtxosChangedRequestMessage registers this connection for utxoChanged notifications
 for the given addresses.
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 See: UtxosChangedNotificationMessage
 
@@ -1283,7 +1283,7 @@ See: NotifyUtxosChangedRequestMessage
 StopNotifyingUtxosChangedRequestMessage unregisters this connection for utxoChanged notifications
 for the given addresses.
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 See: UtxosChangedNotificationMessage
 
@@ -1315,9 +1315,9 @@ See: UtxosChangedNotificationMessage
 <a name="protowire.GetUtxosByAddressesRequestMessage"></a>
 
 ### GetUtxosByAddressesRequestMessage
-GetUtxosByAddressesRequestMessage requests all current UTXOs for the given nexelliad addresses
+GetUtxosByAddressesRequestMessage requests all current UTXOs for the given nautiliad addresses
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 
 | Field | Type | Label | Description |
@@ -1350,7 +1350,7 @@ This call is only available when this nexelliad was started with `--utxoindex`
 ### GetBalanceByAddressRequestMessage
 GetBalanceByAddressRequest returns the total balance in unspent transactions towards a given address
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 
 | Field | Type | Label | Description |
@@ -1551,7 +1551,7 @@ See NotifyVirtualDaaScoreChangedRequestMessage
 NotifyPruningPointUTXOSetOverrideRequestMessage registers this connection for
 pruning point UTXO set override notifications.
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 See: NotifyPruningPointUTXOSetOverrideResponseMessage
 
@@ -1594,7 +1594,7 @@ See NotifyPruningPointUTXOSetOverrideRequestMessage
 StopNotifyingPruningPointUTXOSetOverrideRequestMessage unregisters this connection for
 pruning point UTXO set override notifications.
 
-This call is only available when this nexelliad was started with `--utxoindex`
+This call is only available when this nautiliad was started with `--utxoindex`
 
 See: PruningPointUTXOSetOverrideNotificationMessage
 

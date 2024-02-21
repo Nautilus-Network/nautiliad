@@ -3,18 +3,18 @@ package protowire
 import (
 	"math"
 
-	"github.com/Nexellia-Network/nexelliad/app/appmessage"
+	"github.com/Nautilus-Network/nautiliad/app/appmessage"
 	"github.com/pkg/errors"
 )
 
-func (x *NexelliadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_SubmitBlockRequest) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "SubmitBlockRequestMessage is nil")
 	}
 	return x.SubmitBlockRequest.toAppMessage()
 }
 
-func (x *NexelliadMessage_SubmitBlockRequest) fromAppMessage(message *appmessage.SubmitBlockRequestMessage) error {
+func (x *NautiliadMessage_SubmitBlockRequest) fromAppMessage(message *appmessage.SubmitBlockRequestMessage) error {
 	x.SubmitBlockRequest = &SubmitBlockRequestMessage{Block: &RpcBlock{}}
 	x.SubmitBlockRequest.AllowNonDAABlocks = message.AllowNonDAABlocks
 	return x.SubmitBlockRequest.Block.fromAppMessage(message.Block)
@@ -34,14 +34,14 @@ func (x *SubmitBlockRequestMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *NexelliadMessage_SubmitBlockResponse) toAppMessage() (appmessage.Message, error) {
+func (x *NautiliadMessage_SubmitBlockResponse) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
-		return nil, errors.Wrapf(errorNil, "NexelliadMessage_SubmitBlockResponse is nil")
+		return nil, errors.Wrapf(errorNil, "NautiliadMessage_SubmitBlockResponse is nil")
 	}
 	return x.SubmitBlockResponse.toAppMessage()
 }
 
-func (x *NexelliadMessage_SubmitBlockResponse) fromAppMessage(message *appmessage.SubmitBlockResponseMessage) error {
+func (x *NautiliadMessage_SubmitBlockResponse) fromAppMessage(message *appmessage.SubmitBlockResponseMessage) error {
 	var err *RPCError
 	if message.Error != nil {
 		err = &RPCError{Message: message.Error.Message}

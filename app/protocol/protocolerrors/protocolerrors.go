@@ -1,7 +1,7 @@
 package protocolerrors
 
 import (
-	"github.com/Nexellia-Network/nexelliad/domain/consensus/ruleerrors"
+	"github.com/Nautilus-Network/nautiliad/domain/consensus/ruleerrors"
 	"github.com/pkg/errors"
 )
 

@@ -5,7 +5,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/Nexellia-Network/nexelliad/app/protocol/common"
+	"github.com/Nautilus-Network/nautiliad/app/protocol/common"
 	"github.com/pkg/errors"
 )
 
