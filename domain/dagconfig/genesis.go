@@ -81,6 +81,7 @@ var genesisBlock = externalapi.DomainBlock{
 	Transactions: []*externalapi.DomainTransaction{genesisCoinbaseTx},
 }
 
+
 var devnetGenesisTxOuts = []*externalapi.DomainTransactionOutput{}
 
 var devnetGenesisTxPayload = []byte{
