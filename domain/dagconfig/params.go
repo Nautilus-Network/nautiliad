@@ -211,8 +211,8 @@ var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "nautilus-mainnet",
 	Net:         appmessage.Mainnet,
-	RPCPort:     "55110",
-	DefaultPort: "55111",
+	RPCPort:     "38110",
+	DefaultPort: "38111",
 	DNSSeeds: []string{
 		"",
 	},
@@ -279,8 +279,8 @@ var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "nautilus-testnet",
 	Net:         appmessage.Testnet,
-	RPCPort:     "55210",
-	DefaultPort: "55211",
+	RPCPort:     "38210",
+	DefaultPort: "38211",
 	DNSSeeds: []string{
 		"",
 	},
@@ -349,8 +349,8 @@ var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "nautilus-simnet",
 	Net:         appmessage.Simnet,
-	RPCPort:     "55310",
-	DefaultPort: "55311",
+	RPCPort:     "38310",
+	DefaultPort: "38311",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
@@ -409,8 +409,8 @@ var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
 	Name:        "nautilus-devnet",
 	Net:         appmessage.Devnet,
-	RPCPort:     "55410",
-	DefaultPort: "55411",
+	RPCPort:     "38410",
+	DefaultPort: "38411",
 	DNSSeeds:    []string{}, // NOTE: There must NOT be any seeds.
 
 	// DAG parameters
