@@ -4,11 +4,11 @@ Nautiliad
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://choosealicense.com/licenses/isc/)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/Nautilus-Network/nautiliad/)
 
-Nautiliad is the reference full node Nexellia implementation written in Go (golang).
+Nautiliad is the reference full node Nautilus implementation written in Go (golang).
 
-## What is Nexellia
+## What is Nautilus
 
-Nexellia is a fork of Kaspa with an ASIC resistance implementation
+Nautilus is a fork of Kaspa with an ASIC resistance implementation
 Kaspa is an attempt at a proof-of-work cryptocurrency with instant confirmations and sub-second block times. It is based on [the PHANTOM protocol](https://eprint.iacr.org/2018/104.pdf), a generalization of Nakamoto consensus.
 
 ## Requirements
