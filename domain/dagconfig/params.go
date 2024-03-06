@@ -214,7 +214,10 @@ var MainnetParams = Params{
 	RPCPort:     "38110",
 	DefaultPort: "38111",
 	DNSSeeds: []string{
-		"",
+		"mainnet-dnsseed1.nautilus-network.net",
+		"mainnet-dnsseed2.nautilus-network.net",
+		"mainnet-dnsseed3.nautilus-network.net",
+		"mainnet-dnsseed4.nautilus-network.net",
 	},
 
 	// DAG parameters
